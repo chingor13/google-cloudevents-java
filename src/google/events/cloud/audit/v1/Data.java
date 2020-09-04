@@ -14,8 +14,4403 @@ public final class Data {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface AuditLogDataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:google.events.cloud.audit.v1.AuditLogData)
+  /**
+   * <pre>
+   * The severity of the event described in a log entry, expressed as one of the
+   * standard severity levels listed below.  For your reference, the levels are
+   * assigned the listed numeric values. The effect of using numeric values other
+   * than those listed is undefined.
+   * Copied from https://github.com/googleapis/googleapis/blob/master/google/logging/type/log_severity.proto
+   * </pre>
+   *
+   * Protobuf enum {@code google.events.cloud.audit.v1.LogSeverity}
+   */
+  public enum LogSeverity
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * (0) The log entry has no assigned severity level.
+     * </pre>
+     *
+     * <code>DEFAULT = 0;</code>
+     */
+    DEFAULT(0),
+    /**
+     * <pre>
+     * (100) Debug or trace information.
+     * </pre>
+     *
+     * <code>DEBUG = 100;</code>
+     */
+    DEBUG(100),
+    /**
+     * <pre>
+     * (200) Routine information, such as ongoing status or performance.
+     * </pre>
+     *
+     * <code>INFO = 200;</code>
+     */
+    INFO(200),
+    /**
+     * <pre>
+     * (300) Normal but significant events, such as start up, shut down, or
+     * a configuration change.
+     * </pre>
+     *
+     * <code>NOTICE = 300;</code>
+     */
+    NOTICE(300),
+    /**
+     * <pre>
+     * (400) Warning events might cause problems.
+     * </pre>
+     *
+     * <code>WARNING = 400;</code>
+     */
+    WARNING(400),
+    /**
+     * <pre>
+     * (500) Error events are likely to cause problems.
+     * </pre>
+     *
+     * <code>ERROR = 500;</code>
+     */
+    ERROR(500),
+    /**
+     * <pre>
+     * (600) Critical events cause more severe problems or outages.
+     * </pre>
+     *
+     * <code>CRITICAL = 600;</code>
+     */
+    CRITICAL(600),
+    /**
+     * <pre>
+     * (700) A person must take an action immediately.
+     * </pre>
+     *
+     * <code>ALERT = 700;</code>
+     */
+    ALERT(700),
+    /**
+     * <pre>
+     * (800) One or more systems are unusable.
+     * </pre>
+     *
+     * <code>EMERGENCY = 800;</code>
+     */
+    EMERGENCY(800),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * (0) The log entry has no assigned severity level.
+     * </pre>
+     *
+     * <code>DEFAULT = 0;</code>
+     */
+    public static final int DEFAULT_VALUE = 0;
+    /**
+     * <pre>
+     * (100) Debug or trace information.
+     * </pre>
+     *
+     * <code>DEBUG = 100;</code>
+     */
+    public static final int DEBUG_VALUE = 100;
+    /**
+     * <pre>
+     * (200) Routine information, such as ongoing status or performance.
+     * </pre>
+     *
+     * <code>INFO = 200;</code>
+     */
+    public static final int INFO_VALUE = 200;
+    /**
+     * <pre>
+     * (300) Normal but significant events, such as start up, shut down, or
+     * a configuration change.
+     * </pre>
+     *
+     * <code>NOTICE = 300;</code>
+     */
+    public static final int NOTICE_VALUE = 300;
+    /**
+     * <pre>
+     * (400) Warning events might cause problems.
+     * </pre>
+     *
+     * <code>WARNING = 400;</code>
+     */
+    public static final int WARNING_VALUE = 400;
+    /**
+     * <pre>
+     * (500) Error events are likely to cause problems.
+     * </pre>
+     *
+     * <code>ERROR = 500;</code>
+     */
+    public static final int ERROR_VALUE = 500;
+    /**
+     * <pre>
+     * (600) Critical events cause more severe problems or outages.
+     * </pre>
+     *
+     * <code>CRITICAL = 600;</code>
+     */
+    public static final int CRITICAL_VALUE = 600;
+    /**
+     * <pre>
+     * (700) A person must take an action immediately.
+     * </pre>
+     *
+     * <code>ALERT = 700;</code>
+     */
+    public static final int ALERT_VALUE = 700;
+    /**
+     * <pre>
+     * (800) One or more systems are unusable.
+     * </pre>
+     *
+     * <code>EMERGENCY = 800;</code>
+     */
+    public static final int EMERGENCY_VALUE = 800;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static LogSeverity valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static LogSeverity forNumber(int value) {
+      switch (value) {
+        case 0: return DEFAULT;
+        case 100: return DEBUG;
+        case 200: return INFO;
+        case 300: return NOTICE;
+        case 400: return WARNING;
+        case 500: return ERROR;
+        case 600: return CRITICAL;
+        case 700: return ALERT;
+        case 800: return EMERGENCY;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<LogSeverity>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        LogSeverity> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<LogSeverity>() {
+            public LogSeverity findValueByNumber(int number) {
+              return LogSeverity.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return google.events.cloud.audit.v1.Data.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final LogSeverity[] VALUES = values();
+
+    public static LogSeverity valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private LogSeverity(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:google.events.cloud.audit.v1.LogSeverity)
+  }
+
+  public interface LogEntryDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.events.cloud.audit.v1.LogEntryData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The resource name of the log to which this log entry belongs.
+     * </pre>
+     *
+     * <code>string log_name = 12;</code>
+     * @return The logName.
+     */
+    java.lang.String getLogName();
+    /**
+     * <pre>
+     * The resource name of the log to which this log entry belongs.
+     * </pre>
+     *
+     * <code>string log_name = 12;</code>
+     * @return The bytes for logName.
+     */
+    com.google.protobuf.ByteString
+        getLogNameBytes();
+
+    /**
+     * <pre>
+     * The monitored resource that produced this log entry.
+     * Example: a log entry that reports a database error would be associated with
+     * the monitored resource designating the particular database that reported
+     * the error.
+     * </pre>
+     *
+     * <code>.google.api.MonitoredResource resource = 8;</code>
+     * @return Whether the resource field is set.
+     */
+    boolean hasResource();
+    /**
+     * <pre>
+     * The monitored resource that produced this log entry.
+     * Example: a log entry that reports a database error would be associated with
+     * the monitored resource designating the particular database that reported
+     * the error.
+     * </pre>
+     *
+     * <code>.google.api.MonitoredResource resource = 8;</code>
+     * @return The resource.
+     */
+    google.api.MonitoredResourceOuterClass.MonitoredResource getResource();
+    /**
+     * <pre>
+     * The monitored resource that produced this log entry.
+     * Example: a log entry that reports a database error would be associated with
+     * the monitored resource designating the particular database that reported
+     * the error.
+     * </pre>
+     *
+     * <code>.google.api.MonitoredResource resource = 8;</code>
+     */
+    google.api.MonitoredResourceOuterClass.MonitoredResourceOrBuilder getResourceOrBuilder();
+
+    /**
+     * <pre>
+     * The log entry payload, which is always an AuditLog for Cloud Audit Log events.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.AuditLog proto_payload = 2;</code>
+     * @return Whether the protoPayload field is set.
+     */
+    boolean hasProtoPayload();
+    /**
+     * <pre>
+     * The log entry payload, which is always an AuditLog for Cloud Audit Log events.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.AuditLog proto_payload = 2;</code>
+     * @return The protoPayload.
+     */
+    google.events.cloud.audit.v1.Data.AuditLog getProtoPayload();
+    /**
+     * <pre>
+     * The log entry payload, which is always an AuditLog for Cloud Audit Log events.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.AuditLog proto_payload = 2;</code>
+     */
+    google.events.cloud.audit.v1.Data.AuditLogOrBuilder getProtoPayloadOrBuilder();
+
+    /**
+     * <pre>
+     * A unique identifier for the log entry. 
+     * </pre>
+     *
+     * <code>string insert_id = 4;</code>
+     * @return The insertId.
+     */
+    java.lang.String getInsertId();
+    /**
+     * <pre>
+     * A unique identifier for the log entry. 
+     * </pre>
+     *
+     * <code>string insert_id = 4;</code>
+     * @return The bytes for insertId.
+     */
+    com.google.protobuf.ByteString
+        getInsertIdBytes();
+
+    /**
+     * <pre>
+     * A set of user-defined (key, value) data that provides additional
+     * information about the log entry.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * A set of user-defined (key, value) data that provides additional
+     * information about the log entry.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * A set of user-defined (key, value) data that provides additional
+     * information about the log entry.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * A set of user-defined (key, value) data that provides additional
+     * information about the log entry.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * A set of user-defined (key, value) data that provides additional
+     * information about the log entry.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * Information about an operation associated with the log entry, if applicable.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.LogEntryOperation operation = 15;</code>
+     * @return Whether the operation field is set.
+     */
+    boolean hasOperation();
+    /**
+     * <pre>
+     * Information about an operation associated with the log entry, if applicable.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.LogEntryOperation operation = 15;</code>
+     * @return The operation.
+     */
+    google.events.cloud.audit.v1.Data.LogEntryOperation getOperation();
+    /**
+     * <pre>
+     * Information about an operation associated with the log entry, if applicable.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.LogEntryOperation operation = 15;</code>
+     */
+    google.events.cloud.audit.v1.Data.LogEntryOperationOrBuilder getOperationOrBuilder();
+
+    /**
+     * <pre>
+     * The time the event described by the log entry occurred.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 9;</code>
+     * @return Whether the timestamp field is set.
+     */
+    boolean hasTimestamp();
+    /**
+     * <pre>
+     * The time the event described by the log entry occurred.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 9;</code>
+     * @return The timestamp.
+     */
+    com.google.protobuf.Timestamp getTimestamp();
+    /**
+     * <pre>
+     * The time the event described by the log entry occurred.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 9;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
+
+    /**
+     * <pre>
+     * The time the log entry was received by Logging.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp receive_timestamp = 24;</code>
+     * @return Whether the receiveTimestamp field is set.
+     */
+    boolean hasReceiveTimestamp();
+    /**
+     * <pre>
+     * The time the log entry was received by Logging.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp receive_timestamp = 24;</code>
+     * @return The receiveTimestamp.
+     */
+    com.google.protobuf.Timestamp getReceiveTimestamp();
+    /**
+     * <pre>
+     * The time the log entry was received by Logging.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp receive_timestamp = 24;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getReceiveTimestampOrBuilder();
+
+    /**
+     * <pre>
+     * The severity of the log entry.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.LogSeverity severity = 10;</code>
+     * @return The enum numeric value on the wire for severity.
+     */
+    int getSeverityValue();
+    /**
+     * <pre>
+     * The severity of the log entry.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.LogSeverity severity = 10;</code>
+     * @return The severity.
+     */
+    google.events.cloud.audit.v1.Data.LogSeverity getSeverity();
+
+    /**
+     * <pre>
+     * Resource name of the trace associated with the log entry, if any. If it
+     * contains a relative resource name, the name is assumed to be relative to
+     * `//tracing.googleapis.com`. Example:
+     * `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
+     * </pre>
+     *
+     * <code>string trace = 22;</code>
+     * @return The trace.
+     */
+    java.lang.String getTrace();
+    /**
+     * <pre>
+     * Resource name of the trace associated with the log entry, if any. If it
+     * contains a relative resource name, the name is assumed to be relative to
+     * `//tracing.googleapis.com`. Example:
+     * `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
+     * </pre>
+     *
+     * <code>string trace = 22;</code>
+     * @return The bytes for trace.
+     */
+    com.google.protobuf.ByteString
+        getTraceBytes();
+
+    /**
+     * <pre>
+     * The span ID within the trace associated with the log entry, if any.
+     * For Trace spans, this is the same format that the Trace API v2 uses: a
+     * 16-character hexadecimal encoding of an 8-byte array, such as
+     * `000000000000004a`.
+     * </pre>
+     *
+     * <code>string span_id = 27;</code>
+     * @return The spanId.
+     */
+    java.lang.String getSpanId();
+    /**
+     * <pre>
+     * The span ID within the trace associated with the log entry, if any.
+     * For Trace spans, this is the same format that the Trace API v2 uses: a
+     * 16-character hexadecimal encoding of an 8-byte array, such as
+     * `000000000000004a`.
+     * </pre>
+     *
+     * <code>string span_id = 27;</code>
+     * @return The bytes for spanId.
+     */
+    com.google.protobuf.ByteString
+        getSpanIdBytes();
+  }
+  /**
+   * <pre>
+   * Generic log entry, used as a wrapper for Cloud Audit Logs in events.
+   * This is copied from
+   * https://github.com/googleapis/googleapis/blob/master/google/logging/v2/log_entry.proto
+   * and adapted appropriately.
+   * </pre>
+   *
+   * Protobuf type {@code google.events.cloud.audit.v1.LogEntryData}
+   */
+  public static final class LogEntryData extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.events.cloud.audit.v1.LogEntryData)
+      LogEntryDataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LogEntryData.newBuilder() to construct.
+    private LogEntryData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LogEntryData() {
+      logName_ = "";
+      insertId_ = "";
+      severity_ = 0;
+      trace_ = "";
+      spanId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LogEntryData();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LogEntryData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              google.events.cloud.audit.v1.Data.AuditLog.Builder subBuilder = null;
+              if (protoPayload_ != null) {
+                subBuilder = protoPayload_.toBuilder();
+              }
+              protoPayload_ = input.readMessage(google.events.cloud.audit.v1.Data.AuditLog.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(protoPayload_);
+                protoPayload_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              insertId_ = s;
+              break;
+            }
+            case 66: {
+              google.api.MonitoredResourceOuterClass.MonitoredResource.Builder subBuilder = null;
+              if (resource_ != null) {
+                subBuilder = resource_.toBuilder();
+              }
+              resource_ = input.readMessage(google.api.MonitoredResourceOuterClass.MonitoredResource.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resource_);
+                resource_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (timestamp_ != null) {
+                subBuilder = timestamp_.toBuilder();
+              }
+              timestamp_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(timestamp_);
+                timestamp_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 80: {
+              int rawValue = input.readEnum();
+
+              severity_ = rawValue;
+              break;
+            }
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              logName_ = s;
+              break;
+            }
+            case 122: {
+              google.events.cloud.audit.v1.Data.LogEntryOperation.Builder subBuilder = null;
+              if (operation_ != null) {
+                subBuilder = operation_.toBuilder();
+              }
+              operation_ = input.readMessage(google.events.cloud.audit.v1.Data.LogEntryOperation.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(operation_);
+                operation_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 178: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              trace_ = s;
+              break;
+            }
+            case 194: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (receiveTimestamp_ != null) {
+                subBuilder = receiveTimestamp_.toBuilder();
+              }
+              receiveTimestamp_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(receiveTimestamp_);
+                receiveTimestamp_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 218: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              spanId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_LogEntryData_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 11:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_LogEntryData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              google.events.cloud.audit.v1.Data.LogEntryData.class, google.events.cloud.audit.v1.Data.LogEntryData.Builder.class);
+    }
+
+    public static final int LOG_NAME_FIELD_NUMBER = 12;
+    private volatile java.lang.Object logName_;
+    /**
+     * <pre>
+     * The resource name of the log to which this log entry belongs.
+     * </pre>
+     *
+     * <code>string log_name = 12;</code>
+     * @return The logName.
+     */
+    @java.lang.Override
+    public java.lang.String getLogName() {
+      java.lang.Object ref = logName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        logName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The resource name of the log to which this log entry belongs.
+     * </pre>
+     *
+     * <code>string log_name = 12;</code>
+     * @return The bytes for logName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLogNameBytes() {
+      java.lang.Object ref = logName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        logName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESOURCE_FIELD_NUMBER = 8;
+    private google.api.MonitoredResourceOuterClass.MonitoredResource resource_;
+    /**
+     * <pre>
+     * The monitored resource that produced this log entry.
+     * Example: a log entry that reports a database error would be associated with
+     * the monitored resource designating the particular database that reported
+     * the error.
+     * </pre>
+     *
+     * <code>.google.api.MonitoredResource resource = 8;</code>
+     * @return Whether the resource field is set.
+     */
+    @java.lang.Override
+    public boolean hasResource() {
+      return resource_ != null;
+    }
+    /**
+     * <pre>
+     * The monitored resource that produced this log entry.
+     * Example: a log entry that reports a database error would be associated with
+     * the monitored resource designating the particular database that reported
+     * the error.
+     * </pre>
+     *
+     * <code>.google.api.MonitoredResource resource = 8;</code>
+     * @return The resource.
+     */
+    @java.lang.Override
+    public google.api.MonitoredResourceOuterClass.MonitoredResource getResource() {
+      return resource_ == null ? google.api.MonitoredResourceOuterClass.MonitoredResource.getDefaultInstance() : resource_;
+    }
+    /**
+     * <pre>
+     * The monitored resource that produced this log entry.
+     * Example: a log entry that reports a database error would be associated with
+     * the monitored resource designating the particular database that reported
+     * the error.
+     * </pre>
+     *
+     * <code>.google.api.MonitoredResource resource = 8;</code>
+     */
+    @java.lang.Override
+    public google.api.MonitoredResourceOuterClass.MonitoredResourceOrBuilder getResourceOrBuilder() {
+      return getResource();
+    }
+
+    public static final int PROTO_PAYLOAD_FIELD_NUMBER = 2;
+    private google.events.cloud.audit.v1.Data.AuditLog protoPayload_;
+    /**
+     * <pre>
+     * The log entry payload, which is always an AuditLog for Cloud Audit Log events.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.AuditLog proto_payload = 2;</code>
+     * @return Whether the protoPayload field is set.
+     */
+    @java.lang.Override
+    public boolean hasProtoPayload() {
+      return protoPayload_ != null;
+    }
+    /**
+     * <pre>
+     * The log entry payload, which is always an AuditLog for Cloud Audit Log events.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.AuditLog proto_payload = 2;</code>
+     * @return The protoPayload.
+     */
+    @java.lang.Override
+    public google.events.cloud.audit.v1.Data.AuditLog getProtoPayload() {
+      return protoPayload_ == null ? google.events.cloud.audit.v1.Data.AuditLog.getDefaultInstance() : protoPayload_;
+    }
+    /**
+     * <pre>
+     * The log entry payload, which is always an AuditLog for Cloud Audit Log events.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.AuditLog proto_payload = 2;</code>
+     */
+    @java.lang.Override
+    public google.events.cloud.audit.v1.Data.AuditLogOrBuilder getProtoPayloadOrBuilder() {
+      return getProtoPayload();
+    }
+
+    public static final int INSERT_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object insertId_;
+    /**
+     * <pre>
+     * A unique identifier for the log entry. 
+     * </pre>
+     *
+     * <code>string insert_id = 4;</code>
+     * @return The insertId.
+     */
+    @java.lang.Override
+    public java.lang.String getInsertId() {
+      java.lang.Object ref = insertId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        insertId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A unique identifier for the log entry. 
+     * </pre>
+     *
+     * <code>string insert_id = 4;</code>
+     * @return The bytes for insertId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInsertIdBytes() {
+      java.lang.Object ref = insertId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        insertId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 11;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_LogEntryData_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * A set of user-defined (key, value) data that provides additional
+     * information about the log entry.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * A set of user-defined (key, value) data that provides additional
+     * information about the log entry.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * A set of user-defined (key, value) data that provides additional
+     * information about the log entry.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * A set of user-defined (key, value) data that provides additional
+     * information about the log entry.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 11;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int OPERATION_FIELD_NUMBER = 15;
+    private google.events.cloud.audit.v1.Data.LogEntryOperation operation_;
+    /**
+     * <pre>
+     * Information about an operation associated with the log entry, if applicable.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.LogEntryOperation operation = 15;</code>
+     * @return Whether the operation field is set.
+     */
+    @java.lang.Override
+    public boolean hasOperation() {
+      return operation_ != null;
+    }
+    /**
+     * <pre>
+     * Information about an operation associated with the log entry, if applicable.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.LogEntryOperation operation = 15;</code>
+     * @return The operation.
+     */
+    @java.lang.Override
+    public google.events.cloud.audit.v1.Data.LogEntryOperation getOperation() {
+      return operation_ == null ? google.events.cloud.audit.v1.Data.LogEntryOperation.getDefaultInstance() : operation_;
+    }
+    /**
+     * <pre>
+     * Information about an operation associated with the log entry, if applicable.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.LogEntryOperation operation = 15;</code>
+     */
+    @java.lang.Override
+    public google.events.cloud.audit.v1.Data.LogEntryOperationOrBuilder getOperationOrBuilder() {
+      return getOperation();
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 9;
+    private com.google.protobuf.Timestamp timestamp_;
+    /**
+     * <pre>
+     * The time the event described by the log entry occurred.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 9;</code>
+     * @return Whether the timestamp field is set.
+     */
+    @java.lang.Override
+    public boolean hasTimestamp() {
+      return timestamp_ != null;
+    }
+    /**
+     * <pre>
+     * The time the event described by the log entry occurred.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 9;</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getTimestamp() {
+      return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+    }
+    /**
+     * <pre>
+     * The time the event described by the log entry occurred.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp timestamp = 9;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+      return getTimestamp();
+    }
+
+    public static final int RECEIVE_TIMESTAMP_FIELD_NUMBER = 24;
+    private com.google.protobuf.Timestamp receiveTimestamp_;
+    /**
+     * <pre>
+     * The time the log entry was received by Logging.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp receive_timestamp = 24;</code>
+     * @return Whether the receiveTimestamp field is set.
+     */
+    @java.lang.Override
+    public boolean hasReceiveTimestamp() {
+      return receiveTimestamp_ != null;
+    }
+    /**
+     * <pre>
+     * The time the log entry was received by Logging.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp receive_timestamp = 24;</code>
+     * @return The receiveTimestamp.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getReceiveTimestamp() {
+      return receiveTimestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : receiveTimestamp_;
+    }
+    /**
+     * <pre>
+     * The time the log entry was received by Logging.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp receive_timestamp = 24;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getReceiveTimestampOrBuilder() {
+      return getReceiveTimestamp();
+    }
+
+    public static final int SEVERITY_FIELD_NUMBER = 10;
+    private int severity_;
+    /**
+     * <pre>
+     * The severity of the log entry.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.LogSeverity severity = 10;</code>
+     * @return The enum numeric value on the wire for severity.
+     */
+    @java.lang.Override public int getSeverityValue() {
+      return severity_;
+    }
+    /**
+     * <pre>
+     * The severity of the log entry.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.LogSeverity severity = 10;</code>
+     * @return The severity.
+     */
+    @java.lang.Override public google.events.cloud.audit.v1.Data.LogSeverity getSeverity() {
+      @SuppressWarnings("deprecation")
+      google.events.cloud.audit.v1.Data.LogSeverity result = google.events.cloud.audit.v1.Data.LogSeverity.valueOf(severity_);
+      return result == null ? google.events.cloud.audit.v1.Data.LogSeverity.UNRECOGNIZED : result;
+    }
+
+    public static final int TRACE_FIELD_NUMBER = 22;
+    private volatile java.lang.Object trace_;
+    /**
+     * <pre>
+     * Resource name of the trace associated with the log entry, if any. If it
+     * contains a relative resource name, the name is assumed to be relative to
+     * `//tracing.googleapis.com`. Example:
+     * `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
+     * </pre>
+     *
+     * <code>string trace = 22;</code>
+     * @return The trace.
+     */
+    @java.lang.Override
+    public java.lang.String getTrace() {
+      java.lang.Object ref = trace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        trace_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Resource name of the trace associated with the log entry, if any. If it
+     * contains a relative resource name, the name is assumed to be relative to
+     * `//tracing.googleapis.com`. Example:
+     * `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
+     * </pre>
+     *
+     * <code>string trace = 22;</code>
+     * @return The bytes for trace.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTraceBytes() {
+      java.lang.Object ref = trace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        trace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SPAN_ID_FIELD_NUMBER = 27;
+    private volatile java.lang.Object spanId_;
+    /**
+     * <pre>
+     * The span ID within the trace associated with the log entry, if any.
+     * For Trace spans, this is the same format that the Trace API v2 uses: a
+     * 16-character hexadecimal encoding of an 8-byte array, such as
+     * `000000000000004a`.
+     * </pre>
+     *
+     * <code>string span_id = 27;</code>
+     * @return The spanId.
+     */
+    @java.lang.Override
+    public java.lang.String getSpanId() {
+      java.lang.Object ref = spanId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        spanId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The span ID within the trace associated with the log entry, if any.
+     * For Trace spans, this is the same format that the Trace API v2 uses: a
+     * 16-character hexadecimal encoding of an 8-byte array, such as
+     * `000000000000004a`.
+     * </pre>
+     *
+     * <code>string span_id = 27;</code>
+     * @return The bytes for spanId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSpanIdBytes() {
+      java.lang.Object ref = spanId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        spanId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (protoPayload_ != null) {
+        output.writeMessage(2, getProtoPayload());
+      }
+      if (!getInsertIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, insertId_);
+      }
+      if (resource_ != null) {
+        output.writeMessage(8, getResource());
+      }
+      if (timestamp_ != null) {
+        output.writeMessage(9, getTimestamp());
+      }
+      if (severity_ != google.events.cloud.audit.v1.Data.LogSeverity.DEFAULT.getNumber()) {
+        output.writeEnum(10, severity_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          11);
+      if (!getLogNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, logName_);
+      }
+      if (operation_ != null) {
+        output.writeMessage(15, getOperation());
+      }
+      if (!getTraceBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 22, trace_);
+      }
+      if (receiveTimestamp_ != null) {
+        output.writeMessage(24, getReceiveTimestamp());
+      }
+      if (!getSpanIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 27, spanId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (protoPayload_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getProtoPayload());
+      }
+      if (!getInsertIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, insertId_);
+      }
+      if (resource_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getResource());
+      }
+      if (timestamp_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getTimestamp());
+      }
+      if (severity_ != google.events.cloud.audit.v1.Data.LogSeverity.DEFAULT.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(10, severity_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(11, labels__);
+      }
+      if (!getLogNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, logName_);
+      }
+      if (operation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getOperation());
+      }
+      if (!getTraceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, trace_);
+      }
+      if (receiveTimestamp_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(24, getReceiveTimestamp());
+      }
+      if (!getSpanIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, spanId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof google.events.cloud.audit.v1.Data.LogEntryData)) {
+        return super.equals(obj);
+      }
+      google.events.cloud.audit.v1.Data.LogEntryData other = (google.events.cloud.audit.v1.Data.LogEntryData) obj;
+
+      if (!getLogName()
+          .equals(other.getLogName())) return false;
+      if (hasResource() != other.hasResource()) return false;
+      if (hasResource()) {
+        if (!getResource()
+            .equals(other.getResource())) return false;
+      }
+      if (hasProtoPayload() != other.hasProtoPayload()) return false;
+      if (hasProtoPayload()) {
+        if (!getProtoPayload()
+            .equals(other.getProtoPayload())) return false;
+      }
+      if (!getInsertId()
+          .equals(other.getInsertId())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (hasOperation() != other.hasOperation()) return false;
+      if (hasOperation()) {
+        if (!getOperation()
+            .equals(other.getOperation())) return false;
+      }
+      if (hasTimestamp() != other.hasTimestamp()) return false;
+      if (hasTimestamp()) {
+        if (!getTimestamp()
+            .equals(other.getTimestamp())) return false;
+      }
+      if (hasReceiveTimestamp() != other.hasReceiveTimestamp()) return false;
+      if (hasReceiveTimestamp()) {
+        if (!getReceiveTimestamp()
+            .equals(other.getReceiveTimestamp())) return false;
+      }
+      if (severity_ != other.severity_) return false;
+      if (!getTrace()
+          .equals(other.getTrace())) return false;
+      if (!getSpanId()
+          .equals(other.getSpanId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LOG_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getLogName().hashCode();
+      if (hasResource()) {
+        hash = (37 * hash) + RESOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + getResource().hashCode();
+      }
+      if (hasProtoPayload()) {
+        hash = (37 * hash) + PROTO_PAYLOAD_FIELD_NUMBER;
+        hash = (53 * hash) + getProtoPayload().hashCode();
+      }
+      hash = (37 * hash) + INSERT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInsertId().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      if (hasOperation()) {
+        hash = (37 * hash) + OPERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getOperation().hashCode();
+      }
+      if (hasTimestamp()) {
+        hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+        hash = (53 * hash) + getTimestamp().hashCode();
+      }
+      if (hasReceiveTimestamp()) {
+        hash = (37 * hash) + RECEIVE_TIMESTAMP_FIELD_NUMBER;
+        hash = (53 * hash) + getReceiveTimestamp().hashCode();
+      }
+      hash = (37 * hash) + SEVERITY_FIELD_NUMBER;
+      hash = (53 * hash) + severity_;
+      hash = (37 * hash) + TRACE_FIELD_NUMBER;
+      hash = (53 * hash) + getTrace().hashCode();
+      hash = (37 * hash) + SPAN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSpanId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static google.events.cloud.audit.v1.Data.LogEntryData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(google.events.cloud.audit.v1.Data.LogEntryData prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Generic log entry, used as a wrapper for Cloud Audit Logs in events.
+     * This is copied from
+     * https://github.com/googleapis/googleapis/blob/master/google/logging/v2/log_entry.proto
+     * and adapted appropriately.
+     * </pre>
+     *
+     * Protobuf type {@code google.events.cloud.audit.v1.LogEntryData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.events.cloud.audit.v1.LogEntryData)
+        google.events.cloud.audit.v1.Data.LogEntryDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_LogEntryData_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 11:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 11:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_LogEntryData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                google.events.cloud.audit.v1.Data.LogEntryData.class, google.events.cloud.audit.v1.Data.LogEntryData.Builder.class);
+      }
+
+      // Construct using google.events.cloud.audit.v1.Data.LogEntryData.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        logName_ = "";
+
+        if (resourceBuilder_ == null) {
+          resource_ = null;
+        } else {
+          resource_ = null;
+          resourceBuilder_ = null;
+        }
+        if (protoPayloadBuilder_ == null) {
+          protoPayload_ = null;
+        } else {
+          protoPayload_ = null;
+          protoPayloadBuilder_ = null;
+        }
+        insertId_ = "";
+
+        internalGetMutableLabels().clear();
+        if (operationBuilder_ == null) {
+          operation_ = null;
+        } else {
+          operation_ = null;
+          operationBuilder_ = null;
+        }
+        if (timestampBuilder_ == null) {
+          timestamp_ = null;
+        } else {
+          timestamp_ = null;
+          timestampBuilder_ = null;
+        }
+        if (receiveTimestampBuilder_ == null) {
+          receiveTimestamp_ = null;
+        } else {
+          receiveTimestamp_ = null;
+          receiveTimestampBuilder_ = null;
+        }
+        severity_ = 0;
+
+        trace_ = "";
+
+        spanId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_LogEntryData_descriptor;
+      }
+
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.LogEntryData getDefaultInstanceForType() {
+        return google.events.cloud.audit.v1.Data.LogEntryData.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.LogEntryData build() {
+        google.events.cloud.audit.v1.Data.LogEntryData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.LogEntryData buildPartial() {
+        google.events.cloud.audit.v1.Data.LogEntryData result = new google.events.cloud.audit.v1.Data.LogEntryData(this);
+        int from_bitField0_ = bitField0_;
+        result.logName_ = logName_;
+        if (resourceBuilder_ == null) {
+          result.resource_ = resource_;
+        } else {
+          result.resource_ = resourceBuilder_.build();
+        }
+        if (protoPayloadBuilder_ == null) {
+          result.protoPayload_ = protoPayload_;
+        } else {
+          result.protoPayload_ = protoPayloadBuilder_.build();
+        }
+        result.insertId_ = insertId_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        if (operationBuilder_ == null) {
+          result.operation_ = operation_;
+        } else {
+          result.operation_ = operationBuilder_.build();
+        }
+        if (timestampBuilder_ == null) {
+          result.timestamp_ = timestamp_;
+        } else {
+          result.timestamp_ = timestampBuilder_.build();
+        }
+        if (receiveTimestampBuilder_ == null) {
+          result.receiveTimestamp_ = receiveTimestamp_;
+        } else {
+          result.receiveTimestamp_ = receiveTimestampBuilder_.build();
+        }
+        result.severity_ = severity_;
+        result.trace_ = trace_;
+        result.spanId_ = spanId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof google.events.cloud.audit.v1.Data.LogEntryData) {
+          return mergeFrom((google.events.cloud.audit.v1.Data.LogEntryData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(google.events.cloud.audit.v1.Data.LogEntryData other) {
+        if (other == google.events.cloud.audit.v1.Data.LogEntryData.getDefaultInstance()) return this;
+        if (!other.getLogName().isEmpty()) {
+          logName_ = other.logName_;
+          onChanged();
+        }
+        if (other.hasResource()) {
+          mergeResource(other.getResource());
+        }
+        if (other.hasProtoPayload()) {
+          mergeProtoPayload(other.getProtoPayload());
+        }
+        if (!other.getInsertId().isEmpty()) {
+          insertId_ = other.insertId_;
+          onChanged();
+        }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
+        if (other.hasOperation()) {
+          mergeOperation(other.getOperation());
+        }
+        if (other.hasTimestamp()) {
+          mergeTimestamp(other.getTimestamp());
+        }
+        if (other.hasReceiveTimestamp()) {
+          mergeReceiveTimestamp(other.getReceiveTimestamp());
+        }
+        if (other.severity_ != 0) {
+          setSeverityValue(other.getSeverityValue());
+        }
+        if (!other.getTrace().isEmpty()) {
+          trace_ = other.trace_;
+          onChanged();
+        }
+        if (!other.getSpanId().isEmpty()) {
+          spanId_ = other.spanId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        google.events.cloud.audit.v1.Data.LogEntryData parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (google.events.cloud.audit.v1.Data.LogEntryData) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object logName_ = "";
+      /**
+       * <pre>
+       * The resource name of the log to which this log entry belongs.
+       * </pre>
+       *
+       * <code>string log_name = 12;</code>
+       * @return The logName.
+       */
+      public java.lang.String getLogName() {
+        java.lang.Object ref = logName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          logName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The resource name of the log to which this log entry belongs.
+       * </pre>
+       *
+       * <code>string log_name = 12;</code>
+       * @return The bytes for logName.
+       */
+      public com.google.protobuf.ByteString
+          getLogNameBytes() {
+        java.lang.Object ref = logName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          logName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The resource name of the log to which this log entry belongs.
+       * </pre>
+       *
+       * <code>string log_name = 12;</code>
+       * @param value The logName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLogName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        logName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The resource name of the log to which this log entry belongs.
+       * </pre>
+       *
+       * <code>string log_name = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLogName() {
+        
+        logName_ = getDefaultInstance().getLogName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The resource name of the log to which this log entry belongs.
+       * </pre>
+       *
+       * <code>string log_name = 12;</code>
+       * @param value The bytes for logName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLogNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        logName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private google.api.MonitoredResourceOuterClass.MonitoredResource resource_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          google.api.MonitoredResourceOuterClass.MonitoredResource, google.api.MonitoredResourceOuterClass.MonitoredResource.Builder, google.api.MonitoredResourceOuterClass.MonitoredResourceOrBuilder> resourceBuilder_;
+      /**
+       * <pre>
+       * The monitored resource that produced this log entry.
+       * Example: a log entry that reports a database error would be associated with
+       * the monitored resource designating the particular database that reported
+       * the error.
+       * </pre>
+       *
+       * <code>.google.api.MonitoredResource resource = 8;</code>
+       * @return Whether the resource field is set.
+       */
+      public boolean hasResource() {
+        return resourceBuilder_ != null || resource_ != null;
+      }
+      /**
+       * <pre>
+       * The monitored resource that produced this log entry.
+       * Example: a log entry that reports a database error would be associated with
+       * the monitored resource designating the particular database that reported
+       * the error.
+       * </pre>
+       *
+       * <code>.google.api.MonitoredResource resource = 8;</code>
+       * @return The resource.
+       */
+      public google.api.MonitoredResourceOuterClass.MonitoredResource getResource() {
+        if (resourceBuilder_ == null) {
+          return resource_ == null ? google.api.MonitoredResourceOuterClass.MonitoredResource.getDefaultInstance() : resource_;
+        } else {
+          return resourceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The monitored resource that produced this log entry.
+       * Example: a log entry that reports a database error would be associated with
+       * the monitored resource designating the particular database that reported
+       * the error.
+       * </pre>
+       *
+       * <code>.google.api.MonitoredResource resource = 8;</code>
+       */
+      public Builder setResource(google.api.MonitoredResourceOuterClass.MonitoredResource value) {
+        if (resourceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resource_ = value;
+          onChanged();
+        } else {
+          resourceBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The monitored resource that produced this log entry.
+       * Example: a log entry that reports a database error would be associated with
+       * the monitored resource designating the particular database that reported
+       * the error.
+       * </pre>
+       *
+       * <code>.google.api.MonitoredResource resource = 8;</code>
+       */
+      public Builder setResource(
+          google.api.MonitoredResourceOuterClass.MonitoredResource.Builder builderForValue) {
+        if (resourceBuilder_ == null) {
+          resource_ = builderForValue.build();
+          onChanged();
+        } else {
+          resourceBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The monitored resource that produced this log entry.
+       * Example: a log entry that reports a database error would be associated with
+       * the monitored resource designating the particular database that reported
+       * the error.
+       * </pre>
+       *
+       * <code>.google.api.MonitoredResource resource = 8;</code>
+       */
+      public Builder mergeResource(google.api.MonitoredResourceOuterClass.MonitoredResource value) {
+        if (resourceBuilder_ == null) {
+          if (resource_ != null) {
+            resource_ =
+              google.api.MonitoredResourceOuterClass.MonitoredResource.newBuilder(resource_).mergeFrom(value).buildPartial();
+          } else {
+            resource_ = value;
+          }
+          onChanged();
+        } else {
+          resourceBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The monitored resource that produced this log entry.
+       * Example: a log entry that reports a database error would be associated with
+       * the monitored resource designating the particular database that reported
+       * the error.
+       * </pre>
+       *
+       * <code>.google.api.MonitoredResource resource = 8;</code>
+       */
+      public Builder clearResource() {
+        if (resourceBuilder_ == null) {
+          resource_ = null;
+          onChanged();
+        } else {
+          resource_ = null;
+          resourceBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The monitored resource that produced this log entry.
+       * Example: a log entry that reports a database error would be associated with
+       * the monitored resource designating the particular database that reported
+       * the error.
+       * </pre>
+       *
+       * <code>.google.api.MonitoredResource resource = 8;</code>
+       */
+      public google.api.MonitoredResourceOuterClass.MonitoredResource.Builder getResourceBuilder() {
+        
+        onChanged();
+        return getResourceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The monitored resource that produced this log entry.
+       * Example: a log entry that reports a database error would be associated with
+       * the monitored resource designating the particular database that reported
+       * the error.
+       * </pre>
+       *
+       * <code>.google.api.MonitoredResource resource = 8;</code>
+       */
+      public google.api.MonitoredResourceOuterClass.MonitoredResourceOrBuilder getResourceOrBuilder() {
+        if (resourceBuilder_ != null) {
+          return resourceBuilder_.getMessageOrBuilder();
+        } else {
+          return resource_ == null ?
+              google.api.MonitoredResourceOuterClass.MonitoredResource.getDefaultInstance() : resource_;
+        }
+      }
+      /**
+       * <pre>
+       * The monitored resource that produced this log entry.
+       * Example: a log entry that reports a database error would be associated with
+       * the monitored resource designating the particular database that reported
+       * the error.
+       * </pre>
+       *
+       * <code>.google.api.MonitoredResource resource = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          google.api.MonitoredResourceOuterClass.MonitoredResource, google.api.MonitoredResourceOuterClass.MonitoredResource.Builder, google.api.MonitoredResourceOuterClass.MonitoredResourceOrBuilder> 
+          getResourceFieldBuilder() {
+        if (resourceBuilder_ == null) {
+          resourceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              google.api.MonitoredResourceOuterClass.MonitoredResource, google.api.MonitoredResourceOuterClass.MonitoredResource.Builder, google.api.MonitoredResourceOuterClass.MonitoredResourceOrBuilder>(
+                  getResource(),
+                  getParentForChildren(),
+                  isClean());
+          resource_ = null;
+        }
+        return resourceBuilder_;
+      }
+
+      private google.events.cloud.audit.v1.Data.AuditLog protoPayload_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          google.events.cloud.audit.v1.Data.AuditLog, google.events.cloud.audit.v1.Data.AuditLog.Builder, google.events.cloud.audit.v1.Data.AuditLogOrBuilder> protoPayloadBuilder_;
+      /**
+       * <pre>
+       * The log entry payload, which is always an AuditLog for Cloud Audit Log events.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.AuditLog proto_payload = 2;</code>
+       * @return Whether the protoPayload field is set.
+       */
+      public boolean hasProtoPayload() {
+        return protoPayloadBuilder_ != null || protoPayload_ != null;
+      }
+      /**
+       * <pre>
+       * The log entry payload, which is always an AuditLog for Cloud Audit Log events.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.AuditLog proto_payload = 2;</code>
+       * @return The protoPayload.
+       */
+      public google.events.cloud.audit.v1.Data.AuditLog getProtoPayload() {
+        if (protoPayloadBuilder_ == null) {
+          return protoPayload_ == null ? google.events.cloud.audit.v1.Data.AuditLog.getDefaultInstance() : protoPayload_;
+        } else {
+          return protoPayloadBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The log entry payload, which is always an AuditLog for Cloud Audit Log events.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.AuditLog proto_payload = 2;</code>
+       */
+      public Builder setProtoPayload(google.events.cloud.audit.v1.Data.AuditLog value) {
+        if (protoPayloadBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          protoPayload_ = value;
+          onChanged();
+        } else {
+          protoPayloadBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The log entry payload, which is always an AuditLog for Cloud Audit Log events.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.AuditLog proto_payload = 2;</code>
+       */
+      public Builder setProtoPayload(
+          google.events.cloud.audit.v1.Data.AuditLog.Builder builderForValue) {
+        if (protoPayloadBuilder_ == null) {
+          protoPayload_ = builderForValue.build();
+          onChanged();
+        } else {
+          protoPayloadBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The log entry payload, which is always an AuditLog for Cloud Audit Log events.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.AuditLog proto_payload = 2;</code>
+       */
+      public Builder mergeProtoPayload(google.events.cloud.audit.v1.Data.AuditLog value) {
+        if (protoPayloadBuilder_ == null) {
+          if (protoPayload_ != null) {
+            protoPayload_ =
+              google.events.cloud.audit.v1.Data.AuditLog.newBuilder(protoPayload_).mergeFrom(value).buildPartial();
+          } else {
+            protoPayload_ = value;
+          }
+          onChanged();
+        } else {
+          protoPayloadBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The log entry payload, which is always an AuditLog for Cloud Audit Log events.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.AuditLog proto_payload = 2;</code>
+       */
+      public Builder clearProtoPayload() {
+        if (protoPayloadBuilder_ == null) {
+          protoPayload_ = null;
+          onChanged();
+        } else {
+          protoPayload_ = null;
+          protoPayloadBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The log entry payload, which is always an AuditLog for Cloud Audit Log events.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.AuditLog proto_payload = 2;</code>
+       */
+      public google.events.cloud.audit.v1.Data.AuditLog.Builder getProtoPayloadBuilder() {
+        
+        onChanged();
+        return getProtoPayloadFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The log entry payload, which is always an AuditLog for Cloud Audit Log events.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.AuditLog proto_payload = 2;</code>
+       */
+      public google.events.cloud.audit.v1.Data.AuditLogOrBuilder getProtoPayloadOrBuilder() {
+        if (protoPayloadBuilder_ != null) {
+          return protoPayloadBuilder_.getMessageOrBuilder();
+        } else {
+          return protoPayload_ == null ?
+              google.events.cloud.audit.v1.Data.AuditLog.getDefaultInstance() : protoPayload_;
+        }
+      }
+      /**
+       * <pre>
+       * The log entry payload, which is always an AuditLog for Cloud Audit Log events.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.AuditLog proto_payload = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          google.events.cloud.audit.v1.Data.AuditLog, google.events.cloud.audit.v1.Data.AuditLog.Builder, google.events.cloud.audit.v1.Data.AuditLogOrBuilder> 
+          getProtoPayloadFieldBuilder() {
+        if (protoPayloadBuilder_ == null) {
+          protoPayloadBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              google.events.cloud.audit.v1.Data.AuditLog, google.events.cloud.audit.v1.Data.AuditLog.Builder, google.events.cloud.audit.v1.Data.AuditLogOrBuilder>(
+                  getProtoPayload(),
+                  getParentForChildren(),
+                  isClean());
+          protoPayload_ = null;
+        }
+        return protoPayloadBuilder_;
+      }
+
+      private java.lang.Object insertId_ = "";
+      /**
+       * <pre>
+       * A unique identifier for the log entry. 
+       * </pre>
+       *
+       * <code>string insert_id = 4;</code>
+       * @return The insertId.
+       */
+      public java.lang.String getInsertId() {
+        java.lang.Object ref = insertId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          insertId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A unique identifier for the log entry. 
+       * </pre>
+       *
+       * <code>string insert_id = 4;</code>
+       * @return The bytes for insertId.
+       */
+      public com.google.protobuf.ByteString
+          getInsertIdBytes() {
+        java.lang.Object ref = insertId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          insertId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A unique identifier for the log entry. 
+       * </pre>
+       *
+       * <code>string insert_id = 4;</code>
+       * @param value The insertId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInsertId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        insertId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A unique identifier for the log entry. 
+       * </pre>
+       *
+       * <code>string insert_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInsertId() {
+        
+        insertId_ = getDefaultInstance().getInsertId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A unique identifier for the log entry. 
+       * </pre>
+       *
+       * <code>string insert_id = 4;</code>
+       * @param value The bytes for insertId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInsertIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        insertId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * A set of user-defined (key, value) data that provides additional
+       * information about the log entry.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 11;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * A set of user-defined (key, value) data that provides additional
+       * information about the log entry.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 11;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * A set of user-defined (key, value) data that provides additional
+       * information about the log entry.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 11;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * A set of user-defined (key, value) data that provides additional
+       * information about the log entry.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 11;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * A set of user-defined (key, value) data that provides additional
+       * information about the log entry.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 11;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * A set of user-defined (key, value) data that provides additional
+       * information about the log entry.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 11;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * A set of user-defined (key, value) data that provides additional
+       * information about the log entry.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 11;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private google.events.cloud.audit.v1.Data.LogEntryOperation operation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          google.events.cloud.audit.v1.Data.LogEntryOperation, google.events.cloud.audit.v1.Data.LogEntryOperation.Builder, google.events.cloud.audit.v1.Data.LogEntryOperationOrBuilder> operationBuilder_;
+      /**
+       * <pre>
+       * Information about an operation associated with the log entry, if applicable.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.LogEntryOperation operation = 15;</code>
+       * @return Whether the operation field is set.
+       */
+      public boolean hasOperation() {
+        return operationBuilder_ != null || operation_ != null;
+      }
+      /**
+       * <pre>
+       * Information about an operation associated with the log entry, if applicable.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.LogEntryOperation operation = 15;</code>
+       * @return The operation.
+       */
+      public google.events.cloud.audit.v1.Data.LogEntryOperation getOperation() {
+        if (operationBuilder_ == null) {
+          return operation_ == null ? google.events.cloud.audit.v1.Data.LogEntryOperation.getDefaultInstance() : operation_;
+        } else {
+          return operationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Information about an operation associated with the log entry, if applicable.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.LogEntryOperation operation = 15;</code>
+       */
+      public Builder setOperation(google.events.cloud.audit.v1.Data.LogEntryOperation value) {
+        if (operationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          operation_ = value;
+          onChanged();
+        } else {
+          operationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about an operation associated with the log entry, if applicable.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.LogEntryOperation operation = 15;</code>
+       */
+      public Builder setOperation(
+          google.events.cloud.audit.v1.Data.LogEntryOperation.Builder builderForValue) {
+        if (operationBuilder_ == null) {
+          operation_ = builderForValue.build();
+          onChanged();
+        } else {
+          operationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about an operation associated with the log entry, if applicable.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.LogEntryOperation operation = 15;</code>
+       */
+      public Builder mergeOperation(google.events.cloud.audit.v1.Data.LogEntryOperation value) {
+        if (operationBuilder_ == null) {
+          if (operation_ != null) {
+            operation_ =
+              google.events.cloud.audit.v1.Data.LogEntryOperation.newBuilder(operation_).mergeFrom(value).buildPartial();
+          } else {
+            operation_ = value;
+          }
+          onChanged();
+        } else {
+          operationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about an operation associated with the log entry, if applicable.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.LogEntryOperation operation = 15;</code>
+       */
+      public Builder clearOperation() {
+        if (operationBuilder_ == null) {
+          operation_ = null;
+          onChanged();
+        } else {
+          operation_ = null;
+          operationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about an operation associated with the log entry, if applicable.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.LogEntryOperation operation = 15;</code>
+       */
+      public google.events.cloud.audit.v1.Data.LogEntryOperation.Builder getOperationBuilder() {
+        
+        onChanged();
+        return getOperationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Information about an operation associated with the log entry, if applicable.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.LogEntryOperation operation = 15;</code>
+       */
+      public google.events.cloud.audit.v1.Data.LogEntryOperationOrBuilder getOperationOrBuilder() {
+        if (operationBuilder_ != null) {
+          return operationBuilder_.getMessageOrBuilder();
+        } else {
+          return operation_ == null ?
+              google.events.cloud.audit.v1.Data.LogEntryOperation.getDefaultInstance() : operation_;
+        }
+      }
+      /**
+       * <pre>
+       * Information about an operation associated with the log entry, if applicable.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.LogEntryOperation operation = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          google.events.cloud.audit.v1.Data.LogEntryOperation, google.events.cloud.audit.v1.Data.LogEntryOperation.Builder, google.events.cloud.audit.v1.Data.LogEntryOperationOrBuilder> 
+          getOperationFieldBuilder() {
+        if (operationBuilder_ == null) {
+          operationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              google.events.cloud.audit.v1.Data.LogEntryOperation, google.events.cloud.audit.v1.Data.LogEntryOperation.Builder, google.events.cloud.audit.v1.Data.LogEntryOperationOrBuilder>(
+                  getOperation(),
+                  getParentForChildren(),
+                  isClean());
+          operation_ = null;
+        }
+        return operationBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp timestamp_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
+      /**
+       * <pre>
+       * The time the event described by the log entry occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 9;</code>
+       * @return Whether the timestamp field is set.
+       */
+      public boolean hasTimestamp() {
+        return timestampBuilder_ != null || timestamp_ != null;
+      }
+      /**
+       * <pre>
+       * The time the event described by the log entry occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 9;</code>
+       * @return The timestamp.
+       */
+      public com.google.protobuf.Timestamp getTimestamp() {
+        if (timestampBuilder_ == null) {
+          return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        } else {
+          return timestampBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time the event described by the log entry occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 9;</code>
+       */
+      public Builder setTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          timestamp_ = value;
+          onChanged();
+        } else {
+          timestampBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the event described by the log entry occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 9;</code>
+       */
+      public Builder setTimestamp(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (timestampBuilder_ == null) {
+          timestamp_ = builderForValue.build();
+          onChanged();
+        } else {
+          timestampBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the event described by the log entry occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 9;</code>
+       */
+      public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
+        if (timestampBuilder_ == null) {
+          if (timestamp_ != null) {
+            timestamp_ =
+              com.google.protobuf.Timestamp.newBuilder(timestamp_).mergeFrom(value).buildPartial();
+          } else {
+            timestamp_ = value;
+          }
+          onChanged();
+        } else {
+          timestampBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the event described by the log entry occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 9;</code>
+       */
+      public Builder clearTimestamp() {
+        if (timestampBuilder_ == null) {
+          timestamp_ = null;
+          onChanged();
+        } else {
+          timestamp_ = null;
+          timestampBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the event described by the log entry occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 9;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
+        
+        onChanged();
+        return getTimestampFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time the event described by the log entry occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 9;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
+        if (timestampBuilder_ != null) {
+          return timestampBuilder_.getMessageOrBuilder();
+        } else {
+          return timestamp_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
+        }
+      }
+      /**
+       * <pre>
+       * The time the event described by the log entry occurred.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp timestamp = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTimestampFieldBuilder() {
+        if (timestampBuilder_ == null) {
+          timestampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTimestamp(),
+                  getParentForChildren(),
+                  isClean());
+          timestamp_ = null;
+        }
+        return timestampBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp receiveTimestamp_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> receiveTimestampBuilder_;
+      /**
+       * <pre>
+       * The time the log entry was received by Logging.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp receive_timestamp = 24;</code>
+       * @return Whether the receiveTimestamp field is set.
+       */
+      public boolean hasReceiveTimestamp() {
+        return receiveTimestampBuilder_ != null || receiveTimestamp_ != null;
+      }
+      /**
+       * <pre>
+       * The time the log entry was received by Logging.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp receive_timestamp = 24;</code>
+       * @return The receiveTimestamp.
+       */
+      public com.google.protobuf.Timestamp getReceiveTimestamp() {
+        if (receiveTimestampBuilder_ == null) {
+          return receiveTimestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : receiveTimestamp_;
+        } else {
+          return receiveTimestampBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time the log entry was received by Logging.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp receive_timestamp = 24;</code>
+       */
+      public Builder setReceiveTimestamp(com.google.protobuf.Timestamp value) {
+        if (receiveTimestampBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          receiveTimestamp_ = value;
+          onChanged();
+        } else {
+          receiveTimestampBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the log entry was received by Logging.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp receive_timestamp = 24;</code>
+       */
+      public Builder setReceiveTimestamp(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (receiveTimestampBuilder_ == null) {
+          receiveTimestamp_ = builderForValue.build();
+          onChanged();
+        } else {
+          receiveTimestampBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the log entry was received by Logging.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp receive_timestamp = 24;</code>
+       */
+      public Builder mergeReceiveTimestamp(com.google.protobuf.Timestamp value) {
+        if (receiveTimestampBuilder_ == null) {
+          if (receiveTimestamp_ != null) {
+            receiveTimestamp_ =
+              com.google.protobuf.Timestamp.newBuilder(receiveTimestamp_).mergeFrom(value).buildPartial();
+          } else {
+            receiveTimestamp_ = value;
+          }
+          onChanged();
+        } else {
+          receiveTimestampBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the log entry was received by Logging.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp receive_timestamp = 24;</code>
+       */
+      public Builder clearReceiveTimestamp() {
+        if (receiveTimestampBuilder_ == null) {
+          receiveTimestamp_ = null;
+          onChanged();
+        } else {
+          receiveTimestamp_ = null;
+          receiveTimestampBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time the log entry was received by Logging.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp receive_timestamp = 24;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getReceiveTimestampBuilder() {
+        
+        onChanged();
+        return getReceiveTimestampFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time the log entry was received by Logging.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp receive_timestamp = 24;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getReceiveTimestampOrBuilder() {
+        if (receiveTimestampBuilder_ != null) {
+          return receiveTimestampBuilder_.getMessageOrBuilder();
+        } else {
+          return receiveTimestamp_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : receiveTimestamp_;
+        }
+      }
+      /**
+       * <pre>
+       * The time the log entry was received by Logging.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp receive_timestamp = 24;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getReceiveTimestampFieldBuilder() {
+        if (receiveTimestampBuilder_ == null) {
+          receiveTimestampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getReceiveTimestamp(),
+                  getParentForChildren(),
+                  isClean());
+          receiveTimestamp_ = null;
+        }
+        return receiveTimestampBuilder_;
+      }
+
+      private int severity_ = 0;
+      /**
+       * <pre>
+       * The severity of the log entry.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.LogSeverity severity = 10;</code>
+       * @return The enum numeric value on the wire for severity.
+       */
+      @java.lang.Override public int getSeverityValue() {
+        return severity_;
+      }
+      /**
+       * <pre>
+       * The severity of the log entry.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.LogSeverity severity = 10;</code>
+       * @param value The enum numeric value on the wire for severity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeverityValue(int value) {
+        
+        severity_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The severity of the log entry.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.LogSeverity severity = 10;</code>
+       * @return The severity.
+       */
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.LogSeverity getSeverity() {
+        @SuppressWarnings("deprecation")
+        google.events.cloud.audit.v1.Data.LogSeverity result = google.events.cloud.audit.v1.Data.LogSeverity.valueOf(severity_);
+        return result == null ? google.events.cloud.audit.v1.Data.LogSeverity.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The severity of the log entry.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.LogSeverity severity = 10;</code>
+       * @param value The severity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeverity(google.events.cloud.audit.v1.Data.LogSeverity value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        severity_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The severity of the log entry.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.LogSeverity severity = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeverity() {
+        
+        severity_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object trace_ = "";
+      /**
+       * <pre>
+       * Resource name of the trace associated with the log entry, if any. If it
+       * contains a relative resource name, the name is assumed to be relative to
+       * `//tracing.googleapis.com`. Example:
+       * `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
+       * </pre>
+       *
+       * <code>string trace = 22;</code>
+       * @return The trace.
+       */
+      public java.lang.String getTrace() {
+        java.lang.Object ref = trace_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          trace_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Resource name of the trace associated with the log entry, if any. If it
+       * contains a relative resource name, the name is assumed to be relative to
+       * `//tracing.googleapis.com`. Example:
+       * `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
+       * </pre>
+       *
+       * <code>string trace = 22;</code>
+       * @return The bytes for trace.
+       */
+      public com.google.protobuf.ByteString
+          getTraceBytes() {
+        java.lang.Object ref = trace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          trace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Resource name of the trace associated with the log entry, if any. If it
+       * contains a relative resource name, the name is assumed to be relative to
+       * `//tracing.googleapis.com`. Example:
+       * `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
+       * </pre>
+       *
+       * <code>string trace = 22;</code>
+       * @param value The trace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrace(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        trace_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource name of the trace associated with the log entry, if any. If it
+       * contains a relative resource name, the name is assumed to be relative to
+       * `//tracing.googleapis.com`. Example:
+       * `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
+       * </pre>
+       *
+       * <code>string trace = 22;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrace() {
+        
+        trace_ = getDefaultInstance().getTrace();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource name of the trace associated with the log entry, if any. If it
+       * contains a relative resource name, the name is assumed to be relative to
+       * `//tracing.googleapis.com`. Example:
+       * `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
+       * </pre>
+       *
+       * <code>string trace = 22;</code>
+       * @param value The bytes for trace to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTraceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        trace_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object spanId_ = "";
+      /**
+       * <pre>
+       * The span ID within the trace associated with the log entry, if any.
+       * For Trace spans, this is the same format that the Trace API v2 uses: a
+       * 16-character hexadecimal encoding of an 8-byte array, such as
+       * `000000000000004a`.
+       * </pre>
+       *
+       * <code>string span_id = 27;</code>
+       * @return The spanId.
+       */
+      public java.lang.String getSpanId() {
+        java.lang.Object ref = spanId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          spanId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The span ID within the trace associated with the log entry, if any.
+       * For Trace spans, this is the same format that the Trace API v2 uses: a
+       * 16-character hexadecimal encoding of an 8-byte array, such as
+       * `000000000000004a`.
+       * </pre>
+       *
+       * <code>string span_id = 27;</code>
+       * @return The bytes for spanId.
+       */
+      public com.google.protobuf.ByteString
+          getSpanIdBytes() {
+        java.lang.Object ref = spanId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          spanId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The span ID within the trace associated with the log entry, if any.
+       * For Trace spans, this is the same format that the Trace API v2 uses: a
+       * 16-character hexadecimal encoding of an 8-byte array, such as
+       * `000000000000004a`.
+       * </pre>
+       *
+       * <code>string span_id = 27;</code>
+       * @param value The spanId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpanId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        spanId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The span ID within the trace associated with the log entry, if any.
+       * For Trace spans, this is the same format that the Trace API v2 uses: a
+       * 16-character hexadecimal encoding of an 8-byte array, such as
+       * `000000000000004a`.
+       * </pre>
+       *
+       * <code>string span_id = 27;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpanId() {
+        
+        spanId_ = getDefaultInstance().getSpanId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The span ID within the trace associated with the log entry, if any.
+       * For Trace spans, this is the same format that the Trace API v2 uses: a
+       * 16-character hexadecimal encoding of an 8-byte array, such as
+       * `000000000000004a`.
+       * </pre>
+       *
+       * <code>string span_id = 27;</code>
+       * @param value The bytes for spanId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpanIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        spanId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.events.cloud.audit.v1.LogEntryData)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.events.cloud.audit.v1.LogEntryData)
+    private static final google.events.cloud.audit.v1.Data.LogEntryData DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new google.events.cloud.audit.v1.Data.LogEntryData();
+    }
+
+    public static google.events.cloud.audit.v1.Data.LogEntryData getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LogEntryData>
+        PARSER = new com.google.protobuf.AbstractParser<LogEntryData>() {
+      @java.lang.Override
+      public LogEntryData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LogEntryData(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LogEntryData> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LogEntryData> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public google.events.cloud.audit.v1.Data.LogEntryData getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LogEntryOperationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.events.cloud.audit.v1.LogEntryOperation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * An arbitrary operation identifier. Log entries with the same
+     * identifier are assumed to be part of the same operation.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * An arbitrary operation identifier. Log entries with the same
+     * identifier are assumed to be part of the same operation.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * An arbitrary producer identifier. The combination of `id` and
+     * `producer` must be globally unique. Examples for `producer`:
+     * `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
+     * </pre>
+     *
+     * <code>string producer = 2;</code>
+     * @return The producer.
+     */
+    java.lang.String getProducer();
+    /**
+     * <pre>
+     * An arbitrary producer identifier. The combination of `id` and
+     * `producer` must be globally unique. Examples for `producer`:
+     * `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
+     * </pre>
+     *
+     * <code>string producer = 2;</code>
+     * @return The bytes for producer.
+     */
+    com.google.protobuf.ByteString
+        getProducerBytes();
+
+    /**
+     * <pre>
+     * True if this is the first log entry in the operation.
+     * </pre>
+     *
+     * <code>bool first = 3;</code>
+     * @return The first.
+     */
+    boolean getFirst();
+
+    /**
+     * <pre>
+     * True if this is the last log entry in the operation.
+     * </pre>
+     *
+     * <code>bool last = 4;</code>
+     * @return The last.
+     */
+    boolean getLast();
+  }
+  /**
+   * <pre>
+   * Additional information about a potentially long-running operation with which
+   * a log entry is associated.
+   * </pre>
+   *
+   * Protobuf type {@code google.events.cloud.audit.v1.LogEntryOperation}
+   */
+  public static final class LogEntryOperation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.events.cloud.audit.v1.LogEntryOperation)
+      LogEntryOperationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LogEntryOperation.newBuilder() to construct.
+    private LogEntryOperation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LogEntryOperation() {
+      id_ = "";
+      producer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LogEntryOperation();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LogEntryOperation(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              producer_ = s;
+              break;
+            }
+            case 24: {
+
+              first_ = input.readBool();
+              break;
+            }
+            case 32: {
+
+              last_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_LogEntryOperation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_LogEntryOperation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              google.events.cloud.audit.v1.Data.LogEntryOperation.class, google.events.cloud.audit.v1.Data.LogEntryOperation.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * An arbitrary operation identifier. Log entries with the same
+     * identifier are assumed to be part of the same operation.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * An arbitrary operation identifier. Log entries with the same
+     * identifier are assumed to be part of the same operation.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PRODUCER_FIELD_NUMBER = 2;
+    private volatile java.lang.Object producer_;
+    /**
+     * <pre>
+     * An arbitrary producer identifier. The combination of `id` and
+     * `producer` must be globally unique. Examples for `producer`:
+     * `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
+     * </pre>
+     *
+     * <code>string producer = 2;</code>
+     * @return The producer.
+     */
+    @java.lang.Override
+    public java.lang.String getProducer() {
+      java.lang.Object ref = producer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        producer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * An arbitrary producer identifier. The combination of `id` and
+     * `producer` must be globally unique. Examples for `producer`:
+     * `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
+     * </pre>
+     *
+     * <code>string producer = 2;</code>
+     * @return The bytes for producer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProducerBytes() {
+      java.lang.Object ref = producer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        producer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FIRST_FIELD_NUMBER = 3;
+    private boolean first_;
+    /**
+     * <pre>
+     * True if this is the first log entry in the operation.
+     * </pre>
+     *
+     * <code>bool first = 3;</code>
+     * @return The first.
+     */
+    @java.lang.Override
+    public boolean getFirst() {
+      return first_;
+    }
+
+    public static final int LAST_FIELD_NUMBER = 4;
+    private boolean last_;
+    /**
+     * <pre>
+     * True if this is the last log entry in the operation.
+     * </pre>
+     *
+     * <code>bool last = 4;</code>
+     * @return The last.
+     */
+    @java.lang.Override
+    public boolean getLast() {
+      return last_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!getProducerBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, producer_);
+      }
+      if (first_ != false) {
+        output.writeBool(3, first_);
+      }
+      if (last_ != false) {
+        output.writeBool(4, last_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!getProducerBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, producer_);
+      }
+      if (first_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, first_);
+      }
+      if (last_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, last_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof google.events.cloud.audit.v1.Data.LogEntryOperation)) {
+        return super.equals(obj);
+      }
+      google.events.cloud.audit.v1.Data.LogEntryOperation other = (google.events.cloud.audit.v1.Data.LogEntryOperation) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getProducer()
+          .equals(other.getProducer())) return false;
+      if (getFirst()
+          != other.getFirst()) return false;
+      if (getLast()
+          != other.getLast()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + PRODUCER_FIELD_NUMBER;
+      hash = (53 * hash) + getProducer().hashCode();
+      hash = (37 * hash) + FIRST_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getFirst());
+      hash = (37 * hash) + LAST_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getLast());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static google.events.cloud.audit.v1.Data.LogEntryOperation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryOperation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryOperation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryOperation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryOperation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryOperation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryOperation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryOperation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryOperation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryOperation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryOperation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static google.events.cloud.audit.v1.Data.LogEntryOperation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(google.events.cloud.audit.v1.Data.LogEntryOperation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Additional information about a potentially long-running operation with which
+     * a log entry is associated.
+     * </pre>
+     *
+     * Protobuf type {@code google.events.cloud.audit.v1.LogEntryOperation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.events.cloud.audit.v1.LogEntryOperation)
+        google.events.cloud.audit.v1.Data.LogEntryOperationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_LogEntryOperation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_LogEntryOperation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                google.events.cloud.audit.v1.Data.LogEntryOperation.class, google.events.cloud.audit.v1.Data.LogEntryOperation.Builder.class);
+      }
+
+      // Construct using google.events.cloud.audit.v1.Data.LogEntryOperation.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        producer_ = "";
+
+        first_ = false;
+
+        last_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_LogEntryOperation_descriptor;
+      }
+
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.LogEntryOperation getDefaultInstanceForType() {
+        return google.events.cloud.audit.v1.Data.LogEntryOperation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.LogEntryOperation build() {
+        google.events.cloud.audit.v1.Data.LogEntryOperation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.LogEntryOperation buildPartial() {
+        google.events.cloud.audit.v1.Data.LogEntryOperation result = new google.events.cloud.audit.v1.Data.LogEntryOperation(this);
+        result.id_ = id_;
+        result.producer_ = producer_;
+        result.first_ = first_;
+        result.last_ = last_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof google.events.cloud.audit.v1.Data.LogEntryOperation) {
+          return mergeFrom((google.events.cloud.audit.v1.Data.LogEntryOperation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(google.events.cloud.audit.v1.Data.LogEntryOperation other) {
+        if (other == google.events.cloud.audit.v1.Data.LogEntryOperation.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getProducer().isEmpty()) {
+          producer_ = other.producer_;
+          onChanged();
+        }
+        if (other.getFirst() != false) {
+          setFirst(other.getFirst());
+        }
+        if (other.getLast() != false) {
+          setLast(other.getLast());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        google.events.cloud.audit.v1.Data.LogEntryOperation parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (google.events.cloud.audit.v1.Data.LogEntryOperation) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * An arbitrary operation identifier. Log entries with the same
+       * identifier are assumed to be part of the same operation.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * An arbitrary operation identifier. Log entries with the same
+       * identifier are assumed to be part of the same operation.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * An arbitrary operation identifier. Log entries with the same
+       * identifier are assumed to be part of the same operation.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An arbitrary operation identifier. Log entries with the same
+       * identifier are assumed to be part of the same operation.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An arbitrary operation identifier. Log entries with the same
+       * identifier are assumed to be part of the same operation.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object producer_ = "";
+      /**
+       * <pre>
+       * An arbitrary producer identifier. The combination of `id` and
+       * `producer` must be globally unique. Examples for `producer`:
+       * `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
+       * </pre>
+       *
+       * <code>string producer = 2;</code>
+       * @return The producer.
+       */
+      public java.lang.String getProducer() {
+        java.lang.Object ref = producer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          producer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * An arbitrary producer identifier. The combination of `id` and
+       * `producer` must be globally unique. Examples for `producer`:
+       * `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
+       * </pre>
+       *
+       * <code>string producer = 2;</code>
+       * @return The bytes for producer.
+       */
+      public com.google.protobuf.ByteString
+          getProducerBytes() {
+        java.lang.Object ref = producer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          producer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * An arbitrary producer identifier. The combination of `id` and
+       * `producer` must be globally unique. Examples for `producer`:
+       * `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
+       * </pre>
+       *
+       * <code>string producer = 2;</code>
+       * @param value The producer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProducer(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        producer_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An arbitrary producer identifier. The combination of `id` and
+       * `producer` must be globally unique. Examples for `producer`:
+       * `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
+       * </pre>
+       *
+       * <code>string producer = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProducer() {
+        
+        producer_ = getDefaultInstance().getProducer();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An arbitrary producer identifier. The combination of `id` and
+       * `producer` must be globally unique. Examples for `producer`:
+       * `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
+       * </pre>
+       *
+       * <code>string producer = 2;</code>
+       * @param value The bytes for producer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProducerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        producer_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean first_ ;
+      /**
+       * <pre>
+       * True if this is the first log entry in the operation.
+       * </pre>
+       *
+       * <code>bool first = 3;</code>
+       * @return The first.
+       */
+      @java.lang.Override
+      public boolean getFirst() {
+        return first_;
+      }
+      /**
+       * <pre>
+       * True if this is the first log entry in the operation.
+       * </pre>
+       *
+       * <code>bool first = 3;</code>
+       * @param value The first to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFirst(boolean value) {
+        
+        first_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * True if this is the first log entry in the operation.
+       * </pre>
+       *
+       * <code>bool first = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFirst() {
+        
+        first_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean last_ ;
+      /**
+       * <pre>
+       * True if this is the last log entry in the operation.
+       * </pre>
+       *
+       * <code>bool last = 4;</code>
+       * @return The last.
+       */
+      @java.lang.Override
+      public boolean getLast() {
+        return last_;
+      }
+      /**
+       * <pre>
+       * True if this is the last log entry in the operation.
+       * </pre>
+       *
+       * <code>bool last = 4;</code>
+       * @param value The last to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLast(boolean value) {
+        
+        last_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * True if this is the last log entry in the operation.
+       * </pre>
+       *
+       * <code>bool last = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLast() {
+        
+        last_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.events.cloud.audit.v1.LogEntryOperation)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.events.cloud.audit.v1.LogEntryOperation)
+    private static final google.events.cloud.audit.v1.Data.LogEntryOperation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new google.events.cloud.audit.v1.Data.LogEntryOperation();
+    }
+
+    public static google.events.cloud.audit.v1.Data.LogEntryOperation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LogEntryOperation>
+        PARSER = new com.google.protobuf.AbstractParser<LogEntryOperation>() {
+      @java.lang.Override
+      public LogEntryOperation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LogEntryOperation(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LogEntryOperation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LogEntryOperation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public google.events.cloud.audit.v1.Data.LogEntryOperation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AuditLogOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.events.cloud.audit.v1.AuditLog)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -95,6 +4490,78 @@ public final class Data {
      */
     com.google.protobuf.ByteString
         getResourceNameBytes();
+
+    /**
+     * <pre>
+     * The resource location information.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ResourceLocation resource_location = 20;</code>
+     * @return Whether the resourceLocation field is set.
+     */
+    boolean hasResourceLocation();
+    /**
+     * <pre>
+     * The resource location information.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ResourceLocation resource_location = 20;</code>
+     * @return The resourceLocation.
+     */
+    google.events.cloud.audit.v1.Data.ResourceLocation getResourceLocation();
+    /**
+     * <pre>
+     * The resource location information.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ResourceLocation resource_location = 20;</code>
+     */
+    google.events.cloud.audit.v1.Data.ResourceLocationOrBuilder getResourceLocationOrBuilder();
+
+    /**
+     * <pre>
+     * The resource's original state before mutation. Present only for
+     * operations which have successfully modified the targeted resource(s).
+     * In general, this field should contain all changed fields, except those
+     * that are already been included in `request`, `response`, `metadata` or
+     * `service_data` fields.
+     * When the JSON object represented here has a proto equivalent,
+     * the proto name will be indicated in the `&#64;type` property.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+     * @return Whether the resourceOriginalState field is set.
+     */
+    boolean hasResourceOriginalState();
+    /**
+     * <pre>
+     * The resource's original state before mutation. Present only for
+     * operations which have successfully modified the targeted resource(s).
+     * In general, this field should contain all changed fields, except those
+     * that are already been included in `request`, `response`, `metadata` or
+     * `service_data` fields.
+     * When the JSON object represented here has a proto equivalent,
+     * the proto name will be indicated in the `&#64;type` property.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+     * @return The resourceOriginalState.
+     */
+    com.google.protobuf.Struct getResourceOriginalState();
+    /**
+     * <pre>
+     * The resource's original state before mutation. Present only for
+     * operations which have successfully modified the targeted resource(s).
+     * In general, this field should contain all changed fields, except those
+     * that are already been included in `request`, `response`, `metadata` or
+     * `service_data` fields.
+     * When the JSON object represented here has a proto equivalent,
+     * the proto name will be indicated in the `&#64;type` property.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+     */
+    com.google.protobuf.StructOrBuilder getResourceOriginalStateOrBuilder();
 
     /**
      * <pre>
@@ -329,6 +4796,37 @@ public final class Data {
     /**
      * <pre>
      * Other service-specific data about the request, response, and other
+     * information associated with the current audited event.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct metadata = 18;</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <pre>
+     * Other service-specific data about the request, response, and other
+     * information associated with the current audited event.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct metadata = 18;</code>
+     * @return The metadata.
+     */
+    com.google.protobuf.Struct getMetadata();
+    /**
+     * <pre>
+     * Other service-specific data about the request, response, and other
+     * information associated with the current audited event.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct metadata = 18;</code>
+     */
+    com.google.protobuf.StructOrBuilder getMetadataOrBuilder();
+
+    /**
+     * <pre>
+     * Deprecated, use `metadata` field instead.
+     * Other service-specific data about the request, response, and other
      * activities.
      * When the JSON object represented here has a proto equivalent, the proto
      * name will be indicated in the `&#64;type` property.
@@ -340,6 +4838,7 @@ public final class Data {
     boolean hasServiceData();
     /**
      * <pre>
+     * Deprecated, use `metadata` field instead.
      * Other service-specific data about the request, response, and other
      * activities.
      * When the JSON object represented here has a proto equivalent, the proto
@@ -352,6 +4851,7 @@ public final class Data {
     com.google.protobuf.Struct getServiceData();
     /**
      * <pre>
+     * Deprecated, use `metadata` field instead.
      * Other service-specific data about the request, response, and other
      * activities.
      * When the JSON object represented here has a proto equivalent, the proto
@@ -370,18 +4870,18 @@ public final class Data {
    * but changing service_data from Any to Struct.
    * </pre>
    *
-   * Protobuf type {@code google.events.cloud.audit.v1.AuditLogData}
+   * Protobuf type {@code google.events.cloud.audit.v1.AuditLog}
    */
-  public static final class AuditLogData extends
+  public static final class AuditLog extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:google.events.cloud.audit.v1.AuditLogData)
-      AuditLogDataOrBuilder {
+      // @@protoc_insertion_point(message_implements:google.events.cloud.audit.v1.AuditLog)
+      AuditLogOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AuditLogData.newBuilder() to construct.
-    private AuditLogData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AuditLog.newBuilder() to construct.
+    private AuditLog(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AuditLogData() {
+    private AuditLog() {
       serviceName_ = "";
       methodName_ = "";
       resourceName_ = "";
@@ -392,7 +4892,7 @@ public final class Data {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AuditLogData();
+      return new AuditLog();
     }
 
     @java.lang.Override
@@ -400,7 +4900,7 @@ public final class Data {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AuditLogData(
+    private AuditLog(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -529,6 +5029,45 @@ public final class Data {
 
               break;
             }
+            case 146: {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (metadata_ != null) {
+                subBuilder = metadata_.toBuilder();
+              }
+              metadata_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metadata_);
+                metadata_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 154: {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (resourceOriginalState_ != null) {
+                subBuilder = resourceOriginalState_.toBuilder();
+              }
+              resourceOriginalState_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resourceOriginalState_);
+                resourceOriginalState_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 162: {
+              google.events.cloud.audit.v1.Data.ResourceLocation.Builder subBuilder = null;
+              if (resourceLocation_ != null) {
+                subBuilder = resourceLocation_.toBuilder();
+              }
+              resourceLocation_ = input.readMessage(google.events.cloud.audit.v1.Data.ResourceLocation.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resourceLocation_);
+                resourceLocation_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -553,15 +5092,15 @@ public final class Data {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_AuditLogData_descriptor;
+      return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_AuditLog_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_AuditLogData_fieldAccessorTable
+      return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_AuditLog_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              google.events.cloud.audit.v1.Data.AuditLogData.class, google.events.cloud.audit.v1.Data.AuditLogData.Builder.class);
+              google.events.cloud.audit.v1.Data.AuditLog.class, google.events.cloud.audit.v1.Data.AuditLog.Builder.class);
     }
 
     public static final int SERVICE_NAME_FIELD_NUMBER = 7;
@@ -718,6 +5257,100 @@ public final class Data {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int RESOURCE_LOCATION_FIELD_NUMBER = 20;
+    private google.events.cloud.audit.v1.Data.ResourceLocation resourceLocation_;
+    /**
+     * <pre>
+     * The resource location information.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ResourceLocation resource_location = 20;</code>
+     * @return Whether the resourceLocation field is set.
+     */
+    @java.lang.Override
+    public boolean hasResourceLocation() {
+      return resourceLocation_ != null;
+    }
+    /**
+     * <pre>
+     * The resource location information.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ResourceLocation resource_location = 20;</code>
+     * @return The resourceLocation.
+     */
+    @java.lang.Override
+    public google.events.cloud.audit.v1.Data.ResourceLocation getResourceLocation() {
+      return resourceLocation_ == null ? google.events.cloud.audit.v1.Data.ResourceLocation.getDefaultInstance() : resourceLocation_;
+    }
+    /**
+     * <pre>
+     * The resource location information.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ResourceLocation resource_location = 20;</code>
+     */
+    @java.lang.Override
+    public google.events.cloud.audit.v1.Data.ResourceLocationOrBuilder getResourceLocationOrBuilder() {
+      return getResourceLocation();
+    }
+
+    public static final int RESOURCE_ORIGINAL_STATE_FIELD_NUMBER = 19;
+    private com.google.protobuf.Struct resourceOriginalState_;
+    /**
+     * <pre>
+     * The resource's original state before mutation. Present only for
+     * operations which have successfully modified the targeted resource(s).
+     * In general, this field should contain all changed fields, except those
+     * that are already been included in `request`, `response`, `metadata` or
+     * `service_data` fields.
+     * When the JSON object represented here has a proto equivalent,
+     * the proto name will be indicated in the `&#64;type` property.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+     * @return Whether the resourceOriginalState field is set.
+     */
+    @java.lang.Override
+    public boolean hasResourceOriginalState() {
+      return resourceOriginalState_ != null;
+    }
+    /**
+     * <pre>
+     * The resource's original state before mutation. Present only for
+     * operations which have successfully modified the targeted resource(s).
+     * In general, this field should contain all changed fields, except those
+     * that are already been included in `request`, `response`, `metadata` or
+     * `service_data` fields.
+     * When the JSON object represented here has a proto equivalent,
+     * the proto name will be indicated in the `&#64;type` property.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+     * @return The resourceOriginalState.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getResourceOriginalState() {
+      return resourceOriginalState_ == null ? com.google.protobuf.Struct.getDefaultInstance() : resourceOriginalState_;
+    }
+    /**
+     * <pre>
+     * The resource's original state before mutation. Present only for
+     * operations which have successfully modified the targeted resource(s).
+     * In general, this field should contain all changed fields, except those
+     * that are already been included in `request`, `response`, `metadata` or
+     * `service_data` fields.
+     * When the JSON object represented here has a proto equivalent,
+     * the proto name will be indicated in the `&#64;type` property.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StructOrBuilder getResourceOriginalStateOrBuilder() {
+      return getResourceOriginalState();
     }
 
     public static final int NUM_RESPONSE_ITEMS_FIELD_NUMBER = 12;
@@ -1026,10 +5659,52 @@ public final class Data {
       return getResponse();
     }
 
+    public static final int METADATA_FIELD_NUMBER = 18;
+    private com.google.protobuf.Struct metadata_;
+    /**
+     * <pre>
+     * Other service-specific data about the request, response, and other
+     * information associated with the current audited event.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct metadata = 18;</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return metadata_ != null;
+    }
+    /**
+     * <pre>
+     * Other service-specific data about the request, response, and other
+     * information associated with the current audited event.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct metadata = 18;</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getMetadata() {
+      return metadata_ == null ? com.google.protobuf.Struct.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <pre>
+     * Other service-specific data about the request, response, and other
+     * information associated with the current audited event.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct metadata = 18;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StructOrBuilder getMetadataOrBuilder() {
+      return getMetadata();
+    }
+
     public static final int SERVICE_DATA_FIELD_NUMBER = 15;
     private com.google.protobuf.Struct serviceData_;
     /**
      * <pre>
+     * Deprecated, use `metadata` field instead.
      * Other service-specific data about the request, response, and other
      * activities.
      * When the JSON object represented here has a proto equivalent, the proto
@@ -1045,6 +5720,7 @@ public final class Data {
     }
     /**
      * <pre>
+     * Deprecated, use `metadata` field instead.
      * Other service-specific data about the request, response, and other
      * activities.
      * When the JSON object represented here has a proto equivalent, the proto
@@ -1060,6 +5736,7 @@ public final class Data {
     }
     /**
      * <pre>
+     * Deprecated, use `metadata` field instead.
      * Other service-specific data about the request, response, and other
      * activities.
      * When the JSON object represented here has a proto equivalent, the proto
@@ -1120,6 +5797,15 @@ public final class Data {
       if (response_ != null) {
         output.writeMessage(17, getResponse());
       }
+      if (metadata_ != null) {
+        output.writeMessage(18, getMetadata());
+      }
+      if (resourceOriginalState_ != null) {
+        output.writeMessage(19, getResourceOriginalState());
+      }
+      if (resourceLocation_ != null) {
+        output.writeMessage(20, getResourceLocation());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1170,6 +5856,18 @@ public final class Data {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getResponse());
       }
+      if (metadata_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, getMetadata());
+      }
+      if (resourceOriginalState_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getResourceOriginalState());
+      }
+      if (resourceLocation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, getResourceLocation());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1180,10 +5878,10 @@ public final class Data {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof google.events.cloud.audit.v1.Data.AuditLogData)) {
+      if (!(obj instanceof google.events.cloud.audit.v1.Data.AuditLog)) {
         return super.equals(obj);
       }
-      google.events.cloud.audit.v1.Data.AuditLogData other = (google.events.cloud.audit.v1.Data.AuditLogData) obj;
+      google.events.cloud.audit.v1.Data.AuditLog other = (google.events.cloud.audit.v1.Data.AuditLog) obj;
 
       if (!getServiceName()
           .equals(other.getServiceName())) return false;
@@ -1191,6 +5889,16 @@ public final class Data {
           .equals(other.getMethodName())) return false;
       if (!getResourceName()
           .equals(other.getResourceName())) return false;
+      if (hasResourceLocation() != other.hasResourceLocation()) return false;
+      if (hasResourceLocation()) {
+        if (!getResourceLocation()
+            .equals(other.getResourceLocation())) return false;
+      }
+      if (hasResourceOriginalState() != other.hasResourceOriginalState()) return false;
+      if (hasResourceOriginalState()) {
+        if (!getResourceOriginalState()
+            .equals(other.getResourceOriginalState())) return false;
+      }
       if (getNumResponseItems()
           != other.getNumResponseItems()) return false;
       if (hasStatus() != other.hasStatus()) return false;
@@ -1220,6 +5928,11 @@ public final class Data {
         if (!getResponse()
             .equals(other.getResponse())) return false;
       }
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
       if (hasServiceData() != other.hasServiceData()) return false;
       if (hasServiceData()) {
         if (!getServiceData()
@@ -1242,6 +5955,14 @@ public final class Data {
       hash = (53 * hash) + getMethodName().hashCode();
       hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getResourceName().hashCode();
+      if (hasResourceLocation()) {
+        hash = (37 * hash) + RESOURCE_LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getResourceLocation().hashCode();
+      }
+      if (hasResourceOriginalState()) {
+        hash = (37 * hash) + RESOURCE_ORIGINAL_STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getResourceOriginalState().hashCode();
+      }
       hash = (37 * hash) + NUM_RESPONSE_ITEMS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getNumResponseItems());
@@ -1269,6 +5990,10 @@ public final class Data {
         hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
         hash = (53 * hash) + getResponse().hashCode();
       }
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
       if (hasServiceData()) {
         hash = (37 * hash) + SERVICE_DATA_FIELD_NUMBER;
         hash = (53 * hash) + getServiceData().hashCode();
@@ -1278,69 +6003,69 @@ public final class Data {
       return hash;
     }
 
-    public static google.events.cloud.audit.v1.Data.AuditLogData parseFrom(
+    public static google.events.cloud.audit.v1.Data.AuditLog parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static google.events.cloud.audit.v1.Data.AuditLogData parseFrom(
+    public static google.events.cloud.audit.v1.Data.AuditLog parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static google.events.cloud.audit.v1.Data.AuditLogData parseFrom(
+    public static google.events.cloud.audit.v1.Data.AuditLog parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static google.events.cloud.audit.v1.Data.AuditLogData parseFrom(
+    public static google.events.cloud.audit.v1.Data.AuditLog parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static google.events.cloud.audit.v1.Data.AuditLogData parseFrom(byte[] data)
+    public static google.events.cloud.audit.v1.Data.AuditLog parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static google.events.cloud.audit.v1.Data.AuditLogData parseFrom(
+    public static google.events.cloud.audit.v1.Data.AuditLog parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static google.events.cloud.audit.v1.Data.AuditLogData parseFrom(java.io.InputStream input)
+    public static google.events.cloud.audit.v1.Data.AuditLog parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static google.events.cloud.audit.v1.Data.AuditLogData parseFrom(
+    public static google.events.cloud.audit.v1.Data.AuditLog parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static google.events.cloud.audit.v1.Data.AuditLogData parseDelimitedFrom(java.io.InputStream input)
+    public static google.events.cloud.audit.v1.Data.AuditLog parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static google.events.cloud.audit.v1.Data.AuditLogData parseDelimitedFrom(
+    public static google.events.cloud.audit.v1.Data.AuditLog parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static google.events.cloud.audit.v1.Data.AuditLogData parseFrom(
+    public static google.events.cloud.audit.v1.Data.AuditLog parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static google.events.cloud.audit.v1.Data.AuditLogData parseFrom(
+    public static google.events.cloud.audit.v1.Data.AuditLog parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1353,7 +6078,7 @@ public final class Data {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(google.events.cloud.audit.v1.Data.AuditLogData prototype) {
+    public static Builder newBuilder(google.events.cloud.audit.v1.Data.AuditLog prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1376,26 +6101,26 @@ public final class Data {
      * but changing service_data from Any to Struct.
      * </pre>
      *
-     * Protobuf type {@code google.events.cloud.audit.v1.AuditLogData}
+     * Protobuf type {@code google.events.cloud.audit.v1.AuditLog}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:google.events.cloud.audit.v1.AuditLogData)
-        google.events.cloud.audit.v1.Data.AuditLogDataOrBuilder {
+        // @@protoc_insertion_point(builder_implements:google.events.cloud.audit.v1.AuditLog)
+        google.events.cloud.audit.v1.Data.AuditLogOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_AuditLogData_descriptor;
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_AuditLog_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_AuditLogData_fieldAccessorTable
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_AuditLog_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                google.events.cloud.audit.v1.Data.AuditLogData.class, google.events.cloud.audit.v1.Data.AuditLogData.Builder.class);
+                google.events.cloud.audit.v1.Data.AuditLog.class, google.events.cloud.audit.v1.Data.AuditLog.Builder.class);
       }
 
-      // Construct using google.events.cloud.audit.v1.Data.AuditLogData.newBuilder()
+      // Construct using google.events.cloud.audit.v1.Data.AuditLog.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1420,6 +6145,18 @@ public final class Data {
 
         resourceName_ = "";
 
+        if (resourceLocationBuilder_ == null) {
+          resourceLocation_ = null;
+        } else {
+          resourceLocation_ = null;
+          resourceLocationBuilder_ = null;
+        }
+        if (resourceOriginalStateBuilder_ == null) {
+          resourceOriginalState_ = null;
+        } else {
+          resourceOriginalState_ = null;
+          resourceOriginalStateBuilder_ = null;
+        }
         numResponseItems_ = 0L;
 
         if (statusBuilder_ == null) {
@@ -1458,6 +6195,12 @@ public final class Data {
           response_ = null;
           responseBuilder_ = null;
         }
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+        } else {
+          metadata_ = null;
+          metadataBuilder_ = null;
+        }
         if (serviceDataBuilder_ == null) {
           serviceData_ = null;
         } else {
@@ -1470,17 +6213,17 @@ public final class Data {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_AuditLogData_descriptor;
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_AuditLog_descriptor;
       }
 
       @java.lang.Override
-      public google.events.cloud.audit.v1.Data.AuditLogData getDefaultInstanceForType() {
-        return google.events.cloud.audit.v1.Data.AuditLogData.getDefaultInstance();
+      public google.events.cloud.audit.v1.Data.AuditLog getDefaultInstanceForType() {
+        return google.events.cloud.audit.v1.Data.AuditLog.getDefaultInstance();
       }
 
       @java.lang.Override
-      public google.events.cloud.audit.v1.Data.AuditLogData build() {
-        google.events.cloud.audit.v1.Data.AuditLogData result = buildPartial();
+      public google.events.cloud.audit.v1.Data.AuditLog build() {
+        google.events.cloud.audit.v1.Data.AuditLog result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1488,12 +6231,22 @@ public final class Data {
       }
 
       @java.lang.Override
-      public google.events.cloud.audit.v1.Data.AuditLogData buildPartial() {
-        google.events.cloud.audit.v1.Data.AuditLogData result = new google.events.cloud.audit.v1.Data.AuditLogData(this);
+      public google.events.cloud.audit.v1.Data.AuditLog buildPartial() {
+        google.events.cloud.audit.v1.Data.AuditLog result = new google.events.cloud.audit.v1.Data.AuditLog(this);
         int from_bitField0_ = bitField0_;
         result.serviceName_ = serviceName_;
         result.methodName_ = methodName_;
         result.resourceName_ = resourceName_;
+        if (resourceLocationBuilder_ == null) {
+          result.resourceLocation_ = resourceLocation_;
+        } else {
+          result.resourceLocation_ = resourceLocationBuilder_.build();
+        }
+        if (resourceOriginalStateBuilder_ == null) {
+          result.resourceOriginalState_ = resourceOriginalState_;
+        } else {
+          result.resourceOriginalState_ = resourceOriginalStateBuilder_.build();
+        }
         result.numResponseItems_ = numResponseItems_;
         if (statusBuilder_ == null) {
           result.status_ = status_;
@@ -1528,6 +6281,11 @@ public final class Data {
           result.response_ = response_;
         } else {
           result.response_ = responseBuilder_.build();
+        }
+        if (metadataBuilder_ == null) {
+          result.metadata_ = metadata_;
+        } else {
+          result.metadata_ = metadataBuilder_.build();
         }
         if (serviceDataBuilder_ == null) {
           result.serviceData_ = serviceData_;
@@ -1572,16 +6330,16 @@ public final class Data {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof google.events.cloud.audit.v1.Data.AuditLogData) {
-          return mergeFrom((google.events.cloud.audit.v1.Data.AuditLogData)other);
+        if (other instanceof google.events.cloud.audit.v1.Data.AuditLog) {
+          return mergeFrom((google.events.cloud.audit.v1.Data.AuditLog)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(google.events.cloud.audit.v1.Data.AuditLogData other) {
-        if (other == google.events.cloud.audit.v1.Data.AuditLogData.getDefaultInstance()) return this;
+      public Builder mergeFrom(google.events.cloud.audit.v1.Data.AuditLog other) {
+        if (other == google.events.cloud.audit.v1.Data.AuditLog.getDefaultInstance()) return this;
         if (!other.getServiceName().isEmpty()) {
           serviceName_ = other.serviceName_;
           onChanged();
@@ -1593,6 +6351,12 @@ public final class Data {
         if (!other.getResourceName().isEmpty()) {
           resourceName_ = other.resourceName_;
           onChanged();
+        }
+        if (other.hasResourceLocation()) {
+          mergeResourceLocation(other.getResourceLocation());
+        }
+        if (other.hasResourceOriginalState()) {
+          mergeResourceOriginalState(other.getResourceOriginalState());
         }
         if (other.getNumResponseItems() != 0L) {
           setNumResponseItems(other.getNumResponseItems());
@@ -1638,6 +6402,9 @@ public final class Data {
         if (other.hasResponse()) {
           mergeResponse(other.getResponse());
         }
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
         if (other.hasServiceData()) {
           mergeServiceData(other.getServiceData());
         }
@@ -1656,11 +6423,11 @@ public final class Data {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        google.events.cloud.audit.v1.Data.AuditLogData parsedMessage = null;
+        google.events.cloud.audit.v1.Data.AuditLog parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (google.events.cloud.audit.v1.Data.AuditLogData) e.getUnfinishedMessage();
+          parsedMessage = (google.events.cloud.audit.v1.Data.AuditLog) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2002,6 +6769,370 @@ public final class Data {
         resourceName_ = value;
         onChanged();
         return this;
+      }
+
+      private google.events.cloud.audit.v1.Data.ResourceLocation resourceLocation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          google.events.cloud.audit.v1.Data.ResourceLocation, google.events.cloud.audit.v1.Data.ResourceLocation.Builder, google.events.cloud.audit.v1.Data.ResourceLocationOrBuilder> resourceLocationBuilder_;
+      /**
+       * <pre>
+       * The resource location information.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ResourceLocation resource_location = 20;</code>
+       * @return Whether the resourceLocation field is set.
+       */
+      public boolean hasResourceLocation() {
+        return resourceLocationBuilder_ != null || resourceLocation_ != null;
+      }
+      /**
+       * <pre>
+       * The resource location information.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ResourceLocation resource_location = 20;</code>
+       * @return The resourceLocation.
+       */
+      public google.events.cloud.audit.v1.Data.ResourceLocation getResourceLocation() {
+        if (resourceLocationBuilder_ == null) {
+          return resourceLocation_ == null ? google.events.cloud.audit.v1.Data.ResourceLocation.getDefaultInstance() : resourceLocation_;
+        } else {
+          return resourceLocationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The resource location information.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ResourceLocation resource_location = 20;</code>
+       */
+      public Builder setResourceLocation(google.events.cloud.audit.v1.Data.ResourceLocation value) {
+        if (resourceLocationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resourceLocation_ = value;
+          onChanged();
+        } else {
+          resourceLocationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The resource location information.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ResourceLocation resource_location = 20;</code>
+       */
+      public Builder setResourceLocation(
+          google.events.cloud.audit.v1.Data.ResourceLocation.Builder builderForValue) {
+        if (resourceLocationBuilder_ == null) {
+          resourceLocation_ = builderForValue.build();
+          onChanged();
+        } else {
+          resourceLocationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The resource location information.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ResourceLocation resource_location = 20;</code>
+       */
+      public Builder mergeResourceLocation(google.events.cloud.audit.v1.Data.ResourceLocation value) {
+        if (resourceLocationBuilder_ == null) {
+          if (resourceLocation_ != null) {
+            resourceLocation_ =
+              google.events.cloud.audit.v1.Data.ResourceLocation.newBuilder(resourceLocation_).mergeFrom(value).buildPartial();
+          } else {
+            resourceLocation_ = value;
+          }
+          onChanged();
+        } else {
+          resourceLocationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The resource location information.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ResourceLocation resource_location = 20;</code>
+       */
+      public Builder clearResourceLocation() {
+        if (resourceLocationBuilder_ == null) {
+          resourceLocation_ = null;
+          onChanged();
+        } else {
+          resourceLocation_ = null;
+          resourceLocationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The resource location information.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ResourceLocation resource_location = 20;</code>
+       */
+      public google.events.cloud.audit.v1.Data.ResourceLocation.Builder getResourceLocationBuilder() {
+        
+        onChanged();
+        return getResourceLocationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The resource location information.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ResourceLocation resource_location = 20;</code>
+       */
+      public google.events.cloud.audit.v1.Data.ResourceLocationOrBuilder getResourceLocationOrBuilder() {
+        if (resourceLocationBuilder_ != null) {
+          return resourceLocationBuilder_.getMessageOrBuilder();
+        } else {
+          return resourceLocation_ == null ?
+              google.events.cloud.audit.v1.Data.ResourceLocation.getDefaultInstance() : resourceLocation_;
+        }
+      }
+      /**
+       * <pre>
+       * The resource location information.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ResourceLocation resource_location = 20;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          google.events.cloud.audit.v1.Data.ResourceLocation, google.events.cloud.audit.v1.Data.ResourceLocation.Builder, google.events.cloud.audit.v1.Data.ResourceLocationOrBuilder> 
+          getResourceLocationFieldBuilder() {
+        if (resourceLocationBuilder_ == null) {
+          resourceLocationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              google.events.cloud.audit.v1.Data.ResourceLocation, google.events.cloud.audit.v1.Data.ResourceLocation.Builder, google.events.cloud.audit.v1.Data.ResourceLocationOrBuilder>(
+                  getResourceLocation(),
+                  getParentForChildren(),
+                  isClean());
+          resourceLocation_ = null;
+        }
+        return resourceLocationBuilder_;
+      }
+
+      private com.google.protobuf.Struct resourceOriginalState_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> resourceOriginalStateBuilder_;
+      /**
+       * <pre>
+       * The resource's original state before mutation. Present only for
+       * operations which have successfully modified the targeted resource(s).
+       * In general, this field should contain all changed fields, except those
+       * that are already been included in `request`, `response`, `metadata` or
+       * `service_data` fields.
+       * When the JSON object represented here has a proto equivalent,
+       * the proto name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+       * @return Whether the resourceOriginalState field is set.
+       */
+      public boolean hasResourceOriginalState() {
+        return resourceOriginalStateBuilder_ != null || resourceOriginalState_ != null;
+      }
+      /**
+       * <pre>
+       * The resource's original state before mutation. Present only for
+       * operations which have successfully modified the targeted resource(s).
+       * In general, this field should contain all changed fields, except those
+       * that are already been included in `request`, `response`, `metadata` or
+       * `service_data` fields.
+       * When the JSON object represented here has a proto equivalent,
+       * the proto name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+       * @return The resourceOriginalState.
+       */
+      public com.google.protobuf.Struct getResourceOriginalState() {
+        if (resourceOriginalStateBuilder_ == null) {
+          return resourceOriginalState_ == null ? com.google.protobuf.Struct.getDefaultInstance() : resourceOriginalState_;
+        } else {
+          return resourceOriginalStateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The resource's original state before mutation. Present only for
+       * operations which have successfully modified the targeted resource(s).
+       * In general, this field should contain all changed fields, except those
+       * that are already been included in `request`, `response`, `metadata` or
+       * `service_data` fields.
+       * When the JSON object represented here has a proto equivalent,
+       * the proto name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+       */
+      public Builder setResourceOriginalState(com.google.protobuf.Struct value) {
+        if (resourceOriginalStateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resourceOriginalState_ = value;
+          onChanged();
+        } else {
+          resourceOriginalStateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The resource's original state before mutation. Present only for
+       * operations which have successfully modified the targeted resource(s).
+       * In general, this field should contain all changed fields, except those
+       * that are already been included in `request`, `response`, `metadata` or
+       * `service_data` fields.
+       * When the JSON object represented here has a proto equivalent,
+       * the proto name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+       */
+      public Builder setResourceOriginalState(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (resourceOriginalStateBuilder_ == null) {
+          resourceOriginalState_ = builderForValue.build();
+          onChanged();
+        } else {
+          resourceOriginalStateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The resource's original state before mutation. Present only for
+       * operations which have successfully modified the targeted resource(s).
+       * In general, this field should contain all changed fields, except those
+       * that are already been included in `request`, `response`, `metadata` or
+       * `service_data` fields.
+       * When the JSON object represented here has a proto equivalent,
+       * the proto name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+       */
+      public Builder mergeResourceOriginalState(com.google.protobuf.Struct value) {
+        if (resourceOriginalStateBuilder_ == null) {
+          if (resourceOriginalState_ != null) {
+            resourceOriginalState_ =
+              com.google.protobuf.Struct.newBuilder(resourceOriginalState_).mergeFrom(value).buildPartial();
+          } else {
+            resourceOriginalState_ = value;
+          }
+          onChanged();
+        } else {
+          resourceOriginalStateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The resource's original state before mutation. Present only for
+       * operations which have successfully modified the targeted resource(s).
+       * In general, this field should contain all changed fields, except those
+       * that are already been included in `request`, `response`, `metadata` or
+       * `service_data` fields.
+       * When the JSON object represented here has a proto equivalent,
+       * the proto name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+       */
+      public Builder clearResourceOriginalState() {
+        if (resourceOriginalStateBuilder_ == null) {
+          resourceOriginalState_ = null;
+          onChanged();
+        } else {
+          resourceOriginalState_ = null;
+          resourceOriginalStateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The resource's original state before mutation. Present only for
+       * operations which have successfully modified the targeted resource(s).
+       * In general, this field should contain all changed fields, except those
+       * that are already been included in `request`, `response`, `metadata` or
+       * `service_data` fields.
+       * When the JSON object represented here has a proto equivalent,
+       * the proto name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+       */
+      public com.google.protobuf.Struct.Builder getResourceOriginalStateBuilder() {
+        
+        onChanged();
+        return getResourceOriginalStateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The resource's original state before mutation. Present only for
+       * operations which have successfully modified the targeted resource(s).
+       * In general, this field should contain all changed fields, except those
+       * that are already been included in `request`, `response`, `metadata` or
+       * `service_data` fields.
+       * When the JSON object represented here has a proto equivalent,
+       * the proto name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+       */
+      public com.google.protobuf.StructOrBuilder getResourceOriginalStateOrBuilder() {
+        if (resourceOriginalStateBuilder_ != null) {
+          return resourceOriginalStateBuilder_.getMessageOrBuilder();
+        } else {
+          return resourceOriginalState_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : resourceOriginalState_;
+        }
+      }
+      /**
+       * <pre>
+       * The resource's original state before mutation. Present only for
+       * operations which have successfully modified the targeted resource(s).
+       * In general, this field should contain all changed fields, except those
+       * that are already been included in `request`, `response`, `metadata` or
+       * `service_data` fields.
+       * When the JSON object represented here has a proto equivalent,
+       * the proto name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct resource_original_state = 19;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getResourceOriginalStateFieldBuilder() {
+        if (resourceOriginalStateBuilder_ == null) {
+          resourceOriginalStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getResourceOriginalState(),
+                  getParentForChildren(),
+                  isClean());
+          resourceOriginalState_ = null;
+        }
+        return resourceOriginalStateBuilder_;
       }
 
       private long numResponseItems_ ;
@@ -3263,11 +8394,176 @@ public final class Data {
         return responseBuilder_;
       }
 
+      private com.google.protobuf.Struct metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> metadataBuilder_;
+      /**
+       * <pre>
+       * Other service-specific data about the request, response, and other
+       * information associated with the current audited event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct metadata = 18;</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return metadataBuilder_ != null || metadata_ != null;
+      }
+      /**
+       * <pre>
+       * Other service-specific data about the request, response, and other
+       * information associated with the current audited event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct metadata = 18;</code>
+       * @return The metadata.
+       */
+      public com.google.protobuf.Struct getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.google.protobuf.Struct.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Other service-specific data about the request, response, and other
+       * information associated with the current audited event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct metadata = 18;</code>
+       */
+      public Builder setMetadata(com.google.protobuf.Struct value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Other service-specific data about the request, response, and other
+       * information associated with the current audited event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct metadata = 18;</code>
+       */
+      public Builder setMetadata(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Other service-specific data about the request, response, and other
+       * information associated with the current audited event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct metadata = 18;</code>
+       */
+      public Builder mergeMetadata(com.google.protobuf.Struct value) {
+        if (metadataBuilder_ == null) {
+          if (metadata_ != null) {
+            metadata_ =
+              com.google.protobuf.Struct.newBuilder(metadata_).mergeFrom(value).buildPartial();
+          } else {
+            metadata_ = value;
+          }
+          onChanged();
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Other service-specific data about the request, response, and other
+       * information associated with the current audited event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct metadata = 18;</code>
+       */
+      public Builder clearMetadata() {
+        if (metadataBuilder_ == null) {
+          metadata_ = null;
+          onChanged();
+        } else {
+          metadata_ = null;
+          metadataBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Other service-specific data about the request, response, and other
+       * information associated with the current audited event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct metadata = 18;</code>
+       */
+      public com.google.protobuf.Struct.Builder getMetadataBuilder() {
+        
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Other service-specific data about the request, response, and other
+       * information associated with the current audited event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct metadata = 18;</code>
+       */
+      public com.google.protobuf.StructOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <pre>
+       * Other service-specific data about the request, response, and other
+       * information associated with the current audited event.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct metadata = 18;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
+
       private com.google.protobuf.Struct serviceData_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> serviceDataBuilder_;
       /**
        * <pre>
+       * Deprecated, use `metadata` field instead.
        * Other service-specific data about the request, response, and other
        * activities.
        * When the JSON object represented here has a proto equivalent, the proto
@@ -3282,6 +8578,7 @@ public final class Data {
       }
       /**
        * <pre>
+       * Deprecated, use `metadata` field instead.
        * Other service-specific data about the request, response, and other
        * activities.
        * When the JSON object represented here has a proto equivalent, the proto
@@ -3300,6 +8597,7 @@ public final class Data {
       }
       /**
        * <pre>
+       * Deprecated, use `metadata` field instead.
        * Other service-specific data about the request, response, and other
        * activities.
        * When the JSON object represented here has a proto equivalent, the proto
@@ -3323,6 +8621,7 @@ public final class Data {
       }
       /**
        * <pre>
+       * Deprecated, use `metadata` field instead.
        * Other service-specific data about the request, response, and other
        * activities.
        * When the JSON object represented here has a proto equivalent, the proto
@@ -3344,6 +8643,7 @@ public final class Data {
       }
       /**
        * <pre>
+       * Deprecated, use `metadata` field instead.
        * Other service-specific data about the request, response, and other
        * activities.
        * When the JSON object represented here has a proto equivalent, the proto
@@ -3369,6 +8669,7 @@ public final class Data {
       }
       /**
        * <pre>
+       * Deprecated, use `metadata` field instead.
        * Other service-specific data about the request, response, and other
        * activities.
        * When the JSON object represented here has a proto equivalent, the proto
@@ -3390,6 +8691,7 @@ public final class Data {
       }
       /**
        * <pre>
+       * Deprecated, use `metadata` field instead.
        * Other service-specific data about the request, response, and other
        * activities.
        * When the JSON object represented here has a proto equivalent, the proto
@@ -3405,6 +8707,7 @@ public final class Data {
       }
       /**
        * <pre>
+       * Deprecated, use `metadata` field instead.
        * Other service-specific data about the request, response, and other
        * activities.
        * When the JSON object represented here has a proto equivalent, the proto
@@ -3423,6 +8726,7 @@ public final class Data {
       }
       /**
        * <pre>
+       * Deprecated, use `metadata` field instead.
        * Other service-specific data about the request, response, and other
        * activities.
        * When the JSON object represented here has a proto equivalent, the proto
@@ -3457,41 +8761,41 @@ public final class Data {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:google.events.cloud.audit.v1.AuditLogData)
+      // @@protoc_insertion_point(builder_scope:google.events.cloud.audit.v1.AuditLog)
     }
 
-    // @@protoc_insertion_point(class_scope:google.events.cloud.audit.v1.AuditLogData)
-    private static final google.events.cloud.audit.v1.Data.AuditLogData DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:google.events.cloud.audit.v1.AuditLog)
+    private static final google.events.cloud.audit.v1.Data.AuditLog DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new google.events.cloud.audit.v1.Data.AuditLogData();
+      DEFAULT_INSTANCE = new google.events.cloud.audit.v1.Data.AuditLog();
     }
 
-    public static google.events.cloud.audit.v1.Data.AuditLogData getDefaultInstance() {
+    public static google.events.cloud.audit.v1.Data.AuditLog getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuditLogData>
-        PARSER = new com.google.protobuf.AbstractParser<AuditLogData>() {
+    private static final com.google.protobuf.Parser<AuditLog>
+        PARSER = new com.google.protobuf.AbstractParser<AuditLog>() {
       @java.lang.Override
-      public AuditLogData parsePartialFrom(
+      public AuditLog parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AuditLogData(input, extensionRegistry);
+        return new AuditLog(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AuditLogData> parser() {
+    public static com.google.protobuf.Parser<AuditLog> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AuditLogData> getParserForType() {
+    public com.google.protobuf.Parser<AuditLog> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public google.events.cloud.audit.v1.Data.AuditLogData getDefaultInstanceForType() {
+    public google.events.cloud.audit.v1.Data.AuditLog getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3503,7 +8807,10 @@ public final class Data {
 
     /**
      * <pre>
-     * The email address of the authenticated user making the request.
+     * The email address of the authenticated user (or service account on behalf
+     * of third party principal) making the request. For privacy reasons, the
+     * principal email address is redacted for all read-only operations that fail
+     * with a "permission denied" error.
      * </pre>
      *
      * <code>string principal_email = 1;</code>
@@ -3512,7 +8819,10 @@ public final class Data {
     java.lang.String getPrincipalEmail();
     /**
      * <pre>
-     * The email address of the authenticated user making the request.
+     * The email address of the authenticated user (or service account on behalf
+     * of third party principal) making the request. For privacy reasons, the
+     * principal email address is redacted for all read-only operations that fail
+     * with a "permission denied" error.
      * </pre>
      *
      * <code>string principal_email = 1;</code>
@@ -3520,6 +8830,176 @@ public final class Data {
      */
     com.google.protobuf.ByteString
         getPrincipalEmailBytes();
+
+    /**
+     * <pre>
+     * The authority selector specified by the requestor, if any.
+     * It is not guaranteed that the principal was allowed to use this authority.
+     * </pre>
+     *
+     * <code>string authority_selector = 2;</code>
+     * @return The authoritySelector.
+     */
+    java.lang.String getAuthoritySelector();
+    /**
+     * <pre>
+     * The authority selector specified by the requestor, if any.
+     * It is not guaranteed that the principal was allowed to use this authority.
+     * </pre>
+     *
+     * <code>string authority_selector = 2;</code>
+     * @return The bytes for authoritySelector.
+     */
+    com.google.protobuf.ByteString
+        getAuthoritySelectorBytes();
+
+    /**
+     * <pre>
+     * The third party identification (if any) of the authenticated user making
+     * the request.
+     * When the JSON object represented here has a proto equivalent, the proto
+     * name will be indicated in the `&#64;type` property.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+     * @return Whether the thirdPartyPrincipal field is set.
+     */
+    boolean hasThirdPartyPrincipal();
+    /**
+     * <pre>
+     * The third party identification (if any) of the authenticated user making
+     * the request.
+     * When the JSON object represented here has a proto equivalent, the proto
+     * name will be indicated in the `&#64;type` property.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+     * @return The thirdPartyPrincipal.
+     */
+    com.google.protobuf.Struct getThirdPartyPrincipal();
+    /**
+     * <pre>
+     * The third party identification (if any) of the authenticated user making
+     * the request.
+     * When the JSON object represented here has a proto equivalent, the proto
+     * name will be indicated in the `&#64;type` property.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+     */
+    com.google.protobuf.StructOrBuilder getThirdPartyPrincipalOrBuilder();
+
+    /**
+     * <pre>
+     * The name of the service account key used to create or exchange
+     * credentials for authenticating the service account making the request.
+     * This is a scheme-less URI full resource name. For example:
+     * "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+     * </pre>
+     *
+     * <code>string service_account_key_name = 5;</code>
+     * @return The serviceAccountKeyName.
+     */
+    java.lang.String getServiceAccountKeyName();
+    /**
+     * <pre>
+     * The name of the service account key used to create or exchange
+     * credentials for authenticating the service account making the request.
+     * This is a scheme-less URI full resource name. For example:
+     * "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+     * </pre>
+     *
+     * <code>string service_account_key_name = 5;</code>
+     * @return The bytes for serviceAccountKeyName.
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountKeyNameBytes();
+
+    /**
+     * <pre>
+     * Identity delegation history of an authenticated service account that makes
+     * the request. It contains information on the real authorities that try to
+     * access GCP resources by delegating on a service account. When multiple
+     * authorities present, they are guaranteed to be sorted based on the original
+     * ordering of the identity delegation events.
+     * </pre>
+     *
+     * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     */
+    java.util.List<google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo> 
+        getServiceAccountDelegationInfoList();
+    /**
+     * <pre>
+     * Identity delegation history of an authenticated service account that makes
+     * the request. It contains information on the real authorities that try to
+     * access GCP resources by delegating on a service account. When multiple
+     * authorities present, they are guaranteed to be sorted based on the original
+     * ordering of the identity delegation events.
+     * </pre>
+     *
+     * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     */
+    google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo getServiceAccountDelegationInfo(int index);
+    /**
+     * <pre>
+     * Identity delegation history of an authenticated service account that makes
+     * the request. It contains information on the real authorities that try to
+     * access GCP resources by delegating on a service account. When multiple
+     * authorities present, they are guaranteed to be sorted based on the original
+     * ordering of the identity delegation events.
+     * </pre>
+     *
+     * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     */
+    int getServiceAccountDelegationInfoCount();
+    /**
+     * <pre>
+     * Identity delegation history of an authenticated service account that makes
+     * the request. It contains information on the real authorities that try to
+     * access GCP resources by delegating on a service account. When multiple
+     * authorities present, they are guaranteed to be sorted based on the original
+     * ordering of the identity delegation events.
+     * </pre>
+     *
+     * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     */
+    java.util.List<? extends google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfoOrBuilder> 
+        getServiceAccountDelegationInfoOrBuilderList();
+    /**
+     * <pre>
+     * Identity delegation history of an authenticated service account that makes
+     * the request. It contains information on the real authorities that try to
+     * access GCP resources by delegating on a service account. When multiple
+     * authorities present, they are guaranteed to be sorted based on the original
+     * ordering of the identity delegation events.
+     * </pre>
+     *
+     * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     */
+    google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfoOrBuilder getServiceAccountDelegationInfoOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * String representation of identity of requesting party.
+     * Populated for both first and third party identities.
+     * </pre>
+     *
+     * <code>string principal_subject = 8;</code>
+     * @return The principalSubject.
+     */
+    java.lang.String getPrincipalSubject();
+    /**
+     * <pre>
+     * String representation of identity of requesting party.
+     * Populated for both first and third party identities.
+     * </pre>
+     *
+     * <code>string principal_subject = 8;</code>
+     * @return The bytes for principalSubject.
+     */
+    com.google.protobuf.ByteString
+        getPrincipalSubjectBytes();
   }
   /**
    * <pre>
@@ -3539,6 +9019,10 @@ public final class Data {
     }
     private AuthenticationInfo() {
       principalEmail_ = "";
+      authoritySelector_ = "";
+      serviceAccountKeyName_ = "";
+      serviceAccountDelegationInfo_ = java.util.Collections.emptyList();
+      principalSubject_ = "";
     }
 
     @java.lang.Override
@@ -3561,6 +9045,7 @@ public final class Data {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3575,6 +9060,46 @@ public final class Data {
               java.lang.String s = input.readStringRequireUtf8();
 
               principalEmail_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              authoritySelector_ = s;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (thirdPartyPrincipal_ != null) {
+                subBuilder = thirdPartyPrincipal_.toBuilder();
+              }
+              thirdPartyPrincipal_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(thirdPartyPrincipal_);
+                thirdPartyPrincipal_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountKeyName_ = s;
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                serviceAccountDelegationInfo_ = new java.util.ArrayList<google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              serviceAccountDelegationInfo_.add(
+                  input.readMessage(google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              principalSubject_ = s;
               break;
             }
             default: {
@@ -3592,6 +9117,9 @@ public final class Data {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          serviceAccountDelegationInfo_ = java.util.Collections.unmodifiableList(serviceAccountDelegationInfo_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -3613,7 +9141,10 @@ public final class Data {
     private volatile java.lang.Object principalEmail_;
     /**
      * <pre>
-     * The email address of the authenticated user making the request.
+     * The email address of the authenticated user (or service account on behalf
+     * of third party principal) making the request. For privacy reasons, the
+     * principal email address is redacted for all read-only operations that fail
+     * with a "permission denied" error.
      * </pre>
      *
      * <code>string principal_email = 1;</code>
@@ -3634,7 +9165,10 @@ public final class Data {
     }
     /**
      * <pre>
-     * The email address of the authenticated user making the request.
+     * The email address of the authenticated user (or service account on behalf
+     * of third party principal) making the request. For privacy reasons, the
+     * principal email address is redacted for all read-only operations that fail
+     * with a "permission denied" error.
      * </pre>
      *
      * <code>string principal_email = 1;</code>
@@ -3649,6 +9183,281 @@ public final class Data {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         principalEmail_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AUTHORITY_SELECTOR_FIELD_NUMBER = 2;
+    private volatile java.lang.Object authoritySelector_;
+    /**
+     * <pre>
+     * The authority selector specified by the requestor, if any.
+     * It is not guaranteed that the principal was allowed to use this authority.
+     * </pre>
+     *
+     * <code>string authority_selector = 2;</code>
+     * @return The authoritySelector.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthoritySelector() {
+      java.lang.Object ref = authoritySelector_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authoritySelector_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The authority selector specified by the requestor, if any.
+     * It is not guaranteed that the principal was allowed to use this authority.
+     * </pre>
+     *
+     * <code>string authority_selector = 2;</code>
+     * @return The bytes for authoritySelector.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthoritySelectorBytes() {
+      java.lang.Object ref = authoritySelector_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authoritySelector_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int THIRD_PARTY_PRINCIPAL_FIELD_NUMBER = 4;
+    private com.google.protobuf.Struct thirdPartyPrincipal_;
+    /**
+     * <pre>
+     * The third party identification (if any) of the authenticated user making
+     * the request.
+     * When the JSON object represented here has a proto equivalent, the proto
+     * name will be indicated in the `&#64;type` property.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+     * @return Whether the thirdPartyPrincipal field is set.
+     */
+    @java.lang.Override
+    public boolean hasThirdPartyPrincipal() {
+      return thirdPartyPrincipal_ != null;
+    }
+    /**
+     * <pre>
+     * The third party identification (if any) of the authenticated user making
+     * the request.
+     * When the JSON object represented here has a proto equivalent, the proto
+     * name will be indicated in the `&#64;type` property.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+     * @return The thirdPartyPrincipal.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getThirdPartyPrincipal() {
+      return thirdPartyPrincipal_ == null ? com.google.protobuf.Struct.getDefaultInstance() : thirdPartyPrincipal_;
+    }
+    /**
+     * <pre>
+     * The third party identification (if any) of the authenticated user making
+     * the request.
+     * When the JSON object represented here has a proto equivalent, the proto
+     * name will be indicated in the `&#64;type` property.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StructOrBuilder getThirdPartyPrincipalOrBuilder() {
+      return getThirdPartyPrincipal();
+    }
+
+    public static final int SERVICE_ACCOUNT_KEY_NAME_FIELD_NUMBER = 5;
+    private volatile java.lang.Object serviceAccountKeyName_;
+    /**
+     * <pre>
+     * The name of the service account key used to create or exchange
+     * credentials for authenticating the service account making the request.
+     * This is a scheme-less URI full resource name. For example:
+     * "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+     * </pre>
+     *
+     * <code>string service_account_key_name = 5;</code>
+     * @return The serviceAccountKeyName.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceAccountKeyName() {
+      java.lang.Object ref = serviceAccountKeyName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountKeyName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name of the service account key used to create or exchange
+     * credentials for authenticating the service account making the request.
+     * This is a scheme-less URI full resource name. For example:
+     * "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+     * </pre>
+     *
+     * <code>string service_account_key_name = 5;</code>
+     * @return The bytes for serviceAccountKeyName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceAccountKeyNameBytes() {
+      java.lang.Object ref = serviceAccountKeyName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountKeyName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_ACCOUNT_DELEGATION_INFO_FIELD_NUMBER = 6;
+    private java.util.List<google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo> serviceAccountDelegationInfo_;
+    /**
+     * <pre>
+     * Identity delegation history of an authenticated service account that makes
+     * the request. It contains information on the real authorities that try to
+     * access GCP resources by delegating on a service account. When multiple
+     * authorities present, they are guaranteed to be sorted based on the original
+     * ordering of the identity delegation events.
+     * </pre>
+     *
+     * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     */
+    @java.lang.Override
+    public java.util.List<google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo> getServiceAccountDelegationInfoList() {
+      return serviceAccountDelegationInfo_;
+    }
+    /**
+     * <pre>
+     * Identity delegation history of an authenticated service account that makes
+     * the request. It contains information on the real authorities that try to
+     * access GCP resources by delegating on a service account. When multiple
+     * authorities present, they are guaranteed to be sorted based on the original
+     * ordering of the identity delegation events.
+     * </pre>
+     *
+     * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfoOrBuilder> 
+        getServiceAccountDelegationInfoOrBuilderList() {
+      return serviceAccountDelegationInfo_;
+    }
+    /**
+     * <pre>
+     * Identity delegation history of an authenticated service account that makes
+     * the request. It contains information on the real authorities that try to
+     * access GCP resources by delegating on a service account. When multiple
+     * authorities present, they are guaranteed to be sorted based on the original
+     * ordering of the identity delegation events.
+     * </pre>
+     *
+     * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     */
+    @java.lang.Override
+    public int getServiceAccountDelegationInfoCount() {
+      return serviceAccountDelegationInfo_.size();
+    }
+    /**
+     * <pre>
+     * Identity delegation history of an authenticated service account that makes
+     * the request. It contains information on the real authorities that try to
+     * access GCP resources by delegating on a service account. When multiple
+     * authorities present, they are guaranteed to be sorted based on the original
+     * ordering of the identity delegation events.
+     * </pre>
+     *
+     * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     */
+    @java.lang.Override
+    public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo getServiceAccountDelegationInfo(int index) {
+      return serviceAccountDelegationInfo_.get(index);
+    }
+    /**
+     * <pre>
+     * Identity delegation history of an authenticated service account that makes
+     * the request. It contains information on the real authorities that try to
+     * access GCP resources by delegating on a service account. When multiple
+     * authorities present, they are guaranteed to be sorted based on the original
+     * ordering of the identity delegation events.
+     * </pre>
+     *
+     * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+     */
+    @java.lang.Override
+    public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfoOrBuilder getServiceAccountDelegationInfoOrBuilder(
+        int index) {
+      return serviceAccountDelegationInfo_.get(index);
+    }
+
+    public static final int PRINCIPAL_SUBJECT_FIELD_NUMBER = 8;
+    private volatile java.lang.Object principalSubject_;
+    /**
+     * <pre>
+     * String representation of identity of requesting party.
+     * Populated for both first and third party identities.
+     * </pre>
+     *
+     * <code>string principal_subject = 8;</code>
+     * @return The principalSubject.
+     */
+    @java.lang.Override
+    public java.lang.String getPrincipalSubject() {
+      java.lang.Object ref = principalSubject_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        principalSubject_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * String representation of identity of requesting party.
+     * Populated for both first and third party identities.
+     * </pre>
+     *
+     * <code>string principal_subject = 8;</code>
+     * @return The bytes for principalSubject.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrincipalSubjectBytes() {
+      java.lang.Object ref = principalSubject_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        principalSubject_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -3672,6 +9481,21 @@ public final class Data {
       if (!getPrincipalEmailBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, principalEmail_);
       }
+      if (!getAuthoritySelectorBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, authoritySelector_);
+      }
+      if (thirdPartyPrincipal_ != null) {
+        output.writeMessage(4, getThirdPartyPrincipal());
+      }
+      if (!getServiceAccountKeyNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, serviceAccountKeyName_);
+      }
+      for (int i = 0; i < serviceAccountDelegationInfo_.size(); i++) {
+        output.writeMessage(6, serviceAccountDelegationInfo_.get(i));
+      }
+      if (!getPrincipalSubjectBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, principalSubject_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3683,6 +9507,23 @@ public final class Data {
       size = 0;
       if (!getPrincipalEmailBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, principalEmail_);
+      }
+      if (!getAuthoritySelectorBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, authoritySelector_);
+      }
+      if (thirdPartyPrincipal_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getThirdPartyPrincipal());
+      }
+      if (!getServiceAccountKeyNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, serviceAccountKeyName_);
+      }
+      for (int i = 0; i < serviceAccountDelegationInfo_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, serviceAccountDelegationInfo_.get(i));
+      }
+      if (!getPrincipalSubjectBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, principalSubject_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3701,6 +9542,19 @@ public final class Data {
 
       if (!getPrincipalEmail()
           .equals(other.getPrincipalEmail())) return false;
+      if (!getAuthoritySelector()
+          .equals(other.getAuthoritySelector())) return false;
+      if (hasThirdPartyPrincipal() != other.hasThirdPartyPrincipal()) return false;
+      if (hasThirdPartyPrincipal()) {
+        if (!getThirdPartyPrincipal()
+            .equals(other.getThirdPartyPrincipal())) return false;
+      }
+      if (!getServiceAccountKeyName()
+          .equals(other.getServiceAccountKeyName())) return false;
+      if (!getServiceAccountDelegationInfoList()
+          .equals(other.getServiceAccountDelegationInfoList())) return false;
+      if (!getPrincipalSubject()
+          .equals(other.getPrincipalSubject())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3714,6 +9568,20 @@ public final class Data {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PRINCIPAL_EMAIL_FIELD_NUMBER;
       hash = (53 * hash) + getPrincipalEmail().hashCode();
+      hash = (37 * hash) + AUTHORITY_SELECTOR_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthoritySelector().hashCode();
+      if (hasThirdPartyPrincipal()) {
+        hash = (37 * hash) + THIRD_PARTY_PRINCIPAL_FIELD_NUMBER;
+        hash = (53 * hash) + getThirdPartyPrincipal().hashCode();
+      }
+      hash = (37 * hash) + SERVICE_ACCOUNT_KEY_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountKeyName().hashCode();
+      if (getServiceAccountDelegationInfoCount() > 0) {
+        hash = (37 * hash) + SERVICE_ACCOUNT_DELEGATION_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getServiceAccountDelegationInfoList().hashCode();
+      }
+      hash = (37 * hash) + PRINCIPAL_SUBJECT_FIELD_NUMBER;
+      hash = (53 * hash) + getPrincipalSubject().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3846,12 +9714,31 @@ public final class Data {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getServiceAccountDelegationInfoFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         principalEmail_ = "";
+
+        authoritySelector_ = "";
+
+        if (thirdPartyPrincipalBuilder_ == null) {
+          thirdPartyPrincipal_ = null;
+        } else {
+          thirdPartyPrincipal_ = null;
+          thirdPartyPrincipalBuilder_ = null;
+        }
+        serviceAccountKeyName_ = "";
+
+        if (serviceAccountDelegationInfoBuilder_ == null) {
+          serviceAccountDelegationInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          serviceAccountDelegationInfoBuilder_.clear();
+        }
+        principalSubject_ = "";
 
         return this;
       }
@@ -3879,7 +9766,25 @@ public final class Data {
       @java.lang.Override
       public google.events.cloud.audit.v1.Data.AuthenticationInfo buildPartial() {
         google.events.cloud.audit.v1.Data.AuthenticationInfo result = new google.events.cloud.audit.v1.Data.AuthenticationInfo(this);
+        int from_bitField0_ = bitField0_;
         result.principalEmail_ = principalEmail_;
+        result.authoritySelector_ = authoritySelector_;
+        if (thirdPartyPrincipalBuilder_ == null) {
+          result.thirdPartyPrincipal_ = thirdPartyPrincipal_;
+        } else {
+          result.thirdPartyPrincipal_ = thirdPartyPrincipalBuilder_.build();
+        }
+        result.serviceAccountKeyName_ = serviceAccountKeyName_;
+        if (serviceAccountDelegationInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            serviceAccountDelegationInfo_ = java.util.Collections.unmodifiableList(serviceAccountDelegationInfo_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.serviceAccountDelegationInfo_ = serviceAccountDelegationInfo_;
+        } else {
+          result.serviceAccountDelegationInfo_ = serviceAccountDelegationInfoBuilder_.build();
+        }
+        result.principalSubject_ = principalSubject_;
         onBuilt();
         return result;
       }
@@ -3932,6 +9837,47 @@ public final class Data {
           principalEmail_ = other.principalEmail_;
           onChanged();
         }
+        if (!other.getAuthoritySelector().isEmpty()) {
+          authoritySelector_ = other.authoritySelector_;
+          onChanged();
+        }
+        if (other.hasThirdPartyPrincipal()) {
+          mergeThirdPartyPrincipal(other.getThirdPartyPrincipal());
+        }
+        if (!other.getServiceAccountKeyName().isEmpty()) {
+          serviceAccountKeyName_ = other.serviceAccountKeyName_;
+          onChanged();
+        }
+        if (serviceAccountDelegationInfoBuilder_ == null) {
+          if (!other.serviceAccountDelegationInfo_.isEmpty()) {
+            if (serviceAccountDelegationInfo_.isEmpty()) {
+              serviceAccountDelegationInfo_ = other.serviceAccountDelegationInfo_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureServiceAccountDelegationInfoIsMutable();
+              serviceAccountDelegationInfo_.addAll(other.serviceAccountDelegationInfo_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.serviceAccountDelegationInfo_.isEmpty()) {
+            if (serviceAccountDelegationInfoBuilder_.isEmpty()) {
+              serviceAccountDelegationInfoBuilder_.dispose();
+              serviceAccountDelegationInfoBuilder_ = null;
+              serviceAccountDelegationInfo_ = other.serviceAccountDelegationInfo_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              serviceAccountDelegationInfoBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getServiceAccountDelegationInfoFieldBuilder() : null;
+            } else {
+              serviceAccountDelegationInfoBuilder_.addAllMessages(other.serviceAccountDelegationInfo_);
+            }
+          }
+        }
+        if (!other.getPrincipalSubject().isEmpty()) {
+          principalSubject_ = other.principalSubject_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3960,11 +9906,15 @@ public final class Data {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object principalEmail_ = "";
       /**
        * <pre>
-       * The email address of the authenticated user making the request.
+       * The email address of the authenticated user (or service account on behalf
+       * of third party principal) making the request. For privacy reasons, the
+       * principal email address is redacted for all read-only operations that fail
+       * with a "permission denied" error.
        * </pre>
        *
        * <code>string principal_email = 1;</code>
@@ -3984,7 +9934,10 @@ public final class Data {
       }
       /**
        * <pre>
-       * The email address of the authenticated user making the request.
+       * The email address of the authenticated user (or service account on behalf
+       * of third party principal) making the request. For privacy reasons, the
+       * principal email address is redacted for all read-only operations that fail
+       * with a "permission denied" error.
        * </pre>
        *
        * <code>string principal_email = 1;</code>
@@ -4005,7 +9958,10 @@ public final class Data {
       }
       /**
        * <pre>
-       * The email address of the authenticated user making the request.
+       * The email address of the authenticated user (or service account on behalf
+       * of third party principal) making the request. For privacy reasons, the
+       * principal email address is redacted for all read-only operations that fail
+       * with a "permission denied" error.
        * </pre>
        *
        * <code>string principal_email = 1;</code>
@@ -4024,7 +9980,10 @@ public final class Data {
       }
       /**
        * <pre>
-       * The email address of the authenticated user making the request.
+       * The email address of the authenticated user (or service account on behalf
+       * of third party principal) making the request. For privacy reasons, the
+       * principal email address is redacted for all read-only operations that fail
+       * with a "permission denied" error.
        * </pre>
        *
        * <code>string principal_email = 1;</code>
@@ -4038,7 +9997,10 @@ public final class Data {
       }
       /**
        * <pre>
-       * The email address of the authenticated user making the request.
+       * The email address of the authenticated user (or service account on behalf
+       * of third party principal) making the request. For privacy reasons, the
+       * principal email address is redacted for all read-only operations that fail
+       * with a "permission denied" error.
        * </pre>
        *
        * <code>string principal_email = 1;</code>
@@ -4053,6 +10015,885 @@ public final class Data {
   checkByteStringIsUtf8(value);
         
         principalEmail_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object authoritySelector_ = "";
+      /**
+       * <pre>
+       * The authority selector specified by the requestor, if any.
+       * It is not guaranteed that the principal was allowed to use this authority.
+       * </pre>
+       *
+       * <code>string authority_selector = 2;</code>
+       * @return The authoritySelector.
+       */
+      public java.lang.String getAuthoritySelector() {
+        java.lang.Object ref = authoritySelector_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authoritySelector_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The authority selector specified by the requestor, if any.
+       * It is not guaranteed that the principal was allowed to use this authority.
+       * </pre>
+       *
+       * <code>string authority_selector = 2;</code>
+       * @return The bytes for authoritySelector.
+       */
+      public com.google.protobuf.ByteString
+          getAuthoritySelectorBytes() {
+        java.lang.Object ref = authoritySelector_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authoritySelector_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The authority selector specified by the requestor, if any.
+       * It is not guaranteed that the principal was allowed to use this authority.
+       * </pre>
+       *
+       * <code>string authority_selector = 2;</code>
+       * @param value The authoritySelector to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthoritySelector(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        authoritySelector_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The authority selector specified by the requestor, if any.
+       * It is not guaranteed that the principal was allowed to use this authority.
+       * </pre>
+       *
+       * <code>string authority_selector = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthoritySelector() {
+        
+        authoritySelector_ = getDefaultInstance().getAuthoritySelector();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The authority selector specified by the requestor, if any.
+       * It is not guaranteed that the principal was allowed to use this authority.
+       * </pre>
+       *
+       * <code>string authority_selector = 2;</code>
+       * @param value The bytes for authoritySelector to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthoritySelectorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        authoritySelector_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Struct thirdPartyPrincipal_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> thirdPartyPrincipalBuilder_;
+      /**
+       * <pre>
+       * The third party identification (if any) of the authenticated user making
+       * the request.
+       * When the JSON object represented here has a proto equivalent, the proto
+       * name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+       * @return Whether the thirdPartyPrincipal field is set.
+       */
+      public boolean hasThirdPartyPrincipal() {
+        return thirdPartyPrincipalBuilder_ != null || thirdPartyPrincipal_ != null;
+      }
+      /**
+       * <pre>
+       * The third party identification (if any) of the authenticated user making
+       * the request.
+       * When the JSON object represented here has a proto equivalent, the proto
+       * name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+       * @return The thirdPartyPrincipal.
+       */
+      public com.google.protobuf.Struct getThirdPartyPrincipal() {
+        if (thirdPartyPrincipalBuilder_ == null) {
+          return thirdPartyPrincipal_ == null ? com.google.protobuf.Struct.getDefaultInstance() : thirdPartyPrincipal_;
+        } else {
+          return thirdPartyPrincipalBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The third party identification (if any) of the authenticated user making
+       * the request.
+       * When the JSON object represented here has a proto equivalent, the proto
+       * name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+       */
+      public Builder setThirdPartyPrincipal(com.google.protobuf.Struct value) {
+        if (thirdPartyPrincipalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          thirdPartyPrincipal_ = value;
+          onChanged();
+        } else {
+          thirdPartyPrincipalBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The third party identification (if any) of the authenticated user making
+       * the request.
+       * When the JSON object represented here has a proto equivalent, the proto
+       * name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+       */
+      public Builder setThirdPartyPrincipal(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (thirdPartyPrincipalBuilder_ == null) {
+          thirdPartyPrincipal_ = builderForValue.build();
+          onChanged();
+        } else {
+          thirdPartyPrincipalBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The third party identification (if any) of the authenticated user making
+       * the request.
+       * When the JSON object represented here has a proto equivalent, the proto
+       * name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+       */
+      public Builder mergeThirdPartyPrincipal(com.google.protobuf.Struct value) {
+        if (thirdPartyPrincipalBuilder_ == null) {
+          if (thirdPartyPrincipal_ != null) {
+            thirdPartyPrincipal_ =
+              com.google.protobuf.Struct.newBuilder(thirdPartyPrincipal_).mergeFrom(value).buildPartial();
+          } else {
+            thirdPartyPrincipal_ = value;
+          }
+          onChanged();
+        } else {
+          thirdPartyPrincipalBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The third party identification (if any) of the authenticated user making
+       * the request.
+       * When the JSON object represented here has a proto equivalent, the proto
+       * name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+       */
+      public Builder clearThirdPartyPrincipal() {
+        if (thirdPartyPrincipalBuilder_ == null) {
+          thirdPartyPrincipal_ = null;
+          onChanged();
+        } else {
+          thirdPartyPrincipal_ = null;
+          thirdPartyPrincipalBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The third party identification (if any) of the authenticated user making
+       * the request.
+       * When the JSON object represented here has a proto equivalent, the proto
+       * name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+       */
+      public com.google.protobuf.Struct.Builder getThirdPartyPrincipalBuilder() {
+        
+        onChanged();
+        return getThirdPartyPrincipalFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The third party identification (if any) of the authenticated user making
+       * the request.
+       * When the JSON object represented here has a proto equivalent, the proto
+       * name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+       */
+      public com.google.protobuf.StructOrBuilder getThirdPartyPrincipalOrBuilder() {
+        if (thirdPartyPrincipalBuilder_ != null) {
+          return thirdPartyPrincipalBuilder_.getMessageOrBuilder();
+        } else {
+          return thirdPartyPrincipal_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : thirdPartyPrincipal_;
+        }
+      }
+      /**
+       * <pre>
+       * The third party identification (if any) of the authenticated user making
+       * the request.
+       * When the JSON object represented here has a proto equivalent, the proto
+       * name will be indicated in the `&#64;type` property.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct third_party_principal = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getThirdPartyPrincipalFieldBuilder() {
+        if (thirdPartyPrincipalBuilder_ == null) {
+          thirdPartyPrincipalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getThirdPartyPrincipal(),
+                  getParentForChildren(),
+                  isClean());
+          thirdPartyPrincipal_ = null;
+        }
+        return thirdPartyPrincipalBuilder_;
+      }
+
+      private java.lang.Object serviceAccountKeyName_ = "";
+      /**
+       * <pre>
+       * The name of the service account key used to create or exchange
+       * credentials for authenticating the service account making the request.
+       * This is a scheme-less URI full resource name. For example:
+       * "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+       * </pre>
+       *
+       * <code>string service_account_key_name = 5;</code>
+       * @return The serviceAccountKeyName.
+       */
+      public java.lang.String getServiceAccountKeyName() {
+        java.lang.Object ref = serviceAccountKeyName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountKeyName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the service account key used to create or exchange
+       * credentials for authenticating the service account making the request.
+       * This is a scheme-less URI full resource name. For example:
+       * "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+       * </pre>
+       *
+       * <code>string service_account_key_name = 5;</code>
+       * @return The bytes for serviceAccountKeyName.
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountKeyNameBytes() {
+        java.lang.Object ref = serviceAccountKeyName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountKeyName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the service account key used to create or exchange
+       * credentials for authenticating the service account making the request.
+       * This is a scheme-less URI full resource name. For example:
+       * "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+       * </pre>
+       *
+       * <code>string service_account_key_name = 5;</code>
+       * @param value The serviceAccountKeyName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountKeyName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountKeyName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the service account key used to create or exchange
+       * credentials for authenticating the service account making the request.
+       * This is a scheme-less URI full resource name. For example:
+       * "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+       * </pre>
+       *
+       * <code>string service_account_key_name = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountKeyName() {
+        
+        serviceAccountKeyName_ = getDefaultInstance().getServiceAccountKeyName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the service account key used to create or exchange
+       * credentials for authenticating the service account making the request.
+       * This is a scheme-less URI full resource name. For example:
+       * "//iam.googleapis.com/projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}"
+       * </pre>
+       *
+       * <code>string service_account_key_name = 5;</code>
+       * @param value The bytes for serviceAccountKeyName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountKeyNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountKeyName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo> serviceAccountDelegationInfo_ =
+        java.util.Collections.emptyList();
+      private void ensureServiceAccountDelegationInfoIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          serviceAccountDelegationInfo_ = new java.util.ArrayList<google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo>(serviceAccountDelegationInfo_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.Builder, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfoOrBuilder> serviceAccountDelegationInfoBuilder_;
+
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public java.util.List<google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo> getServiceAccountDelegationInfoList() {
+        if (serviceAccountDelegationInfoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(serviceAccountDelegationInfo_);
+        } else {
+          return serviceAccountDelegationInfoBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public int getServiceAccountDelegationInfoCount() {
+        if (serviceAccountDelegationInfoBuilder_ == null) {
+          return serviceAccountDelegationInfo_.size();
+        } else {
+          return serviceAccountDelegationInfoBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo getServiceAccountDelegationInfo(int index) {
+        if (serviceAccountDelegationInfoBuilder_ == null) {
+          return serviceAccountDelegationInfo_.get(index);
+        } else {
+          return serviceAccountDelegationInfoBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public Builder setServiceAccountDelegationInfo(
+          int index, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo value) {
+        if (serviceAccountDelegationInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceAccountDelegationInfoIsMutable();
+          serviceAccountDelegationInfo_.set(index, value);
+          onChanged();
+        } else {
+          serviceAccountDelegationInfoBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public Builder setServiceAccountDelegationInfo(
+          int index, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.Builder builderForValue) {
+        if (serviceAccountDelegationInfoBuilder_ == null) {
+          ensureServiceAccountDelegationInfoIsMutable();
+          serviceAccountDelegationInfo_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          serviceAccountDelegationInfoBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public Builder addServiceAccountDelegationInfo(google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo value) {
+        if (serviceAccountDelegationInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceAccountDelegationInfoIsMutable();
+          serviceAccountDelegationInfo_.add(value);
+          onChanged();
+        } else {
+          serviceAccountDelegationInfoBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public Builder addServiceAccountDelegationInfo(
+          int index, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo value) {
+        if (serviceAccountDelegationInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceAccountDelegationInfoIsMutable();
+          serviceAccountDelegationInfo_.add(index, value);
+          onChanged();
+        } else {
+          serviceAccountDelegationInfoBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public Builder addServiceAccountDelegationInfo(
+          google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.Builder builderForValue) {
+        if (serviceAccountDelegationInfoBuilder_ == null) {
+          ensureServiceAccountDelegationInfoIsMutable();
+          serviceAccountDelegationInfo_.add(builderForValue.build());
+          onChanged();
+        } else {
+          serviceAccountDelegationInfoBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public Builder addServiceAccountDelegationInfo(
+          int index, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.Builder builderForValue) {
+        if (serviceAccountDelegationInfoBuilder_ == null) {
+          ensureServiceAccountDelegationInfoIsMutable();
+          serviceAccountDelegationInfo_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          serviceAccountDelegationInfoBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public Builder addAllServiceAccountDelegationInfo(
+          java.lang.Iterable<? extends google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo> values) {
+        if (serviceAccountDelegationInfoBuilder_ == null) {
+          ensureServiceAccountDelegationInfoIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, serviceAccountDelegationInfo_);
+          onChanged();
+        } else {
+          serviceAccountDelegationInfoBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public Builder clearServiceAccountDelegationInfo() {
+        if (serviceAccountDelegationInfoBuilder_ == null) {
+          serviceAccountDelegationInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          serviceAccountDelegationInfoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public Builder removeServiceAccountDelegationInfo(int index) {
+        if (serviceAccountDelegationInfoBuilder_ == null) {
+          ensureServiceAccountDelegationInfoIsMutable();
+          serviceAccountDelegationInfo_.remove(index);
+          onChanged();
+        } else {
+          serviceAccountDelegationInfoBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.Builder getServiceAccountDelegationInfoBuilder(
+          int index) {
+        return getServiceAccountDelegationInfoFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfoOrBuilder getServiceAccountDelegationInfoOrBuilder(
+          int index) {
+        if (serviceAccountDelegationInfoBuilder_ == null) {
+          return serviceAccountDelegationInfo_.get(index);  } else {
+          return serviceAccountDelegationInfoBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public java.util.List<? extends google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfoOrBuilder> 
+           getServiceAccountDelegationInfoOrBuilderList() {
+        if (serviceAccountDelegationInfoBuilder_ != null) {
+          return serviceAccountDelegationInfoBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(serviceAccountDelegationInfo_);
+        }
+      }
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.Builder addServiceAccountDelegationInfoBuilder() {
+        return getServiceAccountDelegationInfoFieldBuilder().addBuilder(
+            google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.Builder addServiceAccountDelegationInfoBuilder(
+          int index) {
+        return getServiceAccountDelegationInfoFieldBuilder().addBuilder(
+            index, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Identity delegation history of an authenticated service account that makes
+       * the request. It contains information on the real authorities that try to
+       * access GCP resources by delegating on a service account. When multiple
+       * authorities present, they are guaranteed to be sorted based on the original
+       * ordering of the identity delegation events.
+       * </pre>
+       *
+       * <code>repeated .google.events.cloud.audit.v1.ServiceAccountDelegationInfo service_account_delegation_info = 6;</code>
+       */
+      public java.util.List<google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.Builder> 
+           getServiceAccountDelegationInfoBuilderList() {
+        return getServiceAccountDelegationInfoFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.Builder, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfoOrBuilder> 
+          getServiceAccountDelegationInfoFieldBuilder() {
+        if (serviceAccountDelegationInfoBuilder_ == null) {
+          serviceAccountDelegationInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.Builder, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfoOrBuilder>(
+                  serviceAccountDelegationInfo_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          serviceAccountDelegationInfo_ = null;
+        }
+        return serviceAccountDelegationInfoBuilder_;
+      }
+
+      private java.lang.Object principalSubject_ = "";
+      /**
+       * <pre>
+       * String representation of identity of requesting party.
+       * Populated for both first and third party identities.
+       * </pre>
+       *
+       * <code>string principal_subject = 8;</code>
+       * @return The principalSubject.
+       */
+      public java.lang.String getPrincipalSubject() {
+        java.lang.Object ref = principalSubject_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          principalSubject_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * String representation of identity of requesting party.
+       * Populated for both first and third party identities.
+       * </pre>
+       *
+       * <code>string principal_subject = 8;</code>
+       * @return The bytes for principalSubject.
+       */
+      public com.google.protobuf.ByteString
+          getPrincipalSubjectBytes() {
+        java.lang.Object ref = principalSubject_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          principalSubject_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * String representation of identity of requesting party.
+       * Populated for both first and third party identities.
+       * </pre>
+       *
+       * <code>string principal_subject = 8;</code>
+       * @param value The principalSubject to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrincipalSubject(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        principalSubject_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * String representation of identity of requesting party.
+       * Populated for both first and third party identities.
+       * </pre>
+       *
+       * <code>string principal_subject = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrincipalSubject() {
+        
+        principalSubject_ = getDefaultInstance().getPrincipalSubject();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * String representation of identity of requesting party.
+       * Populated for both first and third party identities.
+       * </pre>
+       *
+       * <code>string principal_subject = 8;</code>
+       * @param value The bytes for principalSubject to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrincipalSubjectBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        principalSubject_ = value;
         onChanged();
         return this;
       }
@@ -4116,7 +10957,7 @@ public final class Data {
     /**
      * <pre>
      * The resource being accessed, as a REST-style string. For example:
-     *     bigquery.googlapis.com/projects/PROJECTID/datasets/DATASETID
+     *     bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
      * </pre>
      *
      * <code>string resource = 1;</code>
@@ -4126,7 +10967,7 @@ public final class Data {
     /**
      * <pre>
      * The resource being accessed, as a REST-style string. For example:
-     *     bigquery.googlapis.com/projects/PROJECTID/datasets/DATASETID
+     *     bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
      * </pre>
      *
      * <code>string resource = 1;</code>
@@ -4165,6 +11006,45 @@ public final class Data {
      * @return The granted.
      */
     boolean getGranted();
+
+    /**
+     * <pre>
+     * Resource attributes used in IAM condition evaluation. This field contains
+     * resource attributes like resource type and resource name.
+     * To get the whole view of the attributes used in IAM
+     * condition evaluation, the user must also look into
+     * `AuditLogData.request_metadata.request_attributes`.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Resource resource_attributes = 5;</code>
+     * @return Whether the resourceAttributes field is set.
+     */
+    boolean hasResourceAttributes();
+    /**
+     * <pre>
+     * Resource attributes used in IAM condition evaluation. This field contains
+     * resource attributes like resource type and resource name.
+     * To get the whole view of the attributes used in IAM
+     * condition evaluation, the user must also look into
+     * `AuditLogData.request_metadata.request_attributes`.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Resource resource_attributes = 5;</code>
+     * @return The resourceAttributes.
+     */
+    com.google.rpc.context.AttributeContext.Resource getResourceAttributes();
+    /**
+     * <pre>
+     * Resource attributes used in IAM condition evaluation. This field contains
+     * resource attributes like resource type and resource name.
+     * To get the whole view of the attributes used in IAM
+     * condition evaluation, the user must also look into
+     * `AuditLogData.request_metadata.request_attributes`.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Resource resource_attributes = 5;</code>
+     */
+    com.google.rpc.context.AttributeContext.ResourceOrBuilder getResourceAttributesOrBuilder();
   }
   /**
    * <pre>
@@ -4234,6 +11114,19 @@ public final class Data {
               granted_ = input.readBool();
               break;
             }
+            case 42: {
+              com.google.rpc.context.AttributeContext.Resource.Builder subBuilder = null;
+              if (resourceAttributes_ != null) {
+                subBuilder = resourceAttributes_.toBuilder();
+              }
+              resourceAttributes_ = input.readMessage(com.google.rpc.context.AttributeContext.Resource.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resourceAttributes_);
+                resourceAttributes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4271,7 +11164,7 @@ public final class Data {
     /**
      * <pre>
      * The resource being accessed, as a REST-style string. For example:
-     *     bigquery.googlapis.com/projects/PROJECTID/datasets/DATASETID
+     *     bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
      * </pre>
      *
      * <code>string resource = 1;</code>
@@ -4293,7 +11186,7 @@ public final class Data {
     /**
      * <pre>
      * The resource being accessed, as a REST-style string. For example:
-     *     bigquery.googlapis.com/projects/PROJECTID/datasets/DATASETID
+     *     bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
      * </pre>
      *
      * <code>string resource = 1;</code>
@@ -4376,6 +11269,56 @@ public final class Data {
       return granted_;
     }
 
+    public static final int RESOURCE_ATTRIBUTES_FIELD_NUMBER = 5;
+    private com.google.rpc.context.AttributeContext.Resource resourceAttributes_;
+    /**
+     * <pre>
+     * Resource attributes used in IAM condition evaluation. This field contains
+     * resource attributes like resource type and resource name.
+     * To get the whole view of the attributes used in IAM
+     * condition evaluation, the user must also look into
+     * `AuditLogData.request_metadata.request_attributes`.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Resource resource_attributes = 5;</code>
+     * @return Whether the resourceAttributes field is set.
+     */
+    @java.lang.Override
+    public boolean hasResourceAttributes() {
+      return resourceAttributes_ != null;
+    }
+    /**
+     * <pre>
+     * Resource attributes used in IAM condition evaluation. This field contains
+     * resource attributes like resource type and resource name.
+     * To get the whole view of the attributes used in IAM
+     * condition evaluation, the user must also look into
+     * `AuditLogData.request_metadata.request_attributes`.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Resource resource_attributes = 5;</code>
+     * @return The resourceAttributes.
+     */
+    @java.lang.Override
+    public com.google.rpc.context.AttributeContext.Resource getResourceAttributes() {
+      return resourceAttributes_ == null ? com.google.rpc.context.AttributeContext.Resource.getDefaultInstance() : resourceAttributes_;
+    }
+    /**
+     * <pre>
+     * Resource attributes used in IAM condition evaluation. This field contains
+     * resource attributes like resource type and resource name.
+     * To get the whole view of the attributes used in IAM
+     * condition evaluation, the user must also look into
+     * `AuditLogData.request_metadata.request_attributes`.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Resource resource_attributes = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.rpc.context.AttributeContext.ResourceOrBuilder getResourceAttributesOrBuilder() {
+      return getResourceAttributes();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4399,6 +11342,9 @@ public final class Data {
       if (granted_ != false) {
         output.writeBool(3, granted_);
       }
+      if (resourceAttributes_ != null) {
+        output.writeMessage(5, getResourceAttributes());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4417,6 +11363,10 @@ public final class Data {
       if (granted_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, granted_);
+      }
+      if (resourceAttributes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getResourceAttributes());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4439,6 +11389,11 @@ public final class Data {
           .equals(other.getPermission())) return false;
       if (getGranted()
           != other.getGranted()) return false;
+      if (hasResourceAttributes() != other.hasResourceAttributes()) return false;
+      if (hasResourceAttributes()) {
+        if (!getResourceAttributes()
+            .equals(other.getResourceAttributes())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4457,6 +11412,10 @@ public final class Data {
       hash = (37 * hash) + GRANTED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getGranted());
+      if (hasResourceAttributes()) {
+        hash = (37 * hash) + RESOURCE_ATTRIBUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getResourceAttributes().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4600,6 +11559,12 @@ public final class Data {
 
         granted_ = false;
 
+        if (resourceAttributesBuilder_ == null) {
+          resourceAttributes_ = null;
+        } else {
+          resourceAttributes_ = null;
+          resourceAttributesBuilder_ = null;
+        }
         return this;
       }
 
@@ -4629,6 +11594,11 @@ public final class Data {
         result.resource_ = resource_;
         result.permission_ = permission_;
         result.granted_ = granted_;
+        if (resourceAttributesBuilder_ == null) {
+          result.resourceAttributes_ = resourceAttributes_;
+        } else {
+          result.resourceAttributes_ = resourceAttributesBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -4688,6 +11658,9 @@ public final class Data {
         if (other.getGranted() != false) {
           setGranted(other.getGranted());
         }
+        if (other.hasResourceAttributes()) {
+          mergeResourceAttributes(other.getResourceAttributes());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4721,7 +11694,7 @@ public final class Data {
       /**
        * <pre>
        * The resource being accessed, as a REST-style string. For example:
-       *     bigquery.googlapis.com/projects/PROJECTID/datasets/DATASETID
+       *     bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
        * </pre>
        *
        * <code>string resource = 1;</code>
@@ -4742,7 +11715,7 @@ public final class Data {
       /**
        * <pre>
        * The resource being accessed, as a REST-style string. For example:
-       *     bigquery.googlapis.com/projects/PROJECTID/datasets/DATASETID
+       *     bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
        * </pre>
        *
        * <code>string resource = 1;</code>
@@ -4764,7 +11737,7 @@ public final class Data {
       /**
        * <pre>
        * The resource being accessed, as a REST-style string. For example:
-       *     bigquery.googlapis.com/projects/PROJECTID/datasets/DATASETID
+       *     bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
        * </pre>
        *
        * <code>string resource = 1;</code>
@@ -4784,7 +11757,7 @@ public final class Data {
       /**
        * <pre>
        * The resource being accessed, as a REST-style string. For example:
-       *     bigquery.googlapis.com/projects/PROJECTID/datasets/DATASETID
+       *     bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
        * </pre>
        *
        * <code>string resource = 1;</code>
@@ -4799,7 +11772,7 @@ public final class Data {
       /**
        * <pre>
        * The resource being accessed, as a REST-style string. For example:
-       *     bigquery.googlapis.com/projects/PROJECTID/datasets/DATASETID
+       *     bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
        * </pre>
        *
        * <code>string resource = 1;</code>
@@ -4959,6 +11932,197 @@ public final class Data {
         onChanged();
         return this;
       }
+
+      private com.google.rpc.context.AttributeContext.Resource resourceAttributes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.rpc.context.AttributeContext.Resource, com.google.rpc.context.AttributeContext.Resource.Builder, com.google.rpc.context.AttributeContext.ResourceOrBuilder> resourceAttributesBuilder_;
+      /**
+       * <pre>
+       * Resource attributes used in IAM condition evaluation. This field contains
+       * resource attributes like resource type and resource name.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLogData.request_metadata.request_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Resource resource_attributes = 5;</code>
+       * @return Whether the resourceAttributes field is set.
+       */
+      public boolean hasResourceAttributes() {
+        return resourceAttributesBuilder_ != null || resourceAttributes_ != null;
+      }
+      /**
+       * <pre>
+       * Resource attributes used in IAM condition evaluation. This field contains
+       * resource attributes like resource type and resource name.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLogData.request_metadata.request_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Resource resource_attributes = 5;</code>
+       * @return The resourceAttributes.
+       */
+      public com.google.rpc.context.AttributeContext.Resource getResourceAttributes() {
+        if (resourceAttributesBuilder_ == null) {
+          return resourceAttributes_ == null ? com.google.rpc.context.AttributeContext.Resource.getDefaultInstance() : resourceAttributes_;
+        } else {
+          return resourceAttributesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Resource attributes used in IAM condition evaluation. This field contains
+       * resource attributes like resource type and resource name.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLogData.request_metadata.request_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Resource resource_attributes = 5;</code>
+       */
+      public Builder setResourceAttributes(com.google.rpc.context.AttributeContext.Resource value) {
+        if (resourceAttributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resourceAttributes_ = value;
+          onChanged();
+        } else {
+          resourceAttributesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource attributes used in IAM condition evaluation. This field contains
+       * resource attributes like resource type and resource name.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLogData.request_metadata.request_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Resource resource_attributes = 5;</code>
+       */
+      public Builder setResourceAttributes(
+          com.google.rpc.context.AttributeContext.Resource.Builder builderForValue) {
+        if (resourceAttributesBuilder_ == null) {
+          resourceAttributes_ = builderForValue.build();
+          onChanged();
+        } else {
+          resourceAttributesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource attributes used in IAM condition evaluation. This field contains
+       * resource attributes like resource type and resource name.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLogData.request_metadata.request_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Resource resource_attributes = 5;</code>
+       */
+      public Builder mergeResourceAttributes(com.google.rpc.context.AttributeContext.Resource value) {
+        if (resourceAttributesBuilder_ == null) {
+          if (resourceAttributes_ != null) {
+            resourceAttributes_ =
+              com.google.rpc.context.AttributeContext.Resource.newBuilder(resourceAttributes_).mergeFrom(value).buildPartial();
+          } else {
+            resourceAttributes_ = value;
+          }
+          onChanged();
+        } else {
+          resourceAttributesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource attributes used in IAM condition evaluation. This field contains
+       * resource attributes like resource type and resource name.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLogData.request_metadata.request_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Resource resource_attributes = 5;</code>
+       */
+      public Builder clearResourceAttributes() {
+        if (resourceAttributesBuilder_ == null) {
+          resourceAttributes_ = null;
+          onChanged();
+        } else {
+          resourceAttributes_ = null;
+          resourceAttributesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource attributes used in IAM condition evaluation. This field contains
+       * resource attributes like resource type and resource name.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLogData.request_metadata.request_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Resource resource_attributes = 5;</code>
+       */
+      public com.google.rpc.context.AttributeContext.Resource.Builder getResourceAttributesBuilder() {
+        
+        onChanged();
+        return getResourceAttributesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Resource attributes used in IAM condition evaluation. This field contains
+       * resource attributes like resource type and resource name.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLogData.request_metadata.request_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Resource resource_attributes = 5;</code>
+       */
+      public com.google.rpc.context.AttributeContext.ResourceOrBuilder getResourceAttributesOrBuilder() {
+        if (resourceAttributesBuilder_ != null) {
+          return resourceAttributesBuilder_.getMessageOrBuilder();
+        } else {
+          return resourceAttributes_ == null ?
+              com.google.rpc.context.AttributeContext.Resource.getDefaultInstance() : resourceAttributes_;
+        }
+      }
+      /**
+       * <pre>
+       * Resource attributes used in IAM condition evaluation. This field contains
+       * resource attributes like resource type and resource name.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLogData.request_metadata.request_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Resource resource_attributes = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.rpc.context.AttributeContext.Resource, com.google.rpc.context.AttributeContext.Resource.Builder, com.google.rpc.context.AttributeContext.ResourceOrBuilder> 
+          getResourceAttributesFieldBuilder() {
+        if (resourceAttributesBuilder_ == null) {
+          resourceAttributesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.rpc.context.AttributeContext.Resource, com.google.rpc.context.AttributeContext.Resource.Builder, com.google.rpc.context.AttributeContext.ResourceOrBuilder>(
+                  getResourceAttributes(),
+                  getParentForChildren(),
+                  isClean());
+          resourceAttributes_ = null;
+        }
+        return resourceAttributesBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5019,6 +12183,14 @@ public final class Data {
     /**
      * <pre>
      * The IP address of the caller.
+     * For caller from internet, this will be public IPv4 or IPv6 address.
+     * For caller from a Compute Engine VM with external IP address, this
+     * will be the VM's external IP address. For caller from a Compute
+     * Engine VM without external IP address, if the VM is in the same
+     * organization (or project) as the accessed resource, `caller_ip` will
+     * be the VM's internal IPv4 address, otherwise the `caller_ip` will be
+     * redacted to "gce-internal-ip".
+     * See https://cloud.google.com/compute/docs/vpc/ for more information.
      * </pre>
      *
      * <code>string caller_ip = 1;</code>
@@ -5028,6 +12200,14 @@ public final class Data {
     /**
      * <pre>
      * The IP address of the caller.
+     * For caller from internet, this will be public IPv4 or IPv6 address.
+     * For caller from a Compute Engine VM with external IP address, this
+     * will be the VM's external IP address. For caller from a Compute
+     * Engine VM without external IP address, if the VM is in the same
+     * organization (or project) as the accessed resource, `caller_ip` will
+     * be the VM's internal IPv4 address, otherwise the `caller_ip` will be
+     * redacted to "gce-internal-ip".
+     * See https://cloud.google.com/compute/docs/vpc/ for more information.
      * </pre>
      *
      * <code>string caller_ip = 1;</code>
@@ -5073,6 +12253,117 @@ public final class Data {
      */
     com.google.protobuf.ByteString
         getCallerSuppliedUserAgentBytes();
+
+    /**
+     * <pre>
+     * The network of the caller.
+     * Set only if the network host project is part of the same GCP organization
+     * (or project) as the accessed resource.
+     * See https://cloud.google.com/compute/docs/vpc/ for more information.
+     * This is a scheme-less URI full resource name. For example:
+     *     "//compute.googleapis.com/projects/PROJECT_ID/global/networks/NETWORK_ID"
+     * </pre>
+     *
+     * <code>string caller_network = 3;</code>
+     * @return The callerNetwork.
+     */
+    java.lang.String getCallerNetwork();
+    /**
+     * <pre>
+     * The network of the caller.
+     * Set only if the network host project is part of the same GCP organization
+     * (or project) as the accessed resource.
+     * See https://cloud.google.com/compute/docs/vpc/ for more information.
+     * This is a scheme-less URI full resource name. For example:
+     *     "//compute.googleapis.com/projects/PROJECT_ID/global/networks/NETWORK_ID"
+     * </pre>
+     *
+     * <code>string caller_network = 3;</code>
+     * @return The bytes for callerNetwork.
+     */
+    com.google.protobuf.ByteString
+        getCallerNetworkBytes();
+
+    /**
+     * <pre>
+     * Request attributes used in IAM condition evaluation. This field contains
+     * request attributes like request time and access levels associated with
+     * the request.
+     * To get the whole view of the attributes used in IAM
+     * condition evaluation, the user must also look into
+     * `AuditLog.authentication_info.resource_attributes`.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+     * @return Whether the requestAttributes field is set.
+     */
+    boolean hasRequestAttributes();
+    /**
+     * <pre>
+     * Request attributes used in IAM condition evaluation. This field contains
+     * request attributes like request time and access levels associated with
+     * the request.
+     * To get the whole view of the attributes used in IAM
+     * condition evaluation, the user must also look into
+     * `AuditLog.authentication_info.resource_attributes`.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+     * @return The requestAttributes.
+     */
+    com.google.rpc.context.AttributeContext.Request getRequestAttributes();
+    /**
+     * <pre>
+     * Request attributes used in IAM condition evaluation. This field contains
+     * request attributes like request time and access levels associated with
+     * the request.
+     * To get the whole view of the attributes used in IAM
+     * condition evaluation, the user must also look into
+     * `AuditLog.authentication_info.resource_attributes`.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+     */
+    com.google.rpc.context.AttributeContext.RequestOrBuilder getRequestAttributesOrBuilder();
+
+    /**
+     * <pre>
+     * The destination of a network activity, such as accepting a TCP connection.
+     * In a multi hop network activity, the destination represents the receiver of
+     * the last hop. Only two fields are used in this message, Peer.port and
+     * Peer.ip. These fields are optionally populated by those services utilizing
+     * the IAM condition feature.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+     * @return Whether the destinationAttributes field is set.
+     */
+    boolean hasDestinationAttributes();
+    /**
+     * <pre>
+     * The destination of a network activity, such as accepting a TCP connection.
+     * In a multi hop network activity, the destination represents the receiver of
+     * the last hop. Only two fields are used in this message, Peer.port and
+     * Peer.ip. These fields are optionally populated by those services utilizing
+     * the IAM condition feature.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+     * @return The destinationAttributes.
+     */
+    com.google.rpc.context.AttributeContext.Peer getDestinationAttributes();
+    /**
+     * <pre>
+     * The destination of a network activity, such as accepting a TCP connection.
+     * In a multi hop network activity, the destination represents the receiver of
+     * the last hop. Only two fields are used in this message, Peer.port and
+     * Peer.ip. These fields are optionally populated by those services utilizing
+     * the IAM condition feature.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+     */
+    com.google.rpc.context.AttributeContext.PeerOrBuilder getDestinationAttributesOrBuilder();
   }
   /**
    * <pre>
@@ -5093,6 +12384,7 @@ public final class Data {
     private RequestMetadata() {
       callerIp_ = "";
       callerSuppliedUserAgent_ = "";
+      callerNetwork_ = "";
     }
 
     @java.lang.Override
@@ -5137,6 +12429,38 @@ public final class Data {
               callerSuppliedUserAgent_ = s;
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              callerNetwork_ = s;
+              break;
+            }
+            case 58: {
+              com.google.rpc.context.AttributeContext.Request.Builder subBuilder = null;
+              if (requestAttributes_ != null) {
+                subBuilder = requestAttributes_.toBuilder();
+              }
+              requestAttributes_ = input.readMessage(com.google.rpc.context.AttributeContext.Request.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(requestAttributes_);
+                requestAttributes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              com.google.rpc.context.AttributeContext.Peer.Builder subBuilder = null;
+              if (destinationAttributes_ != null) {
+                subBuilder = destinationAttributes_.toBuilder();
+              }
+              destinationAttributes_ = input.readMessage(com.google.rpc.context.AttributeContext.Peer.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(destinationAttributes_);
+                destinationAttributes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5174,6 +12498,14 @@ public final class Data {
     /**
      * <pre>
      * The IP address of the caller.
+     * For caller from internet, this will be public IPv4 or IPv6 address.
+     * For caller from a Compute Engine VM with external IP address, this
+     * will be the VM's external IP address. For caller from a Compute
+     * Engine VM without external IP address, if the VM is in the same
+     * organization (or project) as the accessed resource, `caller_ip` will
+     * be the VM's internal IPv4 address, otherwise the `caller_ip` will be
+     * redacted to "gce-internal-ip".
+     * See https://cloud.google.com/compute/docs/vpc/ for more information.
      * </pre>
      *
      * <code>string caller_ip = 1;</code>
@@ -5195,6 +12527,14 @@ public final class Data {
     /**
      * <pre>
      * The IP address of the caller.
+     * For caller from internet, this will be public IPv4 or IPv6 address.
+     * For caller from a Compute Engine VM with external IP address, this
+     * will be the VM's external IP address. For caller from a Compute
+     * Engine VM without external IP address, if the VM is in the same
+     * organization (or project) as the accessed resource, `caller_ip` will
+     * be the VM's internal IPv4 address, otherwise the `caller_ip` will be
+     * redacted to "gce-internal-ip".
+     * See https://cloud.google.com/compute/docs/vpc/ for more information.
      * </pre>
      *
      * <code>string caller_ip = 1;</code>
@@ -5279,6 +12619,165 @@ public final class Data {
       }
     }
 
+    public static final int CALLER_NETWORK_FIELD_NUMBER = 3;
+    private volatile java.lang.Object callerNetwork_;
+    /**
+     * <pre>
+     * The network of the caller.
+     * Set only if the network host project is part of the same GCP organization
+     * (or project) as the accessed resource.
+     * See https://cloud.google.com/compute/docs/vpc/ for more information.
+     * This is a scheme-less URI full resource name. For example:
+     *     "//compute.googleapis.com/projects/PROJECT_ID/global/networks/NETWORK_ID"
+     * </pre>
+     *
+     * <code>string caller_network = 3;</code>
+     * @return The callerNetwork.
+     */
+    @java.lang.Override
+    public java.lang.String getCallerNetwork() {
+      java.lang.Object ref = callerNetwork_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        callerNetwork_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The network of the caller.
+     * Set only if the network host project is part of the same GCP organization
+     * (or project) as the accessed resource.
+     * See https://cloud.google.com/compute/docs/vpc/ for more information.
+     * This is a scheme-less URI full resource name. For example:
+     *     "//compute.googleapis.com/projects/PROJECT_ID/global/networks/NETWORK_ID"
+     * </pre>
+     *
+     * <code>string caller_network = 3;</code>
+     * @return The bytes for callerNetwork.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCallerNetworkBytes() {
+      java.lang.Object ref = callerNetwork_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        callerNetwork_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REQUEST_ATTRIBUTES_FIELD_NUMBER = 7;
+    private com.google.rpc.context.AttributeContext.Request requestAttributes_;
+    /**
+     * <pre>
+     * Request attributes used in IAM condition evaluation. This field contains
+     * request attributes like request time and access levels associated with
+     * the request.
+     * To get the whole view of the attributes used in IAM
+     * condition evaluation, the user must also look into
+     * `AuditLog.authentication_info.resource_attributes`.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+     * @return Whether the requestAttributes field is set.
+     */
+    @java.lang.Override
+    public boolean hasRequestAttributes() {
+      return requestAttributes_ != null;
+    }
+    /**
+     * <pre>
+     * Request attributes used in IAM condition evaluation. This field contains
+     * request attributes like request time and access levels associated with
+     * the request.
+     * To get the whole view of the attributes used in IAM
+     * condition evaluation, the user must also look into
+     * `AuditLog.authentication_info.resource_attributes`.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+     * @return The requestAttributes.
+     */
+    @java.lang.Override
+    public com.google.rpc.context.AttributeContext.Request getRequestAttributes() {
+      return requestAttributes_ == null ? com.google.rpc.context.AttributeContext.Request.getDefaultInstance() : requestAttributes_;
+    }
+    /**
+     * <pre>
+     * Request attributes used in IAM condition evaluation. This field contains
+     * request attributes like request time and access levels associated with
+     * the request.
+     * To get the whole view of the attributes used in IAM
+     * condition evaluation, the user must also look into
+     * `AuditLog.authentication_info.resource_attributes`.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.rpc.context.AttributeContext.RequestOrBuilder getRequestAttributesOrBuilder() {
+      return getRequestAttributes();
+    }
+
+    public static final int DESTINATION_ATTRIBUTES_FIELD_NUMBER = 8;
+    private com.google.rpc.context.AttributeContext.Peer destinationAttributes_;
+    /**
+     * <pre>
+     * The destination of a network activity, such as accepting a TCP connection.
+     * In a multi hop network activity, the destination represents the receiver of
+     * the last hop. Only two fields are used in this message, Peer.port and
+     * Peer.ip. These fields are optionally populated by those services utilizing
+     * the IAM condition feature.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+     * @return Whether the destinationAttributes field is set.
+     */
+    @java.lang.Override
+    public boolean hasDestinationAttributes() {
+      return destinationAttributes_ != null;
+    }
+    /**
+     * <pre>
+     * The destination of a network activity, such as accepting a TCP connection.
+     * In a multi hop network activity, the destination represents the receiver of
+     * the last hop. Only two fields are used in this message, Peer.port and
+     * Peer.ip. These fields are optionally populated by those services utilizing
+     * the IAM condition feature.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+     * @return The destinationAttributes.
+     */
+    @java.lang.Override
+    public com.google.rpc.context.AttributeContext.Peer getDestinationAttributes() {
+      return destinationAttributes_ == null ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance() : destinationAttributes_;
+    }
+    /**
+     * <pre>
+     * The destination of a network activity, such as accepting a TCP connection.
+     * In a multi hop network activity, the destination represents the receiver of
+     * the last hop. Only two fields are used in this message, Peer.port and
+     * Peer.ip. These fields are optionally populated by those services utilizing
+     * the IAM condition feature.
+     * </pre>
+     *
+     * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+     */
+    @java.lang.Override
+    public com.google.rpc.context.AttributeContext.PeerOrBuilder getDestinationAttributesOrBuilder() {
+      return getDestinationAttributes();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5299,6 +12798,15 @@ public final class Data {
       if (!getCallerSuppliedUserAgentBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, callerSuppliedUserAgent_);
       }
+      if (!getCallerNetworkBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, callerNetwork_);
+      }
+      if (requestAttributes_ != null) {
+        output.writeMessage(7, getRequestAttributes());
+      }
+      if (destinationAttributes_ != null) {
+        output.writeMessage(8, getDestinationAttributes());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5313,6 +12821,17 @@ public final class Data {
       }
       if (!getCallerSuppliedUserAgentBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, callerSuppliedUserAgent_);
+      }
+      if (!getCallerNetworkBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, callerNetwork_);
+      }
+      if (requestAttributes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getRequestAttributes());
+      }
+      if (destinationAttributes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getDestinationAttributes());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5333,6 +12852,18 @@ public final class Data {
           .equals(other.getCallerIp())) return false;
       if (!getCallerSuppliedUserAgent()
           .equals(other.getCallerSuppliedUserAgent())) return false;
+      if (!getCallerNetwork()
+          .equals(other.getCallerNetwork())) return false;
+      if (hasRequestAttributes() != other.hasRequestAttributes()) return false;
+      if (hasRequestAttributes()) {
+        if (!getRequestAttributes()
+            .equals(other.getRequestAttributes())) return false;
+      }
+      if (hasDestinationAttributes() != other.hasDestinationAttributes()) return false;
+      if (hasDestinationAttributes()) {
+        if (!getDestinationAttributes()
+            .equals(other.getDestinationAttributes())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5348,6 +12879,16 @@ public final class Data {
       hash = (53 * hash) + getCallerIp().hashCode();
       hash = (37 * hash) + CALLER_SUPPLIED_USER_AGENT_FIELD_NUMBER;
       hash = (53 * hash) + getCallerSuppliedUserAgent().hashCode();
+      hash = (37 * hash) + CALLER_NETWORK_FIELD_NUMBER;
+      hash = (53 * hash) + getCallerNetwork().hashCode();
+      if (hasRequestAttributes()) {
+        hash = (37 * hash) + REQUEST_ATTRIBUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getRequestAttributes().hashCode();
+      }
+      if (hasDestinationAttributes()) {
+        hash = (37 * hash) + DESTINATION_ATTRIBUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getDestinationAttributes().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5489,6 +13030,20 @@ public final class Data {
 
         callerSuppliedUserAgent_ = "";
 
+        callerNetwork_ = "";
+
+        if (requestAttributesBuilder_ == null) {
+          requestAttributes_ = null;
+        } else {
+          requestAttributes_ = null;
+          requestAttributesBuilder_ = null;
+        }
+        if (destinationAttributesBuilder_ == null) {
+          destinationAttributes_ = null;
+        } else {
+          destinationAttributes_ = null;
+          destinationAttributesBuilder_ = null;
+        }
         return this;
       }
 
@@ -5517,6 +13072,17 @@ public final class Data {
         google.events.cloud.audit.v1.Data.RequestMetadata result = new google.events.cloud.audit.v1.Data.RequestMetadata(this);
         result.callerIp_ = callerIp_;
         result.callerSuppliedUserAgent_ = callerSuppliedUserAgent_;
+        result.callerNetwork_ = callerNetwork_;
+        if (requestAttributesBuilder_ == null) {
+          result.requestAttributes_ = requestAttributes_;
+        } else {
+          result.requestAttributes_ = requestAttributesBuilder_.build();
+        }
+        if (destinationAttributesBuilder_ == null) {
+          result.destinationAttributes_ = destinationAttributes_;
+        } else {
+          result.destinationAttributes_ = destinationAttributesBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -5573,6 +13139,16 @@ public final class Data {
           callerSuppliedUserAgent_ = other.callerSuppliedUserAgent_;
           onChanged();
         }
+        if (!other.getCallerNetwork().isEmpty()) {
+          callerNetwork_ = other.callerNetwork_;
+          onChanged();
+        }
+        if (other.hasRequestAttributes()) {
+          mergeRequestAttributes(other.getRequestAttributes());
+        }
+        if (other.hasDestinationAttributes()) {
+          mergeDestinationAttributes(other.getDestinationAttributes());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -5606,6 +13182,14 @@ public final class Data {
       /**
        * <pre>
        * The IP address of the caller.
+       * For caller from internet, this will be public IPv4 or IPv6 address.
+       * For caller from a Compute Engine VM with external IP address, this
+       * will be the VM's external IP address. For caller from a Compute
+       * Engine VM without external IP address, if the VM is in the same
+       * organization (or project) as the accessed resource, `caller_ip` will
+       * be the VM's internal IPv4 address, otherwise the `caller_ip` will be
+       * redacted to "gce-internal-ip".
+       * See https://cloud.google.com/compute/docs/vpc/ for more information.
        * </pre>
        *
        * <code>string caller_ip = 1;</code>
@@ -5626,6 +13210,14 @@ public final class Data {
       /**
        * <pre>
        * The IP address of the caller.
+       * For caller from internet, this will be public IPv4 or IPv6 address.
+       * For caller from a Compute Engine VM with external IP address, this
+       * will be the VM's external IP address. For caller from a Compute
+       * Engine VM without external IP address, if the VM is in the same
+       * organization (or project) as the accessed resource, `caller_ip` will
+       * be the VM's internal IPv4 address, otherwise the `caller_ip` will be
+       * redacted to "gce-internal-ip".
+       * See https://cloud.google.com/compute/docs/vpc/ for more information.
        * </pre>
        *
        * <code>string caller_ip = 1;</code>
@@ -5647,6 +13239,14 @@ public final class Data {
       /**
        * <pre>
        * The IP address of the caller.
+       * For caller from internet, this will be public IPv4 or IPv6 address.
+       * For caller from a Compute Engine VM with external IP address, this
+       * will be the VM's external IP address. For caller from a Compute
+       * Engine VM without external IP address, if the VM is in the same
+       * organization (or project) as the accessed resource, `caller_ip` will
+       * be the VM's internal IPv4 address, otherwise the `caller_ip` will be
+       * redacted to "gce-internal-ip".
+       * See https://cloud.google.com/compute/docs/vpc/ for more information.
        * </pre>
        *
        * <code>string caller_ip = 1;</code>
@@ -5666,6 +13266,14 @@ public final class Data {
       /**
        * <pre>
        * The IP address of the caller.
+       * For caller from internet, this will be public IPv4 or IPv6 address.
+       * For caller from a Compute Engine VM with external IP address, this
+       * will be the VM's external IP address. For caller from a Compute
+       * Engine VM without external IP address, if the VM is in the same
+       * organization (or project) as the accessed resource, `caller_ip` will
+       * be the VM's internal IPv4 address, otherwise the `caller_ip` will be
+       * redacted to "gce-internal-ip".
+       * See https://cloud.google.com/compute/docs/vpc/ for more information.
        * </pre>
        *
        * <code>string caller_ip = 1;</code>
@@ -5680,6 +13288,14 @@ public final class Data {
       /**
        * <pre>
        * The IP address of the caller.
+       * For caller from internet, this will be public IPv4 or IPv6 address.
+       * For caller from a Compute Engine VM with external IP address, this
+       * will be the VM's external IP address. For caller from a Compute
+       * Engine VM without external IP address, if the VM is in the same
+       * organization (or project) as the accessed resource, `caller_ip` will
+       * be the VM's internal IPv4 address, otherwise the `caller_ip` will be
+       * redacted to "gce-internal-ip".
+       * See https://cloud.google.com/compute/docs/vpc/ for more information.
        * </pre>
        *
        * <code>string caller_ip = 1;</code>
@@ -5838,6 +13454,518 @@ public final class Data {
         onChanged();
         return this;
       }
+
+      private java.lang.Object callerNetwork_ = "";
+      /**
+       * <pre>
+       * The network of the caller.
+       * Set only if the network host project is part of the same GCP organization
+       * (or project) as the accessed resource.
+       * See https://cloud.google.com/compute/docs/vpc/ for more information.
+       * This is a scheme-less URI full resource name. For example:
+       *     "//compute.googleapis.com/projects/PROJECT_ID/global/networks/NETWORK_ID"
+       * </pre>
+       *
+       * <code>string caller_network = 3;</code>
+       * @return The callerNetwork.
+       */
+      public java.lang.String getCallerNetwork() {
+        java.lang.Object ref = callerNetwork_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          callerNetwork_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The network of the caller.
+       * Set only if the network host project is part of the same GCP organization
+       * (or project) as the accessed resource.
+       * See https://cloud.google.com/compute/docs/vpc/ for more information.
+       * This is a scheme-less URI full resource name. For example:
+       *     "//compute.googleapis.com/projects/PROJECT_ID/global/networks/NETWORK_ID"
+       * </pre>
+       *
+       * <code>string caller_network = 3;</code>
+       * @return The bytes for callerNetwork.
+       */
+      public com.google.protobuf.ByteString
+          getCallerNetworkBytes() {
+        java.lang.Object ref = callerNetwork_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          callerNetwork_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The network of the caller.
+       * Set only if the network host project is part of the same GCP organization
+       * (or project) as the accessed resource.
+       * See https://cloud.google.com/compute/docs/vpc/ for more information.
+       * This is a scheme-less URI full resource name. For example:
+       *     "//compute.googleapis.com/projects/PROJECT_ID/global/networks/NETWORK_ID"
+       * </pre>
+       *
+       * <code>string caller_network = 3;</code>
+       * @param value The callerNetwork to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCallerNetwork(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        callerNetwork_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The network of the caller.
+       * Set only if the network host project is part of the same GCP organization
+       * (or project) as the accessed resource.
+       * See https://cloud.google.com/compute/docs/vpc/ for more information.
+       * This is a scheme-less URI full resource name. For example:
+       *     "//compute.googleapis.com/projects/PROJECT_ID/global/networks/NETWORK_ID"
+       * </pre>
+       *
+       * <code>string caller_network = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCallerNetwork() {
+        
+        callerNetwork_ = getDefaultInstance().getCallerNetwork();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The network of the caller.
+       * Set only if the network host project is part of the same GCP organization
+       * (or project) as the accessed resource.
+       * See https://cloud.google.com/compute/docs/vpc/ for more information.
+       * This is a scheme-less URI full resource name. For example:
+       *     "//compute.googleapis.com/projects/PROJECT_ID/global/networks/NETWORK_ID"
+       * </pre>
+       *
+       * <code>string caller_network = 3;</code>
+       * @param value The bytes for callerNetwork to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCallerNetworkBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        callerNetwork_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.rpc.context.AttributeContext.Request requestAttributes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.rpc.context.AttributeContext.Request, com.google.rpc.context.AttributeContext.Request.Builder, com.google.rpc.context.AttributeContext.RequestOrBuilder> requestAttributesBuilder_;
+      /**
+       * <pre>
+       * Request attributes used in IAM condition evaluation. This field contains
+       * request attributes like request time and access levels associated with
+       * the request.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLog.authentication_info.resource_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+       * @return Whether the requestAttributes field is set.
+       */
+      public boolean hasRequestAttributes() {
+        return requestAttributesBuilder_ != null || requestAttributes_ != null;
+      }
+      /**
+       * <pre>
+       * Request attributes used in IAM condition evaluation. This field contains
+       * request attributes like request time and access levels associated with
+       * the request.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLog.authentication_info.resource_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+       * @return The requestAttributes.
+       */
+      public com.google.rpc.context.AttributeContext.Request getRequestAttributes() {
+        if (requestAttributesBuilder_ == null) {
+          return requestAttributes_ == null ? com.google.rpc.context.AttributeContext.Request.getDefaultInstance() : requestAttributes_;
+        } else {
+          return requestAttributesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Request attributes used in IAM condition evaluation. This field contains
+       * request attributes like request time and access levels associated with
+       * the request.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLog.authentication_info.resource_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+       */
+      public Builder setRequestAttributes(com.google.rpc.context.AttributeContext.Request value) {
+        if (requestAttributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          requestAttributes_ = value;
+          onChanged();
+        } else {
+          requestAttributesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Request attributes used in IAM condition evaluation. This field contains
+       * request attributes like request time and access levels associated with
+       * the request.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLog.authentication_info.resource_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+       */
+      public Builder setRequestAttributes(
+          com.google.rpc.context.AttributeContext.Request.Builder builderForValue) {
+        if (requestAttributesBuilder_ == null) {
+          requestAttributes_ = builderForValue.build();
+          onChanged();
+        } else {
+          requestAttributesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Request attributes used in IAM condition evaluation. This field contains
+       * request attributes like request time and access levels associated with
+       * the request.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLog.authentication_info.resource_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+       */
+      public Builder mergeRequestAttributes(com.google.rpc.context.AttributeContext.Request value) {
+        if (requestAttributesBuilder_ == null) {
+          if (requestAttributes_ != null) {
+            requestAttributes_ =
+              com.google.rpc.context.AttributeContext.Request.newBuilder(requestAttributes_).mergeFrom(value).buildPartial();
+          } else {
+            requestAttributes_ = value;
+          }
+          onChanged();
+        } else {
+          requestAttributesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Request attributes used in IAM condition evaluation. This field contains
+       * request attributes like request time and access levels associated with
+       * the request.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLog.authentication_info.resource_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+       */
+      public Builder clearRequestAttributes() {
+        if (requestAttributesBuilder_ == null) {
+          requestAttributes_ = null;
+          onChanged();
+        } else {
+          requestAttributes_ = null;
+          requestAttributesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Request attributes used in IAM condition evaluation. This field contains
+       * request attributes like request time and access levels associated with
+       * the request.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLog.authentication_info.resource_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+       */
+      public com.google.rpc.context.AttributeContext.Request.Builder getRequestAttributesBuilder() {
+        
+        onChanged();
+        return getRequestAttributesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Request attributes used in IAM condition evaluation. This field contains
+       * request attributes like request time and access levels associated with
+       * the request.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLog.authentication_info.resource_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+       */
+      public com.google.rpc.context.AttributeContext.RequestOrBuilder getRequestAttributesOrBuilder() {
+        if (requestAttributesBuilder_ != null) {
+          return requestAttributesBuilder_.getMessageOrBuilder();
+        } else {
+          return requestAttributes_ == null ?
+              com.google.rpc.context.AttributeContext.Request.getDefaultInstance() : requestAttributes_;
+        }
+      }
+      /**
+       * <pre>
+       * Request attributes used in IAM condition evaluation. This field contains
+       * request attributes like request time and access levels associated with
+       * the request.
+       * To get the whole view of the attributes used in IAM
+       * condition evaluation, the user must also look into
+       * `AuditLog.authentication_info.resource_attributes`.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Request request_attributes = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.rpc.context.AttributeContext.Request, com.google.rpc.context.AttributeContext.Request.Builder, com.google.rpc.context.AttributeContext.RequestOrBuilder> 
+          getRequestAttributesFieldBuilder() {
+        if (requestAttributesBuilder_ == null) {
+          requestAttributesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.rpc.context.AttributeContext.Request, com.google.rpc.context.AttributeContext.Request.Builder, com.google.rpc.context.AttributeContext.RequestOrBuilder>(
+                  getRequestAttributes(),
+                  getParentForChildren(),
+                  isClean());
+          requestAttributes_ = null;
+        }
+        return requestAttributesBuilder_;
+      }
+
+      private com.google.rpc.context.AttributeContext.Peer destinationAttributes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.rpc.context.AttributeContext.Peer, com.google.rpc.context.AttributeContext.Peer.Builder, com.google.rpc.context.AttributeContext.PeerOrBuilder> destinationAttributesBuilder_;
+      /**
+       * <pre>
+       * The destination of a network activity, such as accepting a TCP connection.
+       * In a multi hop network activity, the destination represents the receiver of
+       * the last hop. Only two fields are used in this message, Peer.port and
+       * Peer.ip. These fields are optionally populated by those services utilizing
+       * the IAM condition feature.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+       * @return Whether the destinationAttributes field is set.
+       */
+      public boolean hasDestinationAttributes() {
+        return destinationAttributesBuilder_ != null || destinationAttributes_ != null;
+      }
+      /**
+       * <pre>
+       * The destination of a network activity, such as accepting a TCP connection.
+       * In a multi hop network activity, the destination represents the receiver of
+       * the last hop. Only two fields are used in this message, Peer.port and
+       * Peer.ip. These fields are optionally populated by those services utilizing
+       * the IAM condition feature.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+       * @return The destinationAttributes.
+       */
+      public com.google.rpc.context.AttributeContext.Peer getDestinationAttributes() {
+        if (destinationAttributesBuilder_ == null) {
+          return destinationAttributes_ == null ? com.google.rpc.context.AttributeContext.Peer.getDefaultInstance() : destinationAttributes_;
+        } else {
+          return destinationAttributesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The destination of a network activity, such as accepting a TCP connection.
+       * In a multi hop network activity, the destination represents the receiver of
+       * the last hop. Only two fields are used in this message, Peer.port and
+       * Peer.ip. These fields are optionally populated by those services utilizing
+       * the IAM condition feature.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+       */
+      public Builder setDestinationAttributes(com.google.rpc.context.AttributeContext.Peer value) {
+        if (destinationAttributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          destinationAttributes_ = value;
+          onChanged();
+        } else {
+          destinationAttributesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The destination of a network activity, such as accepting a TCP connection.
+       * In a multi hop network activity, the destination represents the receiver of
+       * the last hop. Only two fields are used in this message, Peer.port and
+       * Peer.ip. These fields are optionally populated by those services utilizing
+       * the IAM condition feature.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+       */
+      public Builder setDestinationAttributes(
+          com.google.rpc.context.AttributeContext.Peer.Builder builderForValue) {
+        if (destinationAttributesBuilder_ == null) {
+          destinationAttributes_ = builderForValue.build();
+          onChanged();
+        } else {
+          destinationAttributesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The destination of a network activity, such as accepting a TCP connection.
+       * In a multi hop network activity, the destination represents the receiver of
+       * the last hop. Only two fields are used in this message, Peer.port and
+       * Peer.ip. These fields are optionally populated by those services utilizing
+       * the IAM condition feature.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+       */
+      public Builder mergeDestinationAttributes(com.google.rpc.context.AttributeContext.Peer value) {
+        if (destinationAttributesBuilder_ == null) {
+          if (destinationAttributes_ != null) {
+            destinationAttributes_ =
+              com.google.rpc.context.AttributeContext.Peer.newBuilder(destinationAttributes_).mergeFrom(value).buildPartial();
+          } else {
+            destinationAttributes_ = value;
+          }
+          onChanged();
+        } else {
+          destinationAttributesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The destination of a network activity, such as accepting a TCP connection.
+       * In a multi hop network activity, the destination represents the receiver of
+       * the last hop. Only two fields are used in this message, Peer.port and
+       * Peer.ip. These fields are optionally populated by those services utilizing
+       * the IAM condition feature.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+       */
+      public Builder clearDestinationAttributes() {
+        if (destinationAttributesBuilder_ == null) {
+          destinationAttributes_ = null;
+          onChanged();
+        } else {
+          destinationAttributes_ = null;
+          destinationAttributesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The destination of a network activity, such as accepting a TCP connection.
+       * In a multi hop network activity, the destination represents the receiver of
+       * the last hop. Only two fields are used in this message, Peer.port and
+       * Peer.ip. These fields are optionally populated by those services utilizing
+       * the IAM condition feature.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+       */
+      public com.google.rpc.context.AttributeContext.Peer.Builder getDestinationAttributesBuilder() {
+        
+        onChanged();
+        return getDestinationAttributesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The destination of a network activity, such as accepting a TCP connection.
+       * In a multi hop network activity, the destination represents the receiver of
+       * the last hop. Only two fields are used in this message, Peer.port and
+       * Peer.ip. These fields are optionally populated by those services utilizing
+       * the IAM condition feature.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+       */
+      public com.google.rpc.context.AttributeContext.PeerOrBuilder getDestinationAttributesOrBuilder() {
+        if (destinationAttributesBuilder_ != null) {
+          return destinationAttributesBuilder_.getMessageOrBuilder();
+        } else {
+          return destinationAttributes_ == null ?
+              com.google.rpc.context.AttributeContext.Peer.getDefaultInstance() : destinationAttributes_;
+        }
+      }
+      /**
+       * <pre>
+       * The destination of a network activity, such as accepting a TCP connection.
+       * In a multi hop network activity, the destination represents the receiver of
+       * the last hop. Only two fields are used in this message, Peer.port and
+       * Peer.ip. These fields are optionally populated by those services utilizing
+       * the IAM condition feature.
+       * </pre>
+       *
+       * <code>.google.rpc.context.AttributeContext.Peer destination_attributes = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.rpc.context.AttributeContext.Peer, com.google.rpc.context.AttributeContext.Peer.Builder, com.google.rpc.context.AttributeContext.PeerOrBuilder> 
+          getDestinationAttributesFieldBuilder() {
+        if (destinationAttributesBuilder_ == null) {
+          destinationAttributesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.rpc.context.AttributeContext.Peer, com.google.rpc.context.AttributeContext.Peer.Builder, com.google.rpc.context.AttributeContext.PeerOrBuilder>(
+                  getDestinationAttributes(),
+                  getParentForChildren(),
+                  isClean());
+          destinationAttributes_ = null;
+        }
+        return destinationAttributesBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5891,11 +14019,3868 @@ public final class Data {
 
   }
 
+  public interface ResourceLocationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.events.cloud.audit.v1.ResourceLocation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The locations of a resource after the execution of the operation.
+     * Requests to create or delete a location based resource must populate
+     * the 'current_locations' field and not the 'original_locations' field.
+     * For example:
+     *     "europe-west1-a"
+     *     "us-east1"
+     *     "nam3"
+     * </pre>
+     *
+     * <code>repeated string current_locations = 1;</code>
+     * @return A list containing the currentLocations.
+     */
+    java.util.List<java.lang.String>
+        getCurrentLocationsList();
+    /**
+     * <pre>
+     * The locations of a resource after the execution of the operation.
+     * Requests to create or delete a location based resource must populate
+     * the 'current_locations' field and not the 'original_locations' field.
+     * For example:
+     *     "europe-west1-a"
+     *     "us-east1"
+     *     "nam3"
+     * </pre>
+     *
+     * <code>repeated string current_locations = 1;</code>
+     * @return The count of currentLocations.
+     */
+    int getCurrentLocationsCount();
+    /**
+     * <pre>
+     * The locations of a resource after the execution of the operation.
+     * Requests to create or delete a location based resource must populate
+     * the 'current_locations' field and not the 'original_locations' field.
+     * For example:
+     *     "europe-west1-a"
+     *     "us-east1"
+     *     "nam3"
+     * </pre>
+     *
+     * <code>repeated string current_locations = 1;</code>
+     * @param index The index of the element to return.
+     * @return The currentLocations at the given index.
+     */
+    java.lang.String getCurrentLocations(int index);
+    /**
+     * <pre>
+     * The locations of a resource after the execution of the operation.
+     * Requests to create or delete a location based resource must populate
+     * the 'current_locations' field and not the 'original_locations' field.
+     * For example:
+     *     "europe-west1-a"
+     *     "us-east1"
+     *     "nam3"
+     * </pre>
+     *
+     * <code>repeated string current_locations = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the currentLocations at the given index.
+     */
+    com.google.protobuf.ByteString
+        getCurrentLocationsBytes(int index);
+
+    /**
+     * <pre>
+     * The locations of a resource prior to the execution of the operation.
+     * Requests that mutate the resource's location must populate both the
+     * 'original_locations' as well as the 'current_locations' fields.
+     * For example:
+     *     "europe-west1-a"
+     *     "us-east1"
+     *     "nam3"
+     * </pre>
+     *
+     * <code>repeated string original_locations = 2;</code>
+     * @return A list containing the originalLocations.
+     */
+    java.util.List<java.lang.String>
+        getOriginalLocationsList();
+    /**
+     * <pre>
+     * The locations of a resource prior to the execution of the operation.
+     * Requests that mutate the resource's location must populate both the
+     * 'original_locations' as well as the 'current_locations' fields.
+     * For example:
+     *     "europe-west1-a"
+     *     "us-east1"
+     *     "nam3"
+     * </pre>
+     *
+     * <code>repeated string original_locations = 2;</code>
+     * @return The count of originalLocations.
+     */
+    int getOriginalLocationsCount();
+    /**
+     * <pre>
+     * The locations of a resource prior to the execution of the operation.
+     * Requests that mutate the resource's location must populate both the
+     * 'original_locations' as well as the 'current_locations' fields.
+     * For example:
+     *     "europe-west1-a"
+     *     "us-east1"
+     *     "nam3"
+     * </pre>
+     *
+     * <code>repeated string original_locations = 2;</code>
+     * @param index The index of the element to return.
+     * @return The originalLocations at the given index.
+     */
+    java.lang.String getOriginalLocations(int index);
+    /**
+     * <pre>
+     * The locations of a resource prior to the execution of the operation.
+     * Requests that mutate the resource's location must populate both the
+     * 'original_locations' as well as the 'current_locations' fields.
+     * For example:
+     *     "europe-west1-a"
+     *     "us-east1"
+     *     "nam3"
+     * </pre>
+     *
+     * <code>repeated string original_locations = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the originalLocations at the given index.
+     */
+    com.google.protobuf.ByteString
+        getOriginalLocationsBytes(int index);
+  }
+  /**
+   * <pre>
+   * Location information about a resource.
+   * </pre>
+   *
+   * Protobuf type {@code google.events.cloud.audit.v1.ResourceLocation}
+   */
+  public static final class ResourceLocation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.events.cloud.audit.v1.ResourceLocation)
+      ResourceLocationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ResourceLocation.newBuilder() to construct.
+    private ResourceLocation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ResourceLocation() {
+      currentLocations_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      originalLocations_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ResourceLocation();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ResourceLocation(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                currentLocations_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              currentLocations_.add(s);
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                originalLocations_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              originalLocations_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          currentLocations_ = currentLocations_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          originalLocations_ = originalLocations_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ResourceLocation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ResourceLocation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              google.events.cloud.audit.v1.Data.ResourceLocation.class, google.events.cloud.audit.v1.Data.ResourceLocation.Builder.class);
+    }
+
+    public static final int CURRENT_LOCATIONS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList currentLocations_;
+    /**
+     * <pre>
+     * The locations of a resource after the execution of the operation.
+     * Requests to create or delete a location based resource must populate
+     * the 'current_locations' field and not the 'original_locations' field.
+     * For example:
+     *     "europe-west1-a"
+     *     "us-east1"
+     *     "nam3"
+     * </pre>
+     *
+     * <code>repeated string current_locations = 1;</code>
+     * @return A list containing the currentLocations.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getCurrentLocationsList() {
+      return currentLocations_;
+    }
+    /**
+     * <pre>
+     * The locations of a resource after the execution of the operation.
+     * Requests to create or delete a location based resource must populate
+     * the 'current_locations' field and not the 'original_locations' field.
+     * For example:
+     *     "europe-west1-a"
+     *     "us-east1"
+     *     "nam3"
+     * </pre>
+     *
+     * <code>repeated string current_locations = 1;</code>
+     * @return The count of currentLocations.
+     */
+    public int getCurrentLocationsCount() {
+      return currentLocations_.size();
+    }
+    /**
+     * <pre>
+     * The locations of a resource after the execution of the operation.
+     * Requests to create or delete a location based resource must populate
+     * the 'current_locations' field and not the 'original_locations' field.
+     * For example:
+     *     "europe-west1-a"
+     *     "us-east1"
+     *     "nam3"
+     * </pre>
+     *
+     * <code>repeated string current_locations = 1;</code>
+     * @param index The index of the element to return.
+     * @return The currentLocations at the given index.
+     */
+    public java.lang.String getCurrentLocations(int index) {
+      return currentLocations_.get(index);
+    }
+    /**
+     * <pre>
+     * The locations of a resource after the execution of the operation.
+     * Requests to create or delete a location based resource must populate
+     * the 'current_locations' field and not the 'original_locations' field.
+     * For example:
+     *     "europe-west1-a"
+     *     "us-east1"
+     *     "nam3"
+     * </pre>
+     *
+     * <code>repeated string current_locations = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the currentLocations at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getCurrentLocationsBytes(int index) {
+      return currentLocations_.getByteString(index);
+    }
+
+    public static final int ORIGINAL_LOCATIONS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList originalLocations_;
+    /**
+     * <pre>
+     * The locations of a resource prior to the execution of the operation.
+     * Requests that mutate the resource's location must populate both the
+     * 'original_locations' as well as the 'current_locations' fields.
+     * For example:
+     *     "europe-west1-a"
+     *     "us-east1"
+     *     "nam3"
+     * </pre>
+     *
+     * <code>repeated string original_locations = 2;</code>
+     * @return A list containing the originalLocations.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getOriginalLocationsList() {
+      return originalLocations_;
+    }
+    /**
+     * <pre>
+     * The locations of a resource prior to the execution of the operation.
+     * Requests that mutate the resource's location must populate both the
+     * 'original_locations' as well as the 'current_locations' fields.
+     * For example:
+     *     "europe-west1-a"
+     *     "us-east1"
+     *     "nam3"
+     * </pre>
+     *
+     * <code>repeated string original_locations = 2;</code>
+     * @return The count of originalLocations.
+     */
+    public int getOriginalLocationsCount() {
+      return originalLocations_.size();
+    }
+    /**
+     * <pre>
+     * The locations of a resource prior to the execution of the operation.
+     * Requests that mutate the resource's location must populate both the
+     * 'original_locations' as well as the 'current_locations' fields.
+     * For example:
+     *     "europe-west1-a"
+     *     "us-east1"
+     *     "nam3"
+     * </pre>
+     *
+     * <code>repeated string original_locations = 2;</code>
+     * @param index The index of the element to return.
+     * @return The originalLocations at the given index.
+     */
+    public java.lang.String getOriginalLocations(int index) {
+      return originalLocations_.get(index);
+    }
+    /**
+     * <pre>
+     * The locations of a resource prior to the execution of the operation.
+     * Requests that mutate the resource's location must populate both the
+     * 'original_locations' as well as the 'current_locations' fields.
+     * For example:
+     *     "europe-west1-a"
+     *     "us-east1"
+     *     "nam3"
+     * </pre>
+     *
+     * <code>repeated string original_locations = 2;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the originalLocations at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getOriginalLocationsBytes(int index) {
+      return originalLocations_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < currentLocations_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, currentLocations_.getRaw(i));
+      }
+      for (int i = 0; i < originalLocations_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, originalLocations_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < currentLocations_.size(); i++) {
+          dataSize += computeStringSizeNoTag(currentLocations_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getCurrentLocationsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < originalLocations_.size(); i++) {
+          dataSize += computeStringSizeNoTag(originalLocations_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getOriginalLocationsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof google.events.cloud.audit.v1.Data.ResourceLocation)) {
+        return super.equals(obj);
+      }
+      google.events.cloud.audit.v1.Data.ResourceLocation other = (google.events.cloud.audit.v1.Data.ResourceLocation) obj;
+
+      if (!getCurrentLocationsList()
+          .equals(other.getCurrentLocationsList())) return false;
+      if (!getOriginalLocationsList()
+          .equals(other.getOriginalLocationsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCurrentLocationsCount() > 0) {
+        hash = (37 * hash) + CURRENT_LOCATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getCurrentLocationsList().hashCode();
+      }
+      if (getOriginalLocationsCount() > 0) {
+        hash = (37 * hash) + ORIGINAL_LOCATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getOriginalLocationsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static google.events.cloud.audit.v1.Data.ResourceLocation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static google.events.cloud.audit.v1.Data.ResourceLocation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.ResourceLocation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static google.events.cloud.audit.v1.Data.ResourceLocation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.ResourceLocation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static google.events.cloud.audit.v1.Data.ResourceLocation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.ResourceLocation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static google.events.cloud.audit.v1.Data.ResourceLocation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.ResourceLocation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static google.events.cloud.audit.v1.Data.ResourceLocation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.ResourceLocation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static google.events.cloud.audit.v1.Data.ResourceLocation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(google.events.cloud.audit.v1.Data.ResourceLocation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Location information about a resource.
+     * </pre>
+     *
+     * Protobuf type {@code google.events.cloud.audit.v1.ResourceLocation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.events.cloud.audit.v1.ResourceLocation)
+        google.events.cloud.audit.v1.Data.ResourceLocationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ResourceLocation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ResourceLocation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                google.events.cloud.audit.v1.Data.ResourceLocation.class, google.events.cloud.audit.v1.Data.ResourceLocation.Builder.class);
+      }
+
+      // Construct using google.events.cloud.audit.v1.Data.ResourceLocation.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        currentLocations_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        originalLocations_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ResourceLocation_descriptor;
+      }
+
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.ResourceLocation getDefaultInstanceForType() {
+        return google.events.cloud.audit.v1.Data.ResourceLocation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.ResourceLocation build() {
+        google.events.cloud.audit.v1.Data.ResourceLocation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.ResourceLocation buildPartial() {
+        google.events.cloud.audit.v1.Data.ResourceLocation result = new google.events.cloud.audit.v1.Data.ResourceLocation(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          currentLocations_ = currentLocations_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.currentLocations_ = currentLocations_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          originalLocations_ = originalLocations_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.originalLocations_ = originalLocations_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof google.events.cloud.audit.v1.Data.ResourceLocation) {
+          return mergeFrom((google.events.cloud.audit.v1.Data.ResourceLocation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(google.events.cloud.audit.v1.Data.ResourceLocation other) {
+        if (other == google.events.cloud.audit.v1.Data.ResourceLocation.getDefaultInstance()) return this;
+        if (!other.currentLocations_.isEmpty()) {
+          if (currentLocations_.isEmpty()) {
+            currentLocations_ = other.currentLocations_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureCurrentLocationsIsMutable();
+            currentLocations_.addAll(other.currentLocations_);
+          }
+          onChanged();
+        }
+        if (!other.originalLocations_.isEmpty()) {
+          if (originalLocations_.isEmpty()) {
+            originalLocations_ = other.originalLocations_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureOriginalLocationsIsMutable();
+            originalLocations_.addAll(other.originalLocations_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        google.events.cloud.audit.v1.Data.ResourceLocation parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (google.events.cloud.audit.v1.Data.ResourceLocation) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList currentLocations_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureCurrentLocationsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          currentLocations_ = new com.google.protobuf.LazyStringArrayList(currentLocations_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * The locations of a resource after the execution of the operation.
+       * Requests to create or delete a location based resource must populate
+       * the 'current_locations' field and not the 'original_locations' field.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string current_locations = 1;</code>
+       * @return A list containing the currentLocations.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getCurrentLocationsList() {
+        return currentLocations_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * The locations of a resource after the execution of the operation.
+       * Requests to create or delete a location based resource must populate
+       * the 'current_locations' field and not the 'original_locations' field.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string current_locations = 1;</code>
+       * @return The count of currentLocations.
+       */
+      public int getCurrentLocationsCount() {
+        return currentLocations_.size();
+      }
+      /**
+       * <pre>
+       * The locations of a resource after the execution of the operation.
+       * Requests to create or delete a location based resource must populate
+       * the 'current_locations' field and not the 'original_locations' field.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string current_locations = 1;</code>
+       * @param index The index of the element to return.
+       * @return The currentLocations at the given index.
+       */
+      public java.lang.String getCurrentLocations(int index) {
+        return currentLocations_.get(index);
+      }
+      /**
+       * <pre>
+       * The locations of a resource after the execution of the operation.
+       * Requests to create or delete a location based resource must populate
+       * the 'current_locations' field and not the 'original_locations' field.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string current_locations = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the currentLocations at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getCurrentLocationsBytes(int index) {
+        return currentLocations_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * The locations of a resource after the execution of the operation.
+       * Requests to create or delete a location based resource must populate
+       * the 'current_locations' field and not the 'original_locations' field.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string current_locations = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The currentLocations to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentLocations(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCurrentLocationsIsMutable();
+        currentLocations_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The locations of a resource after the execution of the operation.
+       * Requests to create or delete a location based resource must populate
+       * the 'current_locations' field and not the 'original_locations' field.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string current_locations = 1;</code>
+       * @param value The currentLocations to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCurrentLocations(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCurrentLocationsIsMutable();
+        currentLocations_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The locations of a resource after the execution of the operation.
+       * Requests to create or delete a location based resource must populate
+       * the 'current_locations' field and not the 'original_locations' field.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string current_locations = 1;</code>
+       * @param values The currentLocations to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllCurrentLocations(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureCurrentLocationsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, currentLocations_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The locations of a resource after the execution of the operation.
+       * Requests to create or delete a location based resource must populate
+       * the 'current_locations' field and not the 'original_locations' field.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string current_locations = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentLocations() {
+        currentLocations_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The locations of a resource after the execution of the operation.
+       * Requests to create or delete a location based resource must populate
+       * the 'current_locations' field and not the 'original_locations' field.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string current_locations = 1;</code>
+       * @param value The bytes of the currentLocations to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCurrentLocationsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureCurrentLocationsIsMutable();
+        currentLocations_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList originalLocations_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureOriginalLocationsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          originalLocations_ = new com.google.protobuf.LazyStringArrayList(originalLocations_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * The locations of a resource prior to the execution of the operation.
+       * Requests that mutate the resource's location must populate both the
+       * 'original_locations' as well as the 'current_locations' fields.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string original_locations = 2;</code>
+       * @return A list containing the originalLocations.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getOriginalLocationsList() {
+        return originalLocations_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * The locations of a resource prior to the execution of the operation.
+       * Requests that mutate the resource's location must populate both the
+       * 'original_locations' as well as the 'current_locations' fields.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string original_locations = 2;</code>
+       * @return The count of originalLocations.
+       */
+      public int getOriginalLocationsCount() {
+        return originalLocations_.size();
+      }
+      /**
+       * <pre>
+       * The locations of a resource prior to the execution of the operation.
+       * Requests that mutate the resource's location must populate both the
+       * 'original_locations' as well as the 'current_locations' fields.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string original_locations = 2;</code>
+       * @param index The index of the element to return.
+       * @return The originalLocations at the given index.
+       */
+      public java.lang.String getOriginalLocations(int index) {
+        return originalLocations_.get(index);
+      }
+      /**
+       * <pre>
+       * The locations of a resource prior to the execution of the operation.
+       * Requests that mutate the resource's location must populate both the
+       * 'original_locations' as well as the 'current_locations' fields.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string original_locations = 2;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the originalLocations at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getOriginalLocationsBytes(int index) {
+        return originalLocations_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * The locations of a resource prior to the execution of the operation.
+       * Requests that mutate the resource's location must populate both the
+       * 'original_locations' as well as the 'current_locations' fields.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string original_locations = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The originalLocations to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOriginalLocations(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureOriginalLocationsIsMutable();
+        originalLocations_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The locations of a resource prior to the execution of the operation.
+       * Requests that mutate the resource's location must populate both the
+       * 'original_locations' as well as the 'current_locations' fields.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string original_locations = 2;</code>
+       * @param value The originalLocations to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOriginalLocations(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureOriginalLocationsIsMutable();
+        originalLocations_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The locations of a resource prior to the execution of the operation.
+       * Requests that mutate the resource's location must populate both the
+       * 'original_locations' as well as the 'current_locations' fields.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string original_locations = 2;</code>
+       * @param values The originalLocations to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOriginalLocations(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureOriginalLocationsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, originalLocations_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The locations of a resource prior to the execution of the operation.
+       * Requests that mutate the resource's location must populate both the
+       * 'original_locations' as well as the 'current_locations' fields.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string original_locations = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOriginalLocations() {
+        originalLocations_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The locations of a resource prior to the execution of the operation.
+       * Requests that mutate the resource's location must populate both the
+       * 'original_locations' as well as the 'current_locations' fields.
+       * For example:
+       *     "europe-west1-a"
+       *     "us-east1"
+       *     "nam3"
+       * </pre>
+       *
+       * <code>repeated string original_locations = 2;</code>
+       * @param value The bytes of the originalLocations to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOriginalLocationsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureOriginalLocationsIsMutable();
+        originalLocations_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.events.cloud.audit.v1.ResourceLocation)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.events.cloud.audit.v1.ResourceLocation)
+    private static final google.events.cloud.audit.v1.Data.ResourceLocation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new google.events.cloud.audit.v1.Data.ResourceLocation();
+    }
+
+    public static google.events.cloud.audit.v1.Data.ResourceLocation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ResourceLocation>
+        PARSER = new com.google.protobuf.AbstractParser<ResourceLocation>() {
+      @java.lang.Override
+      public ResourceLocation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ResourceLocation(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ResourceLocation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResourceLocation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public google.events.cloud.audit.v1.Data.ResourceLocation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ServiceAccountDelegationInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.events.cloud.audit.v1.ServiceAccountDelegationInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * First party (Google) identity as the real authority.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
+     * @return Whether the firstPartyPrincipal field is set.
+     */
+    boolean hasFirstPartyPrincipal();
+    /**
+     * <pre>
+     * First party (Google) identity as the real authority.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
+     * @return The firstPartyPrincipal.
+     */
+    google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal getFirstPartyPrincipal();
+    /**
+     * <pre>
+     * First party (Google) identity as the real authority.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
+     */
+    google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipalOrBuilder getFirstPartyPrincipalOrBuilder();
+
+    /**
+     * <pre>
+     * Third party identity as the real authority.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
+     * @return Whether the thirdPartyPrincipal field is set.
+     */
+    boolean hasThirdPartyPrincipal();
+    /**
+     * <pre>
+     * Third party identity as the real authority.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
+     * @return The thirdPartyPrincipal.
+     */
+    google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal getThirdPartyPrincipal();
+    /**
+     * <pre>
+     * Third party identity as the real authority.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
+     */
+    google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipalOrBuilder getThirdPartyPrincipalOrBuilder();
+
+    public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.AuthorityCase getAuthorityCase();
+  }
+  /**
+   * <pre>
+   * Identity delegation history of an authenticated service account.
+   * </pre>
+   *
+   * Protobuf type {@code google.events.cloud.audit.v1.ServiceAccountDelegationInfo}
+   */
+  public static final class ServiceAccountDelegationInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.events.cloud.audit.v1.ServiceAccountDelegationInfo)
+      ServiceAccountDelegationInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ServiceAccountDelegationInfo.newBuilder() to construct.
+    private ServiceAccountDelegationInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ServiceAccountDelegationInfo() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ServiceAccountDelegationInfo();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ServiceAccountDelegationInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.Builder subBuilder = null;
+              if (authorityCase_ == 1) {
+                subBuilder = ((google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal) authority_).toBuilder();
+              }
+              authority_ =
+                  input.readMessage(google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal) authority_);
+                authority_ = subBuilder.buildPartial();
+              }
+              authorityCase_ = 1;
+              break;
+            }
+            case 18: {
+              google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.Builder subBuilder = null;
+              if (authorityCase_ == 2) {
+                subBuilder = ((google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal) authority_).toBuilder();
+              }
+              authority_ =
+                  input.readMessage(google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal) authority_);
+                authority_ = subBuilder.buildPartial();
+              }
+              authorityCase_ = 2;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.class, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.Builder.class);
+    }
+
+    public interface FirstPartyPrincipalOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The email address of a Google account.
+       * </pre>
+       *
+       * <code>string principal_email = 1;</code>
+       * @return The principalEmail.
+       */
+      java.lang.String getPrincipalEmail();
+      /**
+       * <pre>
+       * The email address of a Google account.
+       * </pre>
+       *
+       * <code>string principal_email = 1;</code>
+       * @return The bytes for principalEmail.
+       */
+      com.google.protobuf.ByteString
+          getPrincipalEmailBytes();
+
+      /**
+       * <pre>
+       * Metadata about the service that uses the service account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct service_metadata = 2;</code>
+       * @return Whether the serviceMetadata field is set.
+       */
+      boolean hasServiceMetadata();
+      /**
+       * <pre>
+       * Metadata about the service that uses the service account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct service_metadata = 2;</code>
+       * @return The serviceMetadata.
+       */
+      com.google.protobuf.Struct getServiceMetadata();
+      /**
+       * <pre>
+       * Metadata about the service that uses the service account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct service_metadata = 2;</code>
+       */
+      com.google.protobuf.StructOrBuilder getServiceMetadataOrBuilder();
+    }
+    /**
+     * <pre>
+     * First party identity principal.
+     * </pre>
+     *
+     * Protobuf type {@code google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal}
+     */
+    public static final class FirstPartyPrincipal extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal)
+        FirstPartyPrincipalOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use FirstPartyPrincipal.newBuilder() to construct.
+      private FirstPartyPrincipal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private FirstPartyPrincipal() {
+        principalEmail_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new FirstPartyPrincipal();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private FirstPartyPrincipal(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                principalEmail_ = s;
+                break;
+              }
+              case 18: {
+                com.google.protobuf.Struct.Builder subBuilder = null;
+                if (serviceMetadata_ != null) {
+                  subBuilder = serviceMetadata_.toBuilder();
+                }
+                serviceMetadata_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(serviceMetadata_);
+                  serviceMetadata_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_FirstPartyPrincipal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_FirstPartyPrincipal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.class, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.Builder.class);
+      }
+
+      public static final int PRINCIPAL_EMAIL_FIELD_NUMBER = 1;
+      private volatile java.lang.Object principalEmail_;
+      /**
+       * <pre>
+       * The email address of a Google account.
+       * </pre>
+       *
+       * <code>string principal_email = 1;</code>
+       * @return The principalEmail.
+       */
+      @java.lang.Override
+      public java.lang.String getPrincipalEmail() {
+        java.lang.Object ref = principalEmail_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          principalEmail_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * The email address of a Google account.
+       * </pre>
+       *
+       * <code>string principal_email = 1;</code>
+       * @return The bytes for principalEmail.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getPrincipalEmailBytes() {
+        java.lang.Object ref = principalEmail_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          principalEmail_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int SERVICE_METADATA_FIELD_NUMBER = 2;
+      private com.google.protobuf.Struct serviceMetadata_;
+      /**
+       * <pre>
+       * Metadata about the service that uses the service account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct service_metadata = 2;</code>
+       * @return Whether the serviceMetadata field is set.
+       */
+      @java.lang.Override
+      public boolean hasServiceMetadata() {
+        return serviceMetadata_ != null;
+      }
+      /**
+       * <pre>
+       * Metadata about the service that uses the service account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct service_metadata = 2;</code>
+       * @return The serviceMetadata.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getServiceMetadata() {
+        return serviceMetadata_ == null ? com.google.protobuf.Struct.getDefaultInstance() : serviceMetadata_;
+      }
+      /**
+       * <pre>
+       * Metadata about the service that uses the service account.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct service_metadata = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StructOrBuilder getServiceMetadataOrBuilder() {
+        return getServiceMetadata();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getPrincipalEmailBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, principalEmail_);
+        }
+        if (serviceMetadata_ != null) {
+          output.writeMessage(2, getServiceMetadata());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getPrincipalEmailBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, principalEmail_);
+        }
+        if (serviceMetadata_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getServiceMetadata());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal)) {
+          return super.equals(obj);
+        }
+        google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal other = (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal) obj;
+
+        if (!getPrincipalEmail()
+            .equals(other.getPrincipalEmail())) return false;
+        if (hasServiceMetadata() != other.hasServiceMetadata()) return false;
+        if (hasServiceMetadata()) {
+          if (!getServiceMetadata()
+              .equals(other.getServiceMetadata())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + PRINCIPAL_EMAIL_FIELD_NUMBER;
+        hash = (53 * hash) + getPrincipalEmail().hashCode();
+        if (hasServiceMetadata()) {
+          hash = (37 * hash) + SERVICE_METADATA_FIELD_NUMBER;
+          hash = (53 * hash) + getServiceMetadata().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * First party identity principal.
+       * </pre>
+       *
+       * Protobuf type {@code google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal)
+          google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipalOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_FirstPartyPrincipal_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_FirstPartyPrincipal_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.class, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.Builder.class);
+        }
+
+        // Construct using google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          principalEmail_ = "";
+
+          if (serviceMetadataBuilder_ == null) {
+            serviceMetadata_ = null;
+          } else {
+            serviceMetadata_ = null;
+            serviceMetadataBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_FirstPartyPrincipal_descriptor;
+        }
+
+        @java.lang.Override
+        public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal getDefaultInstanceForType() {
+          return google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal build() {
+          google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal buildPartial() {
+          google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal result = new google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal(this);
+          result.principalEmail_ = principalEmail_;
+          if (serviceMetadataBuilder_ == null) {
+            result.serviceMetadata_ = serviceMetadata_;
+          } else {
+            result.serviceMetadata_ = serviceMetadataBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal) {
+            return mergeFrom((google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal other) {
+          if (other == google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.getDefaultInstance()) return this;
+          if (!other.getPrincipalEmail().isEmpty()) {
+            principalEmail_ = other.principalEmail_;
+            onChanged();
+          }
+          if (other.hasServiceMetadata()) {
+            mergeServiceMetadata(other.getServiceMetadata());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object principalEmail_ = "";
+        /**
+         * <pre>
+         * The email address of a Google account.
+         * </pre>
+         *
+         * <code>string principal_email = 1;</code>
+         * @return The principalEmail.
+         */
+        public java.lang.String getPrincipalEmail() {
+          java.lang.Object ref = principalEmail_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            principalEmail_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The email address of a Google account.
+         * </pre>
+         *
+         * <code>string principal_email = 1;</code>
+         * @return The bytes for principalEmail.
+         */
+        public com.google.protobuf.ByteString
+            getPrincipalEmailBytes() {
+          java.lang.Object ref = principalEmail_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            principalEmail_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The email address of a Google account.
+         * </pre>
+         *
+         * <code>string principal_email = 1;</code>
+         * @param value The principalEmail to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPrincipalEmail(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          principalEmail_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The email address of a Google account.
+         * </pre>
+         *
+         * <code>string principal_email = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPrincipalEmail() {
+          
+          principalEmail_ = getDefaultInstance().getPrincipalEmail();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The email address of a Google account.
+         * </pre>
+         *
+         * <code>string principal_email = 1;</code>
+         * @param value The bytes for principalEmail to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPrincipalEmailBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          principalEmail_ = value;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.Struct serviceMetadata_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> serviceMetadataBuilder_;
+        /**
+         * <pre>
+         * Metadata about the service that uses the service account.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct service_metadata = 2;</code>
+         * @return Whether the serviceMetadata field is set.
+         */
+        public boolean hasServiceMetadata() {
+          return serviceMetadataBuilder_ != null || serviceMetadata_ != null;
+        }
+        /**
+         * <pre>
+         * Metadata about the service that uses the service account.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct service_metadata = 2;</code>
+         * @return The serviceMetadata.
+         */
+        public com.google.protobuf.Struct getServiceMetadata() {
+          if (serviceMetadataBuilder_ == null) {
+            return serviceMetadata_ == null ? com.google.protobuf.Struct.getDefaultInstance() : serviceMetadata_;
+          } else {
+            return serviceMetadataBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Metadata about the service that uses the service account.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct service_metadata = 2;</code>
+         */
+        public Builder setServiceMetadata(com.google.protobuf.Struct value) {
+          if (serviceMetadataBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            serviceMetadata_ = value;
+            onChanged();
+          } else {
+            serviceMetadataBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata about the service that uses the service account.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct service_metadata = 2;</code>
+         */
+        public Builder setServiceMetadata(
+            com.google.protobuf.Struct.Builder builderForValue) {
+          if (serviceMetadataBuilder_ == null) {
+            serviceMetadata_ = builderForValue.build();
+            onChanged();
+          } else {
+            serviceMetadataBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata about the service that uses the service account.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct service_metadata = 2;</code>
+         */
+        public Builder mergeServiceMetadata(com.google.protobuf.Struct value) {
+          if (serviceMetadataBuilder_ == null) {
+            if (serviceMetadata_ != null) {
+              serviceMetadata_ =
+                com.google.protobuf.Struct.newBuilder(serviceMetadata_).mergeFrom(value).buildPartial();
+            } else {
+              serviceMetadata_ = value;
+            }
+            onChanged();
+          } else {
+            serviceMetadataBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata about the service that uses the service account.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct service_metadata = 2;</code>
+         */
+        public Builder clearServiceMetadata() {
+          if (serviceMetadataBuilder_ == null) {
+            serviceMetadata_ = null;
+            onChanged();
+          } else {
+            serviceMetadata_ = null;
+            serviceMetadataBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata about the service that uses the service account.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct service_metadata = 2;</code>
+         */
+        public com.google.protobuf.Struct.Builder getServiceMetadataBuilder() {
+          
+          onChanged();
+          return getServiceMetadataFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Metadata about the service that uses the service account.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct service_metadata = 2;</code>
+         */
+        public com.google.protobuf.StructOrBuilder getServiceMetadataOrBuilder() {
+          if (serviceMetadataBuilder_ != null) {
+            return serviceMetadataBuilder_.getMessageOrBuilder();
+          } else {
+            return serviceMetadata_ == null ?
+                com.google.protobuf.Struct.getDefaultInstance() : serviceMetadata_;
+          }
+        }
+        /**
+         * <pre>
+         * Metadata about the service that uses the service account.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct service_metadata = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+            getServiceMetadataFieldBuilder() {
+          if (serviceMetadataBuilder_ == null) {
+            serviceMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                    getServiceMetadata(),
+                    getParentForChildren(),
+                    isClean());
+            serviceMetadata_ = null;
+          }
+          return serviceMetadataBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal)
+      }
+
+      // @@protoc_insertion_point(class_scope:google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal)
+      private static final google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal();
+      }
+
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<FirstPartyPrincipal>
+          PARSER = new com.google.protobuf.AbstractParser<FirstPartyPrincipal>() {
+        @java.lang.Override
+        public FirstPartyPrincipal parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new FirstPartyPrincipal(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<FirstPartyPrincipal> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<FirstPartyPrincipal> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface ThirdPartyPrincipalOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Metadata about third party identity.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct third_party_claims = 1;</code>
+       * @return Whether the thirdPartyClaims field is set.
+       */
+      boolean hasThirdPartyClaims();
+      /**
+       * <pre>
+       * Metadata about third party identity.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct third_party_claims = 1;</code>
+       * @return The thirdPartyClaims.
+       */
+      com.google.protobuf.Struct getThirdPartyClaims();
+      /**
+       * <pre>
+       * Metadata about third party identity.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct third_party_claims = 1;</code>
+       */
+      com.google.protobuf.StructOrBuilder getThirdPartyClaimsOrBuilder();
+    }
+    /**
+     * <pre>
+     * Third party identity principal.
+     * </pre>
+     *
+     * Protobuf type {@code google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal}
+     */
+    public static final class ThirdPartyPrincipal extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal)
+        ThirdPartyPrincipalOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ThirdPartyPrincipal.newBuilder() to construct.
+      private ThirdPartyPrincipal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ThirdPartyPrincipal() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new ThirdPartyPrincipal();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ThirdPartyPrincipal(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.Struct.Builder subBuilder = null;
+                if (thirdPartyClaims_ != null) {
+                  subBuilder = thirdPartyClaims_.toBuilder();
+                }
+                thirdPartyClaims_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(thirdPartyClaims_);
+                  thirdPartyClaims_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_ThirdPartyPrincipal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_ThirdPartyPrincipal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.class, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.Builder.class);
+      }
+
+      public static final int THIRD_PARTY_CLAIMS_FIELD_NUMBER = 1;
+      private com.google.protobuf.Struct thirdPartyClaims_;
+      /**
+       * <pre>
+       * Metadata about third party identity.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct third_party_claims = 1;</code>
+       * @return Whether the thirdPartyClaims field is set.
+       */
+      @java.lang.Override
+      public boolean hasThirdPartyClaims() {
+        return thirdPartyClaims_ != null;
+      }
+      /**
+       * <pre>
+       * Metadata about third party identity.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct third_party_claims = 1;</code>
+       * @return The thirdPartyClaims.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Struct getThirdPartyClaims() {
+        return thirdPartyClaims_ == null ? com.google.protobuf.Struct.getDefaultInstance() : thirdPartyClaims_;
+      }
+      /**
+       * <pre>
+       * Metadata about third party identity.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct third_party_claims = 1;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.StructOrBuilder getThirdPartyClaimsOrBuilder() {
+        return getThirdPartyClaims();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (thirdPartyClaims_ != null) {
+          output.writeMessage(1, getThirdPartyClaims());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (thirdPartyClaims_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getThirdPartyClaims());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal)) {
+          return super.equals(obj);
+        }
+        google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal other = (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal) obj;
+
+        if (hasThirdPartyClaims() != other.hasThirdPartyClaims()) return false;
+        if (hasThirdPartyClaims()) {
+          if (!getThirdPartyClaims()
+              .equals(other.getThirdPartyClaims())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasThirdPartyClaims()) {
+          hash = (37 * hash) + THIRD_PARTY_CLAIMS_FIELD_NUMBER;
+          hash = (53 * hash) + getThirdPartyClaims().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Third party identity principal.
+       * </pre>
+       *
+       * Protobuf type {@code google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal)
+          google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipalOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_ThirdPartyPrincipal_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_ThirdPartyPrincipal_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.class, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.Builder.class);
+        }
+
+        // Construct using google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (thirdPartyClaimsBuilder_ == null) {
+            thirdPartyClaims_ = null;
+          } else {
+            thirdPartyClaims_ = null;
+            thirdPartyClaimsBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_ThirdPartyPrincipal_descriptor;
+        }
+
+        @java.lang.Override
+        public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal getDefaultInstanceForType() {
+          return google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal build() {
+          google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal buildPartial() {
+          google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal result = new google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal(this);
+          if (thirdPartyClaimsBuilder_ == null) {
+            result.thirdPartyClaims_ = thirdPartyClaims_;
+          } else {
+            result.thirdPartyClaims_ = thirdPartyClaimsBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal) {
+            return mergeFrom((google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal other) {
+          if (other == google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.getDefaultInstance()) return this;
+          if (other.hasThirdPartyClaims()) {
+            mergeThirdPartyClaims(other.getThirdPartyClaims());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private com.google.protobuf.Struct thirdPartyClaims_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> thirdPartyClaimsBuilder_;
+        /**
+         * <pre>
+         * Metadata about third party identity.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct third_party_claims = 1;</code>
+         * @return Whether the thirdPartyClaims field is set.
+         */
+        public boolean hasThirdPartyClaims() {
+          return thirdPartyClaimsBuilder_ != null || thirdPartyClaims_ != null;
+        }
+        /**
+         * <pre>
+         * Metadata about third party identity.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct third_party_claims = 1;</code>
+         * @return The thirdPartyClaims.
+         */
+        public com.google.protobuf.Struct getThirdPartyClaims() {
+          if (thirdPartyClaimsBuilder_ == null) {
+            return thirdPartyClaims_ == null ? com.google.protobuf.Struct.getDefaultInstance() : thirdPartyClaims_;
+          } else {
+            return thirdPartyClaimsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Metadata about third party identity.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct third_party_claims = 1;</code>
+         */
+        public Builder setThirdPartyClaims(com.google.protobuf.Struct value) {
+          if (thirdPartyClaimsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            thirdPartyClaims_ = value;
+            onChanged();
+          } else {
+            thirdPartyClaimsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata about third party identity.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct third_party_claims = 1;</code>
+         */
+        public Builder setThirdPartyClaims(
+            com.google.protobuf.Struct.Builder builderForValue) {
+          if (thirdPartyClaimsBuilder_ == null) {
+            thirdPartyClaims_ = builderForValue.build();
+            onChanged();
+          } else {
+            thirdPartyClaimsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata about third party identity.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct third_party_claims = 1;</code>
+         */
+        public Builder mergeThirdPartyClaims(com.google.protobuf.Struct value) {
+          if (thirdPartyClaimsBuilder_ == null) {
+            if (thirdPartyClaims_ != null) {
+              thirdPartyClaims_ =
+                com.google.protobuf.Struct.newBuilder(thirdPartyClaims_).mergeFrom(value).buildPartial();
+            } else {
+              thirdPartyClaims_ = value;
+            }
+            onChanged();
+          } else {
+            thirdPartyClaimsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata about third party identity.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct third_party_claims = 1;</code>
+         */
+        public Builder clearThirdPartyClaims() {
+          if (thirdPartyClaimsBuilder_ == null) {
+            thirdPartyClaims_ = null;
+            onChanged();
+          } else {
+            thirdPartyClaims_ = null;
+            thirdPartyClaimsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata about third party identity.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct third_party_claims = 1;</code>
+         */
+        public com.google.protobuf.Struct.Builder getThirdPartyClaimsBuilder() {
+          
+          onChanged();
+          return getThirdPartyClaimsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Metadata about third party identity.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct third_party_claims = 1;</code>
+         */
+        public com.google.protobuf.StructOrBuilder getThirdPartyClaimsOrBuilder() {
+          if (thirdPartyClaimsBuilder_ != null) {
+            return thirdPartyClaimsBuilder_.getMessageOrBuilder();
+          } else {
+            return thirdPartyClaims_ == null ?
+                com.google.protobuf.Struct.getDefaultInstance() : thirdPartyClaims_;
+          }
+        }
+        /**
+         * <pre>
+         * Metadata about third party identity.
+         * </pre>
+         *
+         * <code>.google.protobuf.Struct third_party_claims = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+            getThirdPartyClaimsFieldBuilder() {
+          if (thirdPartyClaimsBuilder_ == null) {
+            thirdPartyClaimsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                    getThirdPartyClaims(),
+                    getParentForChildren(),
+                    isClean());
+            thirdPartyClaims_ = null;
+          }
+          return thirdPartyClaimsBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal)
+      }
+
+      // @@protoc_insertion_point(class_scope:google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal)
+      private static final google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal();
+      }
+
+      public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ThirdPartyPrincipal>
+          PARSER = new com.google.protobuf.AbstractParser<ThirdPartyPrincipal>() {
+        @java.lang.Override
+        public ThirdPartyPrincipal parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ThirdPartyPrincipal(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ThirdPartyPrincipal> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ThirdPartyPrincipal> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int authorityCase_ = 0;
+    private java.lang.Object authority_;
+    public enum AuthorityCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      FIRST_PARTY_PRINCIPAL(1),
+      THIRD_PARTY_PRINCIPAL(2),
+      AUTHORITY_NOT_SET(0);
+      private final int value;
+      private AuthorityCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static AuthorityCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static AuthorityCase forNumber(int value) {
+        switch (value) {
+          case 1: return FIRST_PARTY_PRINCIPAL;
+          case 2: return THIRD_PARTY_PRINCIPAL;
+          case 0: return AUTHORITY_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public AuthorityCase
+    getAuthorityCase() {
+      return AuthorityCase.forNumber(
+          authorityCase_);
+    }
+
+    public static final int FIRST_PARTY_PRINCIPAL_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * First party (Google) identity as the real authority.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
+     * @return Whether the firstPartyPrincipal field is set.
+     */
+    @java.lang.Override
+    public boolean hasFirstPartyPrincipal() {
+      return authorityCase_ == 1;
+    }
+    /**
+     * <pre>
+     * First party (Google) identity as the real authority.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
+     * @return The firstPartyPrincipal.
+     */
+    @java.lang.Override
+    public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal getFirstPartyPrincipal() {
+      if (authorityCase_ == 1) {
+         return (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal) authority_;
+      }
+      return google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * First party (Google) identity as the real authority.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
+     */
+    @java.lang.Override
+    public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipalOrBuilder getFirstPartyPrincipalOrBuilder() {
+      if (authorityCase_ == 1) {
+         return (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal) authority_;
+      }
+      return google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.getDefaultInstance();
+    }
+
+    public static final int THIRD_PARTY_PRINCIPAL_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Third party identity as the real authority.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
+     * @return Whether the thirdPartyPrincipal field is set.
+     */
+    @java.lang.Override
+    public boolean hasThirdPartyPrincipal() {
+      return authorityCase_ == 2;
+    }
+    /**
+     * <pre>
+     * Third party identity as the real authority.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
+     * @return The thirdPartyPrincipal.
+     */
+    @java.lang.Override
+    public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal getThirdPartyPrincipal() {
+      if (authorityCase_ == 2) {
+         return (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal) authority_;
+      }
+      return google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Third party identity as the real authority.
+     * </pre>
+     *
+     * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
+     */
+    @java.lang.Override
+    public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipalOrBuilder getThirdPartyPrincipalOrBuilder() {
+      if (authorityCase_ == 2) {
+         return (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal) authority_;
+      }
+      return google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (authorityCase_ == 1) {
+        output.writeMessage(1, (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal) authority_);
+      }
+      if (authorityCase_ == 2) {
+        output.writeMessage(2, (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal) authority_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (authorityCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal) authority_);
+      }
+      if (authorityCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal) authority_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo)) {
+        return super.equals(obj);
+      }
+      google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo other = (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo) obj;
+
+      if (!getAuthorityCase().equals(other.getAuthorityCase())) return false;
+      switch (authorityCase_) {
+        case 1:
+          if (!getFirstPartyPrincipal()
+              .equals(other.getFirstPartyPrincipal())) return false;
+          break;
+        case 2:
+          if (!getThirdPartyPrincipal()
+              .equals(other.getThirdPartyPrincipal())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (authorityCase_) {
+        case 1:
+          hash = (37 * hash) + FIRST_PARTY_PRINCIPAL_FIELD_NUMBER;
+          hash = (53 * hash) + getFirstPartyPrincipal().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + THIRD_PARTY_PRINCIPAL_FIELD_NUMBER;
+          hash = (53 * hash) + getThirdPartyPrincipal().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Identity delegation history of an authenticated service account.
+     * </pre>
+     *
+     * Protobuf type {@code google.events.cloud.audit.v1.ServiceAccountDelegationInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.events.cloud.audit.v1.ServiceAccountDelegationInfo)
+        google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.class, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.Builder.class);
+      }
+
+      // Construct using google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        authorityCase_ = 0;
+        authority_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return google.events.cloud.audit.v1.Data.internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo getDefaultInstanceForType() {
+        return google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo build() {
+        google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo buildPartial() {
+        google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo result = new google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo(this);
+        if (authorityCase_ == 1) {
+          if (firstPartyPrincipalBuilder_ == null) {
+            result.authority_ = authority_;
+          } else {
+            result.authority_ = firstPartyPrincipalBuilder_.build();
+          }
+        }
+        if (authorityCase_ == 2) {
+          if (thirdPartyPrincipalBuilder_ == null) {
+            result.authority_ = authority_;
+          } else {
+            result.authority_ = thirdPartyPrincipalBuilder_.build();
+          }
+        }
+        result.authorityCase_ = authorityCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo) {
+          return mergeFrom((google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo other) {
+        if (other == google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.getDefaultInstance()) return this;
+        switch (other.getAuthorityCase()) {
+          case FIRST_PARTY_PRINCIPAL: {
+            mergeFirstPartyPrincipal(other.getFirstPartyPrincipal());
+            break;
+          }
+          case THIRD_PARTY_PRINCIPAL: {
+            mergeThirdPartyPrincipal(other.getThirdPartyPrincipal());
+            break;
+          }
+          case AUTHORITY_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int authorityCase_ = 0;
+      private java.lang.Object authority_;
+      public AuthorityCase
+          getAuthorityCase() {
+        return AuthorityCase.forNumber(
+            authorityCase_);
+      }
+
+      public Builder clearAuthority() {
+        authorityCase_ = 0;
+        authority_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.Builder, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipalOrBuilder> firstPartyPrincipalBuilder_;
+      /**
+       * <pre>
+       * First party (Google) identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
+       * @return Whether the firstPartyPrincipal field is set.
+       */
+      @java.lang.Override
+      public boolean hasFirstPartyPrincipal() {
+        return authorityCase_ == 1;
+      }
+      /**
+       * <pre>
+       * First party (Google) identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
+       * @return The firstPartyPrincipal.
+       */
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal getFirstPartyPrincipal() {
+        if (firstPartyPrincipalBuilder_ == null) {
+          if (authorityCase_ == 1) {
+            return (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal) authority_;
+          }
+          return google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.getDefaultInstance();
+        } else {
+          if (authorityCase_ == 1) {
+            return firstPartyPrincipalBuilder_.getMessage();
+          }
+          return google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * First party (Google) identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
+       */
+      public Builder setFirstPartyPrincipal(google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal value) {
+        if (firstPartyPrincipalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          authority_ = value;
+          onChanged();
+        } else {
+          firstPartyPrincipalBuilder_.setMessage(value);
+        }
+        authorityCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * First party (Google) identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
+       */
+      public Builder setFirstPartyPrincipal(
+          google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.Builder builderForValue) {
+        if (firstPartyPrincipalBuilder_ == null) {
+          authority_ = builderForValue.build();
+          onChanged();
+        } else {
+          firstPartyPrincipalBuilder_.setMessage(builderForValue.build());
+        }
+        authorityCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * First party (Google) identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
+       */
+      public Builder mergeFirstPartyPrincipal(google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal value) {
+        if (firstPartyPrincipalBuilder_ == null) {
+          if (authorityCase_ == 1 &&
+              authority_ != google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.getDefaultInstance()) {
+            authority_ = google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.newBuilder((google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal) authority_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            authority_ = value;
+          }
+          onChanged();
+        } else {
+          if (authorityCase_ == 1) {
+            firstPartyPrincipalBuilder_.mergeFrom(value);
+          }
+          firstPartyPrincipalBuilder_.setMessage(value);
+        }
+        authorityCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * First party (Google) identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
+       */
+      public Builder clearFirstPartyPrincipal() {
+        if (firstPartyPrincipalBuilder_ == null) {
+          if (authorityCase_ == 1) {
+            authorityCase_ = 0;
+            authority_ = null;
+            onChanged();
+          }
+        } else {
+          if (authorityCase_ == 1) {
+            authorityCase_ = 0;
+            authority_ = null;
+          }
+          firstPartyPrincipalBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * First party (Google) identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
+       */
+      public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.Builder getFirstPartyPrincipalBuilder() {
+        return getFirstPartyPrincipalFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * First party (Google) identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
+       */
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipalOrBuilder getFirstPartyPrincipalOrBuilder() {
+        if ((authorityCase_ == 1) && (firstPartyPrincipalBuilder_ != null)) {
+          return firstPartyPrincipalBuilder_.getMessageOrBuilder();
+        } else {
+          if (authorityCase_ == 1) {
+            return (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal) authority_;
+          }
+          return google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * First party (Google) identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.FirstPartyPrincipal first_party_principal = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.Builder, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipalOrBuilder> 
+          getFirstPartyPrincipalFieldBuilder() {
+        if (firstPartyPrincipalBuilder_ == null) {
+          if (!(authorityCase_ == 1)) {
+            authority_ = google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.getDefaultInstance();
+          }
+          firstPartyPrincipalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal.Builder, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipalOrBuilder>(
+                  (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.FirstPartyPrincipal) authority_,
+                  getParentForChildren(),
+                  isClean());
+          authority_ = null;
+        }
+        authorityCase_ = 1;
+        onChanged();;
+        return firstPartyPrincipalBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.Builder, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipalOrBuilder> thirdPartyPrincipalBuilder_;
+      /**
+       * <pre>
+       * Third party identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
+       * @return Whether the thirdPartyPrincipal field is set.
+       */
+      @java.lang.Override
+      public boolean hasThirdPartyPrincipal() {
+        return authorityCase_ == 2;
+      }
+      /**
+       * <pre>
+       * Third party identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
+       * @return The thirdPartyPrincipal.
+       */
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal getThirdPartyPrincipal() {
+        if (thirdPartyPrincipalBuilder_ == null) {
+          if (authorityCase_ == 2) {
+            return (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal) authority_;
+          }
+          return google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.getDefaultInstance();
+        } else {
+          if (authorityCase_ == 2) {
+            return thirdPartyPrincipalBuilder_.getMessage();
+          }
+          return google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Third party identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
+       */
+      public Builder setThirdPartyPrincipal(google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal value) {
+        if (thirdPartyPrincipalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          authority_ = value;
+          onChanged();
+        } else {
+          thirdPartyPrincipalBuilder_.setMessage(value);
+        }
+        authorityCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Third party identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
+       */
+      public Builder setThirdPartyPrincipal(
+          google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.Builder builderForValue) {
+        if (thirdPartyPrincipalBuilder_ == null) {
+          authority_ = builderForValue.build();
+          onChanged();
+        } else {
+          thirdPartyPrincipalBuilder_.setMessage(builderForValue.build());
+        }
+        authorityCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Third party identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
+       */
+      public Builder mergeThirdPartyPrincipal(google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal value) {
+        if (thirdPartyPrincipalBuilder_ == null) {
+          if (authorityCase_ == 2 &&
+              authority_ != google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.getDefaultInstance()) {
+            authority_ = google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.newBuilder((google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal) authority_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            authority_ = value;
+          }
+          onChanged();
+        } else {
+          if (authorityCase_ == 2) {
+            thirdPartyPrincipalBuilder_.mergeFrom(value);
+          }
+          thirdPartyPrincipalBuilder_.setMessage(value);
+        }
+        authorityCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * Third party identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
+       */
+      public Builder clearThirdPartyPrincipal() {
+        if (thirdPartyPrincipalBuilder_ == null) {
+          if (authorityCase_ == 2) {
+            authorityCase_ = 0;
+            authority_ = null;
+            onChanged();
+          }
+        } else {
+          if (authorityCase_ == 2) {
+            authorityCase_ = 0;
+            authority_ = null;
+          }
+          thirdPartyPrincipalBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Third party identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
+       */
+      public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.Builder getThirdPartyPrincipalBuilder() {
+        return getThirdPartyPrincipalFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Third party identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
+       */
+      @java.lang.Override
+      public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipalOrBuilder getThirdPartyPrincipalOrBuilder() {
+        if ((authorityCase_ == 2) && (thirdPartyPrincipalBuilder_ != null)) {
+          return thirdPartyPrincipalBuilder_.getMessageOrBuilder();
+        } else {
+          if (authorityCase_ == 2) {
+            return (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal) authority_;
+          }
+          return google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Third party identity as the real authority.
+       * </pre>
+       *
+       * <code>.google.events.cloud.audit.v1.ServiceAccountDelegationInfo.ThirdPartyPrincipal third_party_principal = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.Builder, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipalOrBuilder> 
+          getThirdPartyPrincipalFieldBuilder() {
+        if (thirdPartyPrincipalBuilder_ == null) {
+          if (!(authorityCase_ == 2)) {
+            authority_ = google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.getDefaultInstance();
+          }
+          thirdPartyPrincipalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal.Builder, google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipalOrBuilder>(
+                  (google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo.ThirdPartyPrincipal) authority_,
+                  getParentForChildren(),
+                  isClean());
+          authority_ = null;
+        }
+        authorityCase_ = 2;
+        onChanged();;
+        return thirdPartyPrincipalBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.events.cloud.audit.v1.ServiceAccountDelegationInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.events.cloud.audit.v1.ServiceAccountDelegationInfo)
+    private static final google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo();
+    }
+
+    public static google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ServiceAccountDelegationInfo>
+        PARSER = new com.google.protobuf.AbstractParser<ServiceAccountDelegationInfo>() {
+      @java.lang.Override
+      public ServiceAccountDelegationInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ServiceAccountDelegationInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ServiceAccountDelegationInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ServiceAccountDelegationInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public google.events.cloud.audit.v1.Data.ServiceAccountDelegationInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_events_cloud_audit_v1_AuditLogData_descriptor;
+    internal_static_google_events_cloud_audit_v1_LogEntryData_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_google_events_cloud_audit_v1_AuditLogData_fieldAccessorTable;
+      internal_static_google_events_cloud_audit_v1_LogEntryData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_events_cloud_audit_v1_LogEntryData_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_events_cloud_audit_v1_LogEntryData_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_events_cloud_audit_v1_LogEntryOperation_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_events_cloud_audit_v1_LogEntryOperation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_events_cloud_audit_v1_AuditLog_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_events_cloud_audit_v1_AuditLog_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_events_cloud_audit_v1_AuthenticationInfo_descriptor;
   private static final 
@@ -5911,6 +17896,26 @@ public final class Data {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_events_cloud_audit_v1_RequestMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_events_cloud_audit_v1_ResourceLocation_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_events_cloud_audit_v1_ResourceLocation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_FirstPartyPrincipal_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_FirstPartyPrincipal_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_ThirdPartyPrincipal_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_ThirdPartyPrincipal_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5921,60 +17926,159 @@ public final class Data {
   static {
     java.lang.String[] descriptorData = {
       "\n\'google/events/cloud/audit/v1/data.prot" +
-      "o\022\034google.events.cloud.audit.v1\032\034google/" +
-      "protobuf/struct.proto\032\027google/rpc/status" +
-      ".proto\"\371\003\n\014AuditLogData\022\024\n\014service_name\030" +
-      "\007 \001(\t\022\023\n\013method_name\030\010 \001(\t\022\025\n\rresource_n" +
-      "ame\030\013 \001(\t\022\032\n\022num_response_items\030\014 \001(\003\022\"\n" +
-      "\006status\030\002 \001(\0132\022.google.rpc.Status\022M\n\023aut" +
-      "hentication_info\030\003 \001(\01320.google.events.c" +
-      "loud.audit.v1.AuthenticationInfo\022K\n\022auth" +
-      "orization_info\030\t \003(\0132/.google.events.clo" +
-      "ud.audit.v1.AuthorizationInfo\022G\n\020request" +
-      "_metadata\030\004 \001(\0132-.google.events.cloud.au" +
-      "dit.v1.RequestMetadata\022(\n\007request\030\020 \001(\0132" +
-      "\027.google.protobuf.Struct\022)\n\010response\030\021 \001" +
-      "(\0132\027.google.protobuf.Struct\022-\n\014service_d" +
-      "ata\030\017 \001(\0132\027.google.protobuf.Struct\"-\n\022Au" +
-      "thenticationInfo\022\027\n\017principal_email\030\001 \001(" +
-      "\t\"J\n\021AuthorizationInfo\022\020\n\010resource\030\001 \001(\t" +
-      "\022\022\n\npermission\030\002 \001(\t\022\017\n\007granted\030\003 \001(\010\"H\n" +
-      "\017RequestMetadata\022\021\n\tcaller_ip\030\001 \001(\t\022\"\n\032c" +
-      "aller_supplied_user_agent\030\002 \001(\tB(\252\002%Goog" +
-      "le.Events.Protobuf.Cloud.Audit.V1b\006proto" +
-      "3"
+      "o\022\034google.events.cloud.audit.v1\032#google/" +
+      "api/monitored_resource.proto\032\034google/pro" +
+      "tobuf/struct.proto\032\037google/protobuf/time" +
+      "stamp.proto\032*google/rpc/context/attribut" +
+      "e_context.proto\032\027google/rpc/status.proto" +
+      "\"\241\004\n\014LogEntryData\022\020\n\010log_name\030\014 \001(\t\022/\n\010r" +
+      "esource\030\010 \001(\0132\035.google.api.MonitoredReso" +
+      "urce\022=\n\rproto_payload\030\002 \001(\0132&.google.eve" +
+      "nts.cloud.audit.v1.AuditLog\022\021\n\tinsert_id" +
+      "\030\004 \001(\t\022F\n\006labels\030\013 \003(\01326.google.events.c" +
+      "loud.audit.v1.LogEntryData.LabelsEntry\022B" +
+      "\n\toperation\030\017 \001(\0132/.google.events.cloud." +
+      "audit.v1.LogEntryOperation\022-\n\ttimestamp\030" +
+      "\t \001(\0132\032.google.protobuf.Timestamp\0225\n\021rec" +
+      "eive_timestamp\030\030 \001(\0132\032.google.protobuf.T" +
+      "imestamp\022;\n\010severity\030\n \001(\0162).google.even" +
+      "ts.cloud.audit.v1.LogSeverity\022\r\n\005trace\030\026" +
+      " \001(\t\022\017\n\007span_id\030\033 \001(\t\032-\n\013LabelsEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"N\n\021LogEntry" +
+      "Operation\022\n\n\002id\030\001 \001(\t\022\020\n\010producer\030\002 \001(\t\022" +
+      "\r\n\005first\030\003 \001(\010\022\014\n\004last\030\004 \001(\010\"\245\005\n\010AuditLo" +
+      "g\022\024\n\014service_name\030\007 \001(\t\022\023\n\013method_name\030\010" +
+      " \001(\t\022\025\n\rresource_name\030\013 \001(\t\022I\n\021resource_" +
+      "location\030\024 \001(\0132..google.events.cloud.aud" +
+      "it.v1.ResourceLocation\0228\n\027resource_origi" +
+      "nal_state\030\023 \001(\0132\027.google.protobuf.Struct" +
+      "\022\032\n\022num_response_items\030\014 \001(\003\022\"\n\006status\030\002" +
+      " \001(\0132\022.google.rpc.Status\022M\n\023authenticati" +
+      "on_info\030\003 \001(\01320.google.events.cloud.audi" +
+      "t.v1.AuthenticationInfo\022K\n\022authorization" +
+      "_info\030\t \003(\0132/.google.events.cloud.audit." +
+      "v1.AuthorizationInfo\022G\n\020request_metadata" +
+      "\030\004 \001(\0132-.google.events.cloud.audit.v1.Re" +
+      "questMetadata\022(\n\007request\030\020 \001(\0132\027.google." +
+      "protobuf.Struct\022)\n\010response\030\021 \001(\0132\027.goog" +
+      "le.protobuf.Struct\022)\n\010metadata\030\022 \001(\0132\027.g" +
+      "oogle.protobuf.Struct\022-\n\014service_data\030\017 " +
+      "\001(\0132\027.google.protobuf.Struct\"\243\002\n\022Authent" +
+      "icationInfo\022\027\n\017principal_email\030\001 \001(\t\022\032\n\022" +
+      "authority_selector\030\002 \001(\t\0226\n\025third_party_" +
+      "principal\030\004 \001(\0132\027.google.protobuf.Struct" +
+      "\022 \n\030service_account_key_name\030\005 \001(\t\022c\n\037se" +
+      "rvice_account_delegation_info\030\006 \003(\0132:.go" +
+      "ogle.events.cloud.audit.v1.ServiceAccoun" +
+      "tDelegationInfo\022\031\n\021principal_subject\030\010 \001" +
+      "(\t\"\226\001\n\021AuthorizationInfo\022\020\n\010resource\030\001 \001" +
+      "(\t\022\022\n\npermission\030\002 \001(\t\022\017\n\007granted\030\003 \001(\010\022" +
+      "J\n\023resource_attributes\030\005 \001(\0132-.google.rp" +
+      "c.context.AttributeContext.Resource\"\365\001\n\017" +
+      "RequestMetadata\022\021\n\tcaller_ip\030\001 \001(\t\022\"\n\032ca" +
+      "ller_supplied_user_agent\030\002 \001(\t\022\026\n\016caller" +
+      "_network\030\003 \001(\t\022H\n\022request_attributes\030\007 \001" +
+      "(\0132,.google.rpc.context.AttributeContext" +
+      ".Request\022I\n\026destination_attributes\030\010 \001(\013" +
+      "2).google.rpc.context.AttributeContext.P" +
+      "eer\"I\n\020ResourceLocation\022\031\n\021current_locat" +
+      "ions\030\001 \003(\t\022\032\n\022original_locations\030\002 \003(\t\"\274" +
+      "\003\n\034ServiceAccountDelegationInfo\022o\n\025first" +
+      "_party_principal\030\001 \001(\0132N.google.events.c" +
+      "loud.audit.v1.ServiceAccountDelegationIn" +
+      "fo.FirstPartyPrincipalH\000\022o\n\025third_party_" +
+      "principal\030\002 \001(\0132N.google.events.cloud.au" +
+      "dit.v1.ServiceAccountDelegationInfo.Thir" +
+      "dPartyPrincipalH\000\032a\n\023FirstPartyPrincipal" +
+      "\022\027\n\017principal_email\030\001 \001(\t\0221\n\020service_met" +
+      "adata\030\002 \001(\0132\027.google.protobuf.Struct\032J\n\023" +
+      "ThirdPartyPrincipal\0223\n\022third_party_claim" +
+      "s\030\001 \001(\0132\027.google.protobuf.StructB\013\n\tAuth" +
+      "ority*\202\001\n\013LogSeverity\022\013\n\007DEFAULT\020\000\022\t\n\005DE" +
+      "BUG\020d\022\t\n\004INFO\020\310\001\022\013\n\006NOTICE\020\254\002\022\014\n\007WARNING" +
+      "\020\220\003\022\n\n\005ERROR\020\364\003\022\r\n\010CRITICAL\020\330\004\022\n\n\005ALERT\020" +
+      "\274\005\022\016\n\tEMERGENCY\020\240\006B(\252\002%Google.Events.Pro" +
+      "tobuf.Cloud.Audit.V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          google.api.MonitoredResourceOuterClass.getDescriptor(),
           com.google.protobuf.StructProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.rpc.context.AttributeContextProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
         });
-    internal_static_google_events_cloud_audit_v1_AuditLogData_descriptor =
+    internal_static_google_events_cloud_audit_v1_LogEntryData_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_google_events_cloud_audit_v1_AuditLogData_fieldAccessorTable = new
+    internal_static_google_events_cloud_audit_v1_LogEntryData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_events_cloud_audit_v1_AuditLogData_descriptor,
-        new java.lang.String[] { "ServiceName", "MethodName", "ResourceName", "NumResponseItems", "Status", "AuthenticationInfo", "AuthorizationInfo", "RequestMetadata", "Request", "Response", "ServiceData", });
-    internal_static_google_events_cloud_audit_v1_AuthenticationInfo_descriptor =
+        internal_static_google_events_cloud_audit_v1_LogEntryData_descriptor,
+        new java.lang.String[] { "LogName", "Resource", "ProtoPayload", "InsertId", "Labels", "Operation", "Timestamp", "ReceiveTimestamp", "Severity", "Trace", "SpanId", });
+    internal_static_google_events_cloud_audit_v1_LogEntryData_LabelsEntry_descriptor =
+      internal_static_google_events_cloud_audit_v1_LogEntryData_descriptor.getNestedTypes().get(0);
+    internal_static_google_events_cloud_audit_v1_LogEntryData_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_events_cloud_audit_v1_LogEntryData_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_google_events_cloud_audit_v1_LogEntryOperation_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_google_events_cloud_audit_v1_LogEntryOperation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_events_cloud_audit_v1_LogEntryOperation_descriptor,
+        new java.lang.String[] { "Id", "Producer", "First", "Last", });
+    internal_static_google_events_cloud_audit_v1_AuditLog_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_google_events_cloud_audit_v1_AuditLog_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_events_cloud_audit_v1_AuditLog_descriptor,
+        new java.lang.String[] { "ServiceName", "MethodName", "ResourceName", "ResourceLocation", "ResourceOriginalState", "NumResponseItems", "Status", "AuthenticationInfo", "AuthorizationInfo", "RequestMetadata", "Request", "Response", "Metadata", "ServiceData", });
+    internal_static_google_events_cloud_audit_v1_AuthenticationInfo_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_google_events_cloud_audit_v1_AuthenticationInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_events_cloud_audit_v1_AuthenticationInfo_descriptor,
-        new java.lang.String[] { "PrincipalEmail", });
+        new java.lang.String[] { "PrincipalEmail", "AuthoritySelector", "ThirdPartyPrincipal", "ServiceAccountKeyName", "ServiceAccountDelegationInfo", "PrincipalSubject", });
     internal_static_google_events_cloud_audit_v1_AuthorizationInfo_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_google_events_cloud_audit_v1_AuthorizationInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_events_cloud_audit_v1_AuthorizationInfo_descriptor,
-        new java.lang.String[] { "Resource", "Permission", "Granted", });
+        new java.lang.String[] { "Resource", "Permission", "Granted", "ResourceAttributes", });
     internal_static_google_events_cloud_audit_v1_RequestMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_google_events_cloud_audit_v1_RequestMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_events_cloud_audit_v1_RequestMetadata_descriptor,
-        new java.lang.String[] { "CallerIp", "CallerSuppliedUserAgent", });
+        new java.lang.String[] { "CallerIp", "CallerSuppliedUserAgent", "CallerNetwork", "RequestAttributes", "DestinationAttributes", });
+    internal_static_google_events_cloud_audit_v1_ResourceLocation_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_google_events_cloud_audit_v1_ResourceLocation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_events_cloud_audit_v1_ResourceLocation_descriptor,
+        new java.lang.String[] { "CurrentLocations", "OriginalLocations", });
+    internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_descriptor,
+        new java.lang.String[] { "FirstPartyPrincipal", "ThirdPartyPrincipal", "Authority", });
+    internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_FirstPartyPrincipal_descriptor =
+      internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_descriptor.getNestedTypes().get(0);
+    internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_FirstPartyPrincipal_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_FirstPartyPrincipal_descriptor,
+        new java.lang.String[] { "PrincipalEmail", "ServiceMetadata", });
+    internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_ThirdPartyPrincipal_descriptor =
+      internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_descriptor.getNestedTypes().get(1);
+    internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_ThirdPartyPrincipal_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_events_cloud_audit_v1_ServiceAccountDelegationInfo_ThirdPartyPrincipal_descriptor,
+        new java.lang.String[] { "ThirdPartyClaims", });
+    google.api.MonitoredResourceOuterClass.getDescriptor();
     com.google.protobuf.StructProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.rpc.context.AttributeContextProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
   }
 
